@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="description" content="DEPANN2PNEUS — Dépannage pneus à domicile en moyenne en 40-45 min, 7j/7, 24h/24, toute l'Île-de-France. Mercedes Sprinter équipé.">
+<meta property="og:title" content="DEPANN2PNEUS — Dépannage pneus 40-45 min IDF">
+<meta property="og:type" content="website">
+<title>DEPANN2PNEUS — Dépannage pneus à domicile Île-de-France</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+:root{
+  --bg:#07090c;
+  --bg2:#0d1117;
+  --bg3:#111820;
+  --surface:rgba(255,255,255,.025);
+  --surface2:rgba(255,255,255,.05);
+  --glass:rgba(8,12,18,.88);
+  --cyan:#2ee9ff;
+  --cd:rgba(46,233,255,.12);
+  --cg:rgba(46,233,255,.22);
+  --orange:#ff6b35;
+  --od:rgba(255,107,53,.12);
+  --txt:#f0f4f8;
+  --txt2:#8b9ab0;
+  --txt3:#3d4f63;
+  --border:rgba(46,233,255,.12);
+  --border2:rgba(255,255,255,.06);
+  --r:1.25rem;
+  --rl:2rem;
+  --f1:'Sora',sans-serif;
+  --f2:'Inter',sans-serif;
+}
+
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--f2);overflow-x:hidden;line-height:1.6}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+/* ── PROGRESS ── */
+#bar{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--cyan),rgba(46,233,255,.3));z-index:9999;box-shadow:0 0 10px var(--cg);transition:width .05s linear}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:.9rem clamp(1.25rem,4vw,3.5rem);display:flex;align-items:center;justify-content:space-between;transition:background .3s,box-shadow .3s}
+nav.sc{background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:0 1px 0 var(--border2)}
+.logo{font-family:var(--f1);font-weight:900;font-size:1.2rem;letter-spacing:-.02em;display:flex;align-items:center;gap:.1em}
+.logo em{color:var(--cyan);font-style:normal}
+.logo span{color:var(--txt)}
+.nav-links{display:flex;align-items:center;gap:2rem;font-size:.83rem;font-weight:500;color:var(--txt2)}
+.nav-links a:hover{color:var(--txt)}
+@media(max-width:768px){.nav-links{display:none}}
+.nav-btn{display:inline-flex;align-items:center;gap:.45rem;background:var(--cyan);color:#07090c;font-family:var(--f1);font-weight:700;font-size:.82rem;padding:.5rem 1.2rem;border-radius:2rem;letter-spacing:.02em;transition:transform .18s,box-shadow .18s;white-space:nowrap;animation:led-pulse-cyan 2.4s ease-in-out infinite}
+.nav-btn:hover{transform:translateY(-1px);box-shadow:0 0 20px rgba(46,233,255,1),0 0 45px rgba(46,233,255,.7),0 0 90px rgba(46,233,255,.4),0 8px 22px rgba(46,233,255,.4);animation:none}
+@media(max-width:768px){nav .nav-btn{padding:.55rem .75rem;font-size:0;gap:0;border-radius:50%;width:2.4rem;height:2.4rem;justify-content:center}
+nav .nav-btn svg{width:16px;height:16px}}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 clamp(1.5rem,5vw,5rem);padding-top:5rem;padding-bottom:4rem;position:relative;overflow:hidden;background:url('images/hero-bg.jpg') center center/cover no-repeat;background-attachment:fixed}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,9,12,.82) 0%,rgba(7,9,12,.55) 55%,rgba(7,9,12,.25) 100%),radial-gradient(ellipse 70% 60% at 72% 40%,rgba(46,233,255,.05) 0%,transparent 65%);pointer-events:none;z-index:0}
+.hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(46,233,255,.055) 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(ellipse 85% 85% at center,black 0%,transparent 72%);pointer-events:none;z-index:0}
+@media(max-width:900px){.hero{text-align:center;padding-top:7rem;padding-bottom:3rem;background-attachment:scroll;background-size:cover;background-position:68% center;display:flex;flex-direction:column;justify-content:center}}
+@media(max-width:900px){.hero::before{background:linear-gradient(90deg,rgba(7,9,12,.92) 0%,rgba(7,9,12,.85) 45%,rgba(7,9,12,.35) 75%,rgba(7,9,12,.05) 100%)}}
+
+.hero-l{position:relative;z-index:2;display:flex;flex-direction:column;gap:1.5rem;max-width:620px}
+@media(max-width:900px){.hero-l{max-width:100%;align-items:center}}
+
+.badge{display:inline-flex;align-items:center;gap:.45rem;background:var(--od);border:1px solid rgba(255,107,53,.22);color:var(--orange);font-family:var(--f1);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.32rem .8rem;border-radius:2rem;width:fit-content}
+.badge::before{content:'';width:.42rem;height:.42rem;background:var(--orange);border-radius:50%;animation:pdot 1.6s ease-in-out infinite}
+@keyframes pdot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.6}}
+
+.hero-h1{font-family:var(--f1);font-weight:900;font-size:clamp(2.8rem,5.5vw,5.2rem);line-height:1.0;letter-spacing:-.04em;color:#fff}
+.hero-h1 .ac{display:block;color:var(--cyan)}
+
+.hero-sub{font-size:1.05rem;color:var(--txt2);max-width:460px;line-height:1.75}
+@media(max-width:900px){.hero-sub{margin:0 auto}}
+
+.hero-btns{display:flex;align-items:center;gap:.85rem;flex-wrap:wrap}
+@media(max-width:900px){.hero-btns{justify-content:center}}
+
+.btn-p{display:inline-flex;align-items:center;gap:.55rem;background:linear-gradient(90deg,#4cef50,#1fd13a);color:#fff;font-family:var(--f1);font-weight:800;font-size:.95rem;padding:.8rem 1.9rem;border-radius:3rem;transition:transform .18s,box-shadow .18s;animation:led-pulse 2.4s ease-in-out infinite}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 0 20px rgba(34,197,94,1),0 0 45px rgba(34,197,94,.7),0 0 90px rgba(34,197,94,.4),0 14px 36px rgba(31,211,58,.6);animation:none}
+.btn-s{display:inline-flex;align-items:center;gap:.45rem;color:var(--txt);font-family:var(--f1);font-weight:600;font-size:.9rem;padding:.8rem 1.4rem;border:1px solid var(--border2);border-radius:3rem;transition:border-color .18s,background .18s}
+.btn-s:hover{border-color:var(--border);background:var(--surface)}
+.call-line{display:inline-flex;align-items:center;gap:.5rem;color:var(--cyan);font-family:var(--f1);font-size:.9rem;font-weight:500;margin-top:1rem;text-decoration:none;opacity:.85;transition:opacity .2s}
+.call-line:hover{opacity:1}
+.call-line strong{font-weight:800;letter-spacing:.03em}
+
+.trust-row{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
+@media(max-width:900px){.trust-row{justify-content:center}}
+.trust-it{display:flex;align-items:center;gap:.35rem;font-size:.78rem;color:var(--txt2);font-weight:500}
+.trust-it svg{color:var(--cyan);flex-shrink:0}
+
+/* ── HERO RIGHT — TIRE ── */
+.hero-r{position:absolute;top:50%;left:44%;transform:translateY(-50%);z-index:1;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:.75}
+@media(max-width:900px){.hero-r{top:auto;bottom:-60px;left:50%;transform:translateX(-50%);opacity:.35}}
+.tire-wrap{position:relative;width:320px;height:320px;display:flex;align-items:center;justify-content:center}
+.tire-glow{position:absolute;inset:-40px;border-radius:50%;background:radial-gradient(circle,var(--cg) 0%,transparent 62%);animation:gpulse 3.2s ease-in-out infinite}
+@keyframes gpulse{0%,100%{opacity:.45;transform:scale(1)}50%{opacity:.9;transform:scale(1.06)}}
+.tire-svg{width:100%;height:100%;animation:tspin 20s linear infinite;transform-origin:center}
+@keyframes tspin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+/* ── STATS STRIP ── */
+.stats{background:var(--bg2);border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:2.5rem clamp(1.5rem,5vw,5rem)}
+.stats-g{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+@media(max-width:700px){.stats-g{grid-template-columns:repeat(2,1fr)}}
+.stat{text-align:center}
+.stat-n{font-family:var(--f1);font-weight:900;font-size:clamp(2.4rem,3.8vw,3.2rem);color:#fff;line-height:1;letter-spacing:-.035em}
+.stat-n em{color:var(--cyan);font-style:normal}
+.stat-l{font-size:.75rem;color:var(--txt2);text-transform:uppercase;letter-spacing:.09em;margin-top:.4rem;font-weight:500}
+
+/* ── BRANDS ── */
+.brands{padding:2.5rem 0;border-bottom:1px solid var(--border2);overflow:hidden;position:relative}
+/* fade edges */
+.brands::before,.brands::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
+@media(max-width:768px){.brands::before,.brands::after{width:40px}}
+.brands::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.brands::after{right:0;background:linear-gradient(-90deg,var(--bg),transparent)}
+.brands-lbl{text-align:center;font-size:.65rem;text-transform:uppercase;letter-spacing:.18em;color:var(--txt3);margin-bottom:1.4rem;font-weight:600}
+.mq-wrap{overflow:visible;padding:10px 0}
+.mq{display:flex;align-items:center;gap:2.6rem;animation:mq 55s linear infinite;width:max-content}
+.mq:hover{animation-play-state:paused}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* ── LOGOS MARQUES PREMIUM ── */
+.brand-logo{
+  display:inline-flex;align-items:center;justify-content:center;
+  flex-shrink:0;position:relative;
+  opacity:.9;
+  transition:opacity .35s cubic-bezier(.2,0,.2,1),transform .35s cubic-bezier(.2,0,.2,1),box-shadow .35s;
+  animation:logo-float 5s ease-in-out infinite;
+}
+@keyframes logo-float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-7px)}
+}
+.brand-logo:nth-child(2n){animation-delay:-1.2s}
+.brand-logo:nth-child(3n){animation-delay:-2.5s}
+.brand-logo:nth-child(4n){animation-delay:-3.8s}
+.brand-logo:hover{
+  opacity:1;
+  transform:translateY(-10px) scale(1.07) !important;
+  animation-play-state:paused;
+}
+/* Vrais logos — glass pill premium */
+.brand-logo.real{
+  background:linear-gradient(160deg,rgba(255,255,255,.97) 0%,rgba(242,246,255,.96) 100%);
+  border-radius:14px;
+  padding:11px 22px;
+  height:68px;width:180px;
+  border:1px solid rgba(255,255,255,.25);
+  box-shadow:
+    0 2px 0 rgba(255,255,255,.7) inset,
+    0 -1px 0 rgba(0,0,0,.08) inset,
+    0 8px 28px rgba(0,0,0,.45),
+    0 2px 6px rgba(0,0,0,.3);
+}
+.brand-logo.real:hover{
+  box-shadow:
+    0 2px 0 rgba(255,255,255,.7) inset,
+    0 -1px 0 rgba(0,0,0,.08) inset,
+    0 22px 55px rgba(0,0,0,.55),
+    0 0 0 1px rgba(46,233,255,.35),
+    0 0 35px rgba(46,233,255,.18);
+}
+.brand-logo.real img{
+  height:38px;width:100%;
+  object-fit:contain;display:block;
+}
+.brand-logo.michelin img{height:52px}
+/* Badges SVG fallback */
+.brand-logo.svg-badge{
+  filter:drop-shadow(0 6px 18px rgba(0,0,0,.55));
+}
+.brand-logo.svg-badge:hover{
+  filter:drop-shadow(0 18px 38px rgba(0,0,0,.65)) drop-shadow(0 0 12px rgba(46,233,255,.2));
+}
+.brand-logo.svg-badge::after{
+  content:'';position:absolute;inset:0;border-radius:12px;
+  background:linear-gradient(160deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,.05) 45%,transparent 65%);
+  pointer-events:none;z-index:1;
+}
+.brand-logo.svg-badge svg{height:52px;width:auto;display:block;border-radius:12px}
+
+/* ── SECTION BASE ── */
+section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
+.c{max-width:1200px;margin:0 auto}
+.sec-tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.1rem}
+.sec-tag::before{content:'';width:1.4rem;height:1px;background:var(--cyan)}
+.sec-h{font-family:var(--f1);font-weight:900;font-size:clamp(1.9rem,3.5vw,2.8rem);letter-spacing:-.032em;color:#fff;line-height:1.1}
+.sec-sub{font-size:1rem;color:var(--txt2);max-width:500px;margin-top:.7rem;line-height:1.72}
+
+/* ── WHY ── */
+.why-g{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+@media(max-width:768px){.why-g{grid-template-columns:1fr;gap:2.5rem}}
+.why-feats{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+.why-f{display:flex;align-items:flex-start;gap:.9rem;padding:1.1rem 1.3rem;background:var(--surface);border:1px solid var(--border2);border-radius:var(--r);transition:border-color .2s,background .2s}
+.why-f:hover{border-color:var(--border);background:var(--surface2)}
+.wico{width:2.4rem;height:2.4rem;min-width:2.4rem;display:flex;align-items:center;justify-content:center;background:var(--cd);border-radius:.7rem;font-size:1rem}
+.wft{font-family:var(--f1);font-weight:700;font-size:.9rem;color:#fff;margin-bottom:.2rem}
+.wfd{font-size:.82rem;color:var(--txt2);line-height:1.6}
+
+.why-v{position:relative}
+.why-card{background:var(--surface);border:1px solid var(--border2);border-radius:var(--rl);padding:2.2rem;position:relative;overflow:hidden}
+.why-card::before{content:'';position:absolute;top:-80px;right:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,var(--cg) 0%,transparent 60%)}
+.wc-label{font-family:var(--f1);font-size:.75rem;color:var(--txt2);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:.4rem}
+.wc-big{font-family:var(--f1);font-size:4.2rem;font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1}
+.wc-big em{color:var(--cyan);font-style:normal}
+.wc-desc{font-size:.85rem;color:var(--txt2);margin-top:.4rem}
+.why-mini{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:.9rem}
+.wm{background:var(--surface);border:1px solid var(--border2);border-radius:var(--r);padding:.9rem 1.1rem}
+.wm-val{font-family:var(--f1);font-size:1.4rem;font-weight:900;color:#fff;letter-spacing:-.03em}
+.wm-val em{color:var(--cyan);font-style:normal}
+.wm-lbl{font-size:.72rem;color:var(--txt2);margin-top:.2rem}
+
+/* ── SERVICES ── */
+.svc-bg{background:var(--bg2)}
+.svc-hdr{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem}
+.svc-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media(max-width:1024px){.svc-g{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.svc-g{grid-template-columns:repeat(2,1fr);gap:.6rem}}
+@media(max-width:560px){.svc{padding:.7rem .65rem}.svc-ico{width:1.7rem;height:1.7rem;font-size:.85rem;margin-bottom:.35rem;border-radius:.4rem}.svc-t{font-size:.72rem;margin-bottom:.25rem;line-height:1.25}.svc-d{font-size:.65rem;line-height:1.45}.svc-no{font-size:.55rem;margin-bottom:.3rem}}
+@media(max-width:560px){.svc-g>.svc:nth-child(7){grid-column:1/-1}}
+.svc-mich{grid-column:2/4;overflow:hidden;border-radius:var(--rl);align-self:stretch;background:#000;position:relative;min-height:160px}
+.svc-mich img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center}
+@media(max-width:1024px){.svc-mich{grid-column:1/-1;height:260px}}
+@media(max-width:560px){.svc-mich{grid-column:1/-1;height:220px}}
+.svc{background:var(--surface);border:1px solid var(--border2);border-radius:var(--rl);padding:1.8rem;position:relative;overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s;cursor:default}
+.svc::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right,var(--cd) 0%,transparent 55%);opacity:0;transition:opacity .3s}
+.svc:hover{transform:translateY(-4px);border-color:var(--border);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.svc:hover::before{opacity:1}
+.svc.feat{border-color:rgba(46,233,255,.18);background:linear-gradient(140deg,rgba(46,233,255,.055),var(--surface) 60%)}
+.svc-no{font-family:var(--f1);font-size:.65rem;font-weight:700;color:var(--txt3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.9rem}
+.svc-ico{width:2.8rem;height:2.8rem;display:flex;align-items:center;justify-content:center;background:var(--cd);border-radius:.75rem;font-size:1.3rem;margin-bottom:1.1rem;position:relative;z-index:1}
+.svc-t{font-family:var(--f1);font-weight:700;font-size:.98rem;color:#fff;margin-bottom:.4rem;position:relative;z-index:1}
+.svc-d{font-size:.83rem;color:var(--txt2);line-height:1.65;position:relative;z-index:1}
+.svc-req{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.75rem;position:relative;z-index:1}
+.svc-req-badge{display:inline-flex;align-items:center;gap:.3rem;font-size:.72rem;font-weight:600;color:var(--txt2);background:rgba(46,233,255,.07);border:1px solid rgba(46,233,255,.18);border-radius:2rem;padding:.25rem .65rem}
+
+/* ── STEPS ── */
+.steps-g{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:3rem;position:relative}
+@media(max-width:900px){.steps-g{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.steps-g{grid-template-columns:1fr}}
+.steps-g::before{content:'';position:absolute;top:2.6rem;left:calc(12.5% + .8rem);right:calc(12.5% + .8rem);height:1px;background:linear-gradient(90deg,transparent,var(--border),var(--border),transparent)}
+@media(max-width:700px){.steps-g::before{display:none}}
+.step{text-align:center;padding:1.8rem 1.2rem}
+.step-n{width:3.2rem;height:3.2rem;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--f1);font-size:.9rem;font-weight:900;color:var(--cyan);background:var(--bg);margin:0 auto 1.3rem;position:relative;z-index:1}
+.step-ico{font-size:1.9rem;margin-bottom:.9rem}
+.step-t{font-family:var(--f1);font-weight:700;font-size:1rem;color:#fff;margin-bottom:.4rem}
+.step-d{font-size:.83rem;color:var(--txt2);line-height:1.65}
+
+/* ── ZONE ── */
+.zone-bg{background:var(--bg2)}
+.zone-g{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:2.5rem}
+@media(max-width:768px){.zone-g{grid-template-columns:1fr;gap:2rem}}
+.depts{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+.dept{display:inline-flex;align-items:center;gap:.35rem;background:var(--surface);border:1px solid var(--border2);border-radius:2rem;padding:.38rem .85rem;font-size:.78rem;color:var(--txt2);font-family:var(--f1);font-weight:600;transition:border-color .2s,color .2s}
+.dept:hover,.dept.on{background:var(--cd);border-color:rgba(46,233,255,.28);color:var(--cyan)}
+.zone-cta{background:var(--surface);border:1px solid var(--border2);border-radius:var(--r);padding:1.75rem;margin-top:1.5rem}
+.zone-cta p{font-size:.83rem;color:var(--txt2);margin-bottom:.9rem}
+.zone-map{background:transparent;border:none;border-radius:0;overflow:visible;aspect-ratio:auto;display:flex;align-items:center;justify-content:center}
+.zone-g{align-items:start}
+/* ── CARTE 3D IDF ── */
+.map3d{width:100%;transform:perspective(1000px) rotateX(25deg) rotateY(-8deg) rotateZ(1.5deg);transform-origin:50% 55%;filter:drop-shadow(0 50px 90px rgba(0,0,0,.8));transition:transform .9s cubic-bezier(.2,0,.2,1),filter .9s}
+.map3d:hover{transform:perspective(1000px) rotateX(18deg) rotateY(-5deg) rotateZ(.8deg);filter:drop-shadow(0 70px 110px rgba(0,0,0,.85))}
+.dp{transition:opacity .25s;cursor:pointer}
+
+/* ── TARIFS ── */
+.trf-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.5rem}
+@media(max-width:900px){.trf-g{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.trf-g{grid-template-columns:1fr}}
+.trf{background:var(--surface);border:1px solid var(--border2);border-radius:var(--rl);padding:1.6rem;transition:border-color .22s,transform .22s}
+.trf:hover{border-color:var(--border);transform:translateY(-3px)}
+.trf.feat{border-color:rgba(46,233,255,.22);background:linear-gradient(140deg,rgba(46,233,255,.05),var(--surface) 60%)}
+.trf-tag{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--txt2);margin-bottom:.65rem}
+.trf-name{font-family:var(--f1);font-weight:700;font-size:.92rem;color:#fff;margin-bottom:.9rem}
+.trf-p{font-family:var(--f1);font-weight:900;font-size:1.85rem;color:#fff;letter-spacing:-.03em;margin-bottom:.2rem}
+.trf-p em{font-size:.95rem;color:var(--cyan);font-style:normal;font-weight:700}
+.trf-note{font-size:.75rem;color:var(--txt2);margin-bottom:1.1rem}
+.trf-list{display:flex;flex-direction:column;gap:.5rem}
+.trf-li{display:flex;align-items:center;gap:.45rem;font-size:.8rem;color:var(--txt2)}
+.trf-li::before{content:'✓';color:var(--cyan);font-weight:700;font-size:.75rem;min-width:.9rem}
+
+/* ── AVIS ── */
+.avis-bg{background:var(--bg2)}
+.avis-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.8rem}
+@media(max-width:768px){.avis-g{grid-template-columns:1fr}}
+.avis{background:var(--surface);border:1px solid var(--border2);border-radius:var(--rl);padding:1.6rem;transition:border-color .2s}
+.avis:hover{border-color:var(--border)}
+.stars{color:#fbbf24;font-size:.95rem;letter-spacing:.05em;margin-bottom:.7rem}
+.avis-txt{font-size:.87rem;color:var(--txt2);line-height:1.72;margin-bottom:1.2rem;font-style:italic}
+.avis-who{display:flex;align-items:center;gap:.7rem}
+.ava{width:2.4rem;height:2.4rem;border-radius:50%;background:var(--cd);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--f1);font-weight:800;font-size:.78rem;color:var(--cyan);flex-shrink:0}
+.avis-name{font-family:var(--f1);font-weight:700;font-size:.87rem;color:#fff}
+.avis-meta{font-size:.72rem;color:var(--txt3);margin-top:.1rem}
+.avis-carousels{margin-top:2.8rem;display:flex;flex-direction:column;gap:1.8rem}
+.avis-mq-wrap{overflow:hidden;position:relative}
+.avis-mq-wrap::before,.avis-mq-wrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none}
+.avis-mq-wrap::before{left:0;background:linear-gradient(90deg,var(--bg2),transparent)}
+.avis-mq-wrap::after{right:0;background:linear-gradient(-90deg,var(--bg2),transparent)}
+.avis-mq{display:flex;gap:1.1rem;width:max-content;animation:rmq 50s linear infinite}
+.avis-mq.rev{animation-direction:reverse}
+.avis-mq:hover{animation-play-state:paused}
+@keyframes rmq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.rc{background:var(--surface);border:1px solid var(--border2);border-radius:var(--rl);padding:1.1rem 1.4rem;width:270px;min-width:270px;transition:border-color .2s}
+.rc:hover{border-color:var(--border)}
+.rc .stars{color:#f59e0b;font-size:.8rem;margin-bottom:.5rem}
+.rc-txt{font-size:.8rem;color:var(--txt2);line-height:1.6;margin-bottom:.8rem;font-style:italic;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.rc-who{display:flex;align-items:center;gap:.65rem}
+@media(max-width:768px){.rc{width:170px;min-width:170px;padding:.6rem .75rem}.rc-txt{font-size:.67rem;line-height:1.4;-webkit-line-clamp:unset;display:block;overflow:visible;margin-bottom:.35rem}.rc .stars{font-size:.65rem;margin-bottom:.25rem}.rc-name{font-size:.68rem}.rc-meta{display:none}.ava{display:none}.rc-who{gap:.3rem}.avis-carousels{gap:.5rem;padding:0}.avis-mq{gap:.6rem}.avis-mq-wrap::before,.avis-mq-wrap::after{width:30px}}
+.rc-name{font-family:var(--f1);font-weight:700;font-size:.83rem;color:#fff}
+.rc-meta{font-size:.7rem;color:var(--txt3);margin-top:.1rem}
+
+/* ── FAQ ── */
+.faq-bg{background:url('images/faq-bg.jpg') center center/cover no-repeat;position:relative}
+@media(max-width:900px){.faq-bg{background-position:right center;background-size:auto 140%}}
+.faq-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,9,12,.92) 0%,rgba(7,9,12,.78) 50%,rgba(7,9,12,.88) 100%);pointer-events:none;z-index:0}
+.faq-bg .c{position:relative;z-index:1}
+.faq-l{max-width:700px;margin:2.5rem auto 0;display:flex;flex-direction:column;gap:.45rem}
+.faq-i{background:var(--surface);border:1px solid var(--border2);border-radius:var(--r);overflow:hidden;transition:border-color .2s}
+.faq-i:hover{border-color:var(--border)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:1.15rem 1.4rem;cursor:pointer;font-family:var(--f1);font-weight:600;font-size:.9rem;color:#fff;gap:.9rem;user-select:none}
+.faq-q::after{content:'+';color:var(--cyan);font-size:1.35rem;font-weight:300;transition:transform .24s;min-width:1.3rem;text-align:center}
+.faq-i.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .32s ease}
+.faq-ai{padding:0 1.4rem 1.15rem;font-size:.84rem;color:var(--txt2);line-height:1.72}
+.faq-i.open .faq-a{max-height:280px}
+
+/* ── CTA FINAL ── */
+.cta-sec{background:var(--bg2);border-top:1px solid var(--border2);padding:6rem clamp(1.5rem,5vw,5rem);text-align:center;position:relative;overflow:hidden}
+.cta-mich{position:absolute;top:50%;margin-top:-115px;height:230px;opacity:.88;pointer-events:none;z-index:0;animation:mich-float 4s ease-in-out infinite;filter:drop-shadow(0 20px 40px rgba(46,233,255,.12))}
+.cta-mich.right{right:4vw}
+.cta-mich.left{left:4vw;transform:scaleX(-1)}
+@keyframes mich-float{0%,100%{transform:translateY(0) scaleX(var(--mx,1))}50%{transform:translateY(-10px) scaleX(var(--mx,1))}}
+@keyframes led-pulse-cyan{0%,100%{box-shadow:0 0 8px rgba(46,233,255,.5),0 0 20px rgba(46,233,255,.3),0 0 40px rgba(46,233,255,.15),0 6px 22px rgba(46,233,255,.25)}50%{box-shadow:0 0 14px rgba(46,233,255,.9),0 0 35px rgba(46,233,255,.6),0 0 65px rgba(46,233,255,.25),0 6px 22px rgba(46,233,255,.45)}}
+@keyframes led-pulse{0%,100%{box-shadow:0 0 8px rgba(34,197,94,.5),0 0 20px rgba(34,197,94,.3),0 0 40px rgba(34,197,94,.15),0 6px 28px rgba(31,211,58,.4)}50%{box-shadow:0 0 14px rgba(34,197,94,.9),0 0 35px rgba(34,197,94,.6),0 0 65px rgba(34,197,94,.25),0 6px 28px rgba(31,211,58,.6)}}
+.cta-mich.right{--mx:1}.cta-mich.left{--mx:-1}
+@media(max-width:900px){.cta-sec{overflow:visible;padding-bottom:8rem}.cta-mich{height:110px;top:auto;bottom:0;margin-top:0;opacity:.6}
+.cta-mich.right{right:0}.cta-mich.left{left:0}}
+
+.tarifs-flex{display:flex;align-items:center;justify-content:center;gap:2.5rem;margin:2.5rem auto 0}
+.tarifs-flex .wa-wrap{margin:0;flex-shrink:0}
+.tarif-mich{height:auto;width:auto;max-height:510px;flex:1 1 auto;min-width:0;opacity:1;pointer-events:none;animation:mich-float 4s ease-in-out infinite}
+@media(max-width:1299px){.tarif-mich{display:none}}
+@media(max-width:900px){#contact .btn-p,#contact .nav-btn{font-size:.78rem!important;padding:.65rem 1.1rem!important}}
+
+/* ═══ MOBILE — BIBENDUM SOUS FORMULAIRE ══════════════════════════════════════ */
+@media(max-width:768px){
+  .tarifs-flex{flex-direction:column;align-items:center}
+  .tarif-mich{display:block;max-height:220px;width:auto;height:auto;margin-top:1.5rem}
+}
+.cta-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at center,rgba(46,233,255,.045),transparent 62%)}
+.cta-h{font-family:var(--f1);font-weight:900;font-size:clamp(2.3rem,4.5vw,4.2rem);letter-spacing:-.04em;color:#fff;line-height:1.05;position:relative;z-index:1}
+.cta-h .hl{display:block;color:var(--cyan)}
+.cta-sub{font-size:1rem;color:var(--txt2);max-width:440px;margin:.7rem auto 2rem;position:relative;z-index:1}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:.9rem;flex-wrap:wrap;position:relative;z-index:1}
+
+/* ── FOOTER ── */
+footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.2rem clamp(1.5rem,5vw,5rem)}
+.ft{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.ft-copy{font-size:.77rem;color:var(--txt3);margin-top:.35rem}
+.ft-links{display:flex;gap:1.4rem;font-size:.77rem;color:var(--txt3)}
+.ft-links a:hover{color:var(--txt2)}
+
+/* ── FLOAT CTA ── */
+#fcta{position:fixed;bottom:1.4rem;right:1.4rem;z-index:800;display:flex;align-items:center;gap:.45rem;background:linear-gradient(90deg,#4cef50,#1fd13a);color:#fff;font-family:var(--f1);font-weight:800;font-size:.87rem;padding:.7rem 1.4rem;border-radius:3rem;transform:translateY(100px);transition:transform .3s ease;cursor:pointer;animation:led-pulse 2.4s ease-in-out infinite}
+#fcta.on{transform:translateY(0)}
+#fcta:hover{box-shadow:0 0 20px rgba(34,197,94,1),0 0 45px rgba(34,197,94,.7),0 0 90px rgba(34,197,94,.4);animation:none}
+
+/* ── REVEAL — éléments visibles par défaut, animation au scroll ── */
+.rv{transition:opacity .55s ease,transform .55s ease}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
+/* .hidden ajouté par JS seulement sur éléments hors viewport */
+.rv.hidden{opacity:0;transform:translateY(22px)}
+.rv.hidden.show{opacity:1;transform:none}
+
+/* ── WhatsApp Form ── */
+.wa-wrap{max-width:520px;margin:2.5rem auto 0;border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35);border:1px solid rgba(37,217,102,.15);transition:transform 0.4s cubic-bezier(0.16,1,0.3,1),box-shadow 0.4s cubic-bezier(0.16,1,0.3,1),border-color 0.4s ease}
+.wa-wrap:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(0,0,0,.45),0 0 40px rgba(37,217,102,.18);border-color:rgba(37,217,102,.45)}
+.wa-head{background:linear-gradient(90deg,#4cef50,#1fd13a);padding:1.1rem 1.4rem;display:flex;align-items:center;justify-content:space-between}
+.wa-head h3{color:#fff;font-family:var(--f1);font-weight:700;font-size:1.05rem}
+.wa-head-x{color:rgba(255,255,255,.7);font-size:1.1rem;cursor:pointer;background:none;border:none;line-height:1;padding:.2rem .4rem;transition:color .2s}
+.wa-head-x:hover{color:#fff}
+.wa-body{background:linear-gradient(145deg,#0ecfb0 0%,#2adba8 25%,#38d9c4 50%,#29c9d4 75%,#1bb8d0 100%);padding:1.5rem 1.4rem 1.6rem}
+.wa-field{width:100%;border:none;border-radius:14px;padding:.9rem 1.1rem;font-size:.92rem;color:#2d4a3e;font-family:var(--f2);outline:none;margin-bottom:.9rem;position:relative;background:linear-gradient(110deg,rgba(255,255,255,.42) 0%,rgba(255,255,255,.42) 42%,rgba(255,255,255,.18) 42%,rgba(255,255,255,.18) 100%);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.5);transition:background .2s}
+.wa-field::placeholder{color:rgba(30,70,55,.65);font-size:.9rem}
+.wa-field:focus{background:linear-gradient(110deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,.55) 42%,rgba(255,255,255,.28) 42%,rgba(255,255,255,.28) 100%);outline:none}
+textarea.wa-field{min-height:120px;resize:none}
+.wa-btn-send{width:100%;background:linear-gradient(90deg,#4cef50,#1fd13a);color:#fff;border:none;border-radius:50px;padding:1.05rem 1.5rem;font-size:1rem;font-weight:700;font-family:var(--f1);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.65rem;transition:filter .2s,transform .15s,box-shadow .2s;margin-top:.3rem;animation:led-pulse 2.4s ease-in-out infinite}
+.wa-btn-send:hover{filter:brightness(1.08);transform:translateY(-1px);box-shadow:0 0 20px rgba(34,197,94,1),0 0 45px rgba(34,197,94,.7),0 0 90px rgba(34,197,94,.4);animation:none}
+@media(max-width:540px){.wa-body{padding:1.2rem 1rem}.wa-head{padding:.85rem .9rem}.wa-head h3{font-size:.8rem;gap:.5rem}.wa-head h3 a.logo{font-size:.95rem!important}}
+</style>
+</head>
+<body>
+
+<div id="bar"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo"><em>DEPANN2</em><span>PNEUS</span></a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#zone">Zone IDF</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a href="tel:+33761069638" class="nav-btn" onclick="window.location.href='tel:+33761069638';return false;">
+    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Appeler maintenant
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-l">
+    <div class="badge">🚨 Urgence 24h/24 — 7j/7</div>
+
+    <h1 class="hero-h1">
+      Pneu crevé ?<br>
+      <span class="ac">On arrive</span>
+      en moyenne en 40-45 min.
+    </h1>
+
+    <p class="hero-sub">Dépannage pneus à domicile partout en Île-de-France. Mercedes Sprinter équipé, toutes marques. Intervention immédiate.</p>
+
+    <div class="hero-btns">
+      <a href="#tarifs" class="btn-p">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        Écrire sur WhatsApp
+      </a>
+      <a href="#services" class="btn-s">
+        Voir les services
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="trust-row">
+      <div class="trust-it">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Devis gratuit
+      </div>
+      <div class="trust-it">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        40-45 min en moyenne
+      </div>
+      <div class="trust-it">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Pro certifié
+      </div>
+    </div>
+  </div>
+
+  <!-- TIRE SVG ANIMÉ -->
+  <div class="hero-r">
+    <div class="tire-wrap">
+      <div class="tire-glow"></div>
+      <svg class="tire-svg" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer tire body -->
+        <circle cx="250" cy="250" r="232" fill="rgba(9,13,20,.7)"/>
+        <!-- Tread pattern — dashed ring -->
+        <circle cx="250" cy="250" r="228" fill="none" stroke="rgba(46,233,255,.2)" stroke-width="46" stroke-dasharray="20 10"/>
+        <!-- Tread highlight -->
+        <circle cx="250" cy="250" r="228" fill="none" stroke="rgba(46,233,255,.06)" stroke-width="46" stroke-dasharray="5 25" stroke-dashoffset="8"/>
+        <!-- Sidewall inner border -->
+        <circle cx="250" cy="250" r="205" fill="none" stroke="rgba(46,233,255,.09)" stroke-width="1.5"/>
+        <circle cx="250" cy="250" r="213" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="4 10"/>
+        <!-- Inner disk -->
+        <circle cx="250" cy="250" r="186" fill="#080d14" stroke="rgba(46,233,255,.14)" stroke-width="1.5"/>
+        <!-- 5-spoke rim -->
+        <!-- Spoke 0° -->
+        <path d="M244 186 L232 95 Q250 84 268 95 L256 186 Q250 192 244 186Z" fill="rgba(46,233,255,.16)" stroke="rgba(46,233,255,.28)" stroke-width=".8"/>
+        <!-- Spoke 72° -->
+        <path d="M244 186 L232 95 Q250 84 268 95 L256 186 Q250 192 244 186Z" fill="rgba(46,233,255,.16)" stroke="rgba(46,233,255,.28)" stroke-width=".8" transform="rotate(72 250 250)"/>
+        <!-- Spoke 144° -->
+        <path d="M244 186 L232 95 Q250 84 268 95 L256 186 Q250 192 244 186Z" fill="rgba(46,233,255,.16)" stroke="rgba(46,233,255,.28)" stroke-width=".8" transform="rotate(144 250 250)"/>
+        <!-- Spoke 216° -->
+        <path d="M244 186 L232 95 Q250 84 268 95 L256 186 Q250 192 244 186Z" fill="rgba(46,233,255,.16)" stroke="rgba(46,233,255,.28)" stroke-width=".8" transform="rotate(216 250 250)"/>
+        <!-- Spoke 288° -->
+        <path d="M244 186 L232 95 Q250 84 268 95 L256 186 Q250 192 244 186Z" fill="rgba(46,233,255,.16)" stroke="rgba(46,233,255,.28)" stroke-width=".8" transform="rotate(288 250 250)"/>
+        <!-- Rim outer ring -->
+        <circle cx="250" cy="250" r="112" fill="rgba(8,13,20,.95)" stroke="rgba(46,233,255,.22)" stroke-width="2"/>
+        <!-- Hub cap -->
+        <circle cx="250" cy="250" r="52" fill="rgba(6,10,16,1)" stroke="rgba(46,233,255,.38)" stroke-width="2"/>
+        <!-- Lug bolts × 5 -->
+        <circle cx="250" cy="214" r="7" fill="rgba(46,233,255,.55)"/>
+        <circle cx="250" cy="214" r="7" fill="rgba(46,233,255,.55)" transform="rotate(72 250 250)"/>
+        <circle cx="250" cy="214" r="7" fill="rgba(46,233,255,.55)" transform="rotate(144 250 250)"/>
+        <circle cx="250" cy="214" r="7" fill="rgba(46,233,255,.55)" transform="rotate(216 250 250)"/>
+        <circle cx="250" cy="214" r="7" fill="rgba(46,233,255,.55)" transform="rotate(288 250 250)"/>
+        <!-- Center -->
+        <circle cx="250" cy="250" r="24" fill="#2ee9ff" opacity=".9"/>
+        <circle cx="250" cy="250" r="10" fill="#07090c"/>
+        <!-- Outer glow haze -->
+        <circle cx="250" cy="250" r="232" fill="none" stroke="rgba(46,233,255,.035)" stroke-width="55"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-g">
+    <div class="stat rv"><div class="stat-n"><span class="cnt" data-t="40">40</span><em>-45 min</em></div><div class="stat-l">Délai moyen d'intervention</div></div>
+    <div class="stat rv d1"><div class="stat-n"><span class="cnt" data-t="24">24</span><em>h/24</em></div><div class="stat-l">Disponible 7j/7</div></div>
+    <div class="stat rv d2"><div class="stat-n"><span class="cnt" data-t="8">8</span><em>+</em></div><div class="stat-l">Départements IDF</div></div>
+    <div class="stat rv d3"><div class="stat-n"><span class="cnt" data-t="8700">0</span><em>+</em></div><div class="stat-l">Clients satisfaits</div></div>
+  </div>
+</div>
+
+<!-- BRANDS MARQUEE -->
+<div class="brands">
+  <p class="brands-lbl">Toutes marques de pneumatiques</p>
+  <div class="mq-wrap">
+    <div class="mq">
+      <!-- MICHELIN -->
+      <span class="brand-logo real michelin"><img src="images/logo-michelin.png" alt="Michelin"></span>
+      <!-- GOODYEAR -->
+      <span class="brand-logo real"><img src="images/logo-goodyear.png" alt="Goodyear"></span>
+      <!-- CONTINENTAL -->
+      <span class="brand-logo real"><img src="images/logo-continental.png" alt="Continental"></span>
+      <!-- BRIDGESTONE -->
+      <span class="brand-logo real"><img src="images/logo-bridgestone.png" alt="Bridgestone"></span>
+      <!-- PIRELLI -->
+      <span class="brand-logo real"><img src="images/logo-pirelli.png" alt="Pirelli"></span>
+      <!-- DUNLOP -->
+      <span class="brand-logo real"><img src="images/logo-dunlop.svg" alt="Dunlop"></span>
+      <!-- HANKOOK -->
+      <span class="brand-logo real"><img src="images/logo-hankook.png" alt="Hankook"></span>
+      <!-- YOKOHAMA -->
+      <span class="brand-logo real"><img src="images/logo-yokohama.png" alt="Yokohama"></span>
+      <!-- BFGOODRICH -->
+      <span class="brand-logo real"><img src="images/logo-bfgoodrich.svg" alt="BFGoodrich"></span>
+      <!-- FALKEN -->
+      <span class="brand-logo real"><img src="images/logo-falken.png" alt="Falken"></span>
+      <!-- TOYO -->
+      <span class="brand-logo real"><img src="images/logo-toyo.png" alt="Toyo Tires"></span>
+      <!-- NOKIAN -->
+      <span class="brand-logo real"><img src="images/logo-nokian.png" alt="Nokian"></span>
+      <!-- === DUPLICATE pour loop === -->
+      <span class="brand-logo real michelin"><img src="images/logo-michelin.png" alt="Michelin"></span>
+      <span class="brand-logo real"><img src="images/logo-goodyear.png" alt="Goodyear"></span>
+      <span class="brand-logo real"><img src="images/logo-continental.png" alt="Continental"></span>
+      <span class="brand-logo real"><img src="images/logo-bridgestone.png" alt="Bridgestone"></span>
+      <span class="brand-logo real"><img src="images/logo-pirelli.png" alt="Pirelli"></span>
+      <span class="brand-logo real"><img src="images/logo-dunlop.svg" alt="Dunlop"></span>
+      <span class="brand-logo real"><img src="images/logo-hankook.png" alt="Hankook"></span>
+      <span class="brand-logo real"><img src="images/logo-yokohama.png" alt="Yokohama"></span>
+      <span class="brand-logo real"><img src="images/logo-bfgoodrich.svg" alt="BFGoodrich"></span>
+      <span class="brand-logo real"><img src="images/logo-falken.png" alt="Falken"></span>
+      <span class="brand-logo real"><img src="images/logo-toyo.png" alt="Toyo Tires"></span>
+      <span class="brand-logo real"><img src="images/logo-nokian.png" alt="Nokian"></span>
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="c">
+    <div class="why-g">
+      <div>
+        <div class="sec-tag">Pourquoi nous</div>
+        <h2 class="sec-h">Le garage qui<br>vient à vous.</h2>
+        <p class="sec-sub">Fini l'attente, fini les galères. Notre atelier mobile vient directement à votre position.</p>
+        <div class="why-feats">
+          <div class="why-f rv"><div class="wico">⚡</div><div><div class="wft">Réponse immédiate</div><div class="wfd">Décroché en 2 sonneries, devis immédiat au téléphone, aucune surprise.</div></div></div>
+          <div class="why-f rv d1"><div class="wico">🚐</div><div><div class="wft">Flotte de stations mobiles</div><div class="wfd">Plusieurs ateliers mobiles tout équipés, prêts à partir à tout moment — 24h/24, 7j/7, partout en IDF.</div></div></div>
+          <div class="why-f rv d2"><div class="wico">💳</div><div><div class="wft">Paiement facile</div><div class="wfd">CB, virement, espèces. Facture pro sur demande avec TVA.</div></div></div>
+        </div>
+      </div>
+      <div class="why-v">
+        <div class="why-card rv">
+          <div class="wc-label">Délai d'intervention moyen</div>
+          <div class="wc-big"><em>40-45</em> min</div>
+          <div class="wc-desc">Où que vous soyez en Île-de-France</div>
+        </div>
+        <div class="why-mini">
+          <div class="wm rv d1"><div class="wm-val"><em>7</em>j/<em>7</em></div><div class="wm-lbl">Tous les jours</div></div>
+          <div class="wm rv d2"><div class="wm-val"><em>24</em>h/<em>24</em></div><div class="wm-lbl">Même la nuit</div></div>
+          <div class="wm rv d3"><div class="wm-val"><em>0</em>€</div><div class="wm-lbl">Devis gratuit</div></div>
+          <div class="wm rv d4"><div class="wm-val"><em>100</em>%</div><div class="wm-lbl">Satisfaction</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="svc-bg">
+  <div class="c">
+    <div class="svc-hdr">
+      <div>
+        <div class="sec-tag">Services</div>
+        <h2 class="sec-h">Ce qu'on fait<br>directement sur place.</h2>
+      </div>
+      <p class="sec-sub" style="max-width:280px;margin-top:0">Tout l'équipement d'un garage pro, chez vous.</p>
+    </div>
+    <div class="svc-g">
+      <div class="svc feat rv"><div class="svc-no">01</div><div class="svc-ico">🔧</div><div class="svc-t">Montage / Démontage</div><div class="svc-d">Changement de pneu sur place avec monte-pneus professionnel. Toutes tailles, toutes jantes.</div></div>
+      <div class="svc rv d1"><div class="svc-no">02</div><div class="svc-ico">⚖️</div><div class="svc-t">Équilibrage dynamique</div><div class="svc-d">Équilibreuse embarquée pour un résultat pro. Vibrations éliminées, confort retrouvé.</div></div>
+      <div class="svc rv d2"><div class="svc-no">03</div><div class="svc-ico">🩹</div><div class="svc-t">Réparation de crevaison</div><div class="svc-d">Plug ou patch selon position. Diagnostic rapide — on vous dit si c'est réparable ou non.</div></div>
+      <div class="svc rv d1"><div class="svc-no">04</div><div class="svc-ico">📡</div><div class="svc-t">Reset TPMS & Pression</div><div class="svc-d">Vérification capteurs et réinitialisation. Témoin éteint, pression aux normes constructeur.</div></div>
+      <div class="svc rv d2"><div class="svc-no">05</div><div class="svc-ico">🛞</div><div class="svc-t">Retrait roue de secours</div><div class="svc-d">Démontage de la roue galette, pose du pneu définitif. Tout se fait sur place.</div></div>
+      <div class="svc rv d3"><div class="svc-no">06</div><div class="svc-ico">🚨</div><div class="svc-t">Panne sur autoroute</div><div class="svc-d">On n'intervient pas directement sur l'autoroute. Appelez-nous et sortez à la prochaine sortie — on vous y rejoint rapidement.</div></div>
+      <div class="svc rv d1"><div class="svc-no">07</div><div class="svc-ico">🔑</div><div class="svc-t">Écrous antivol perdus / cassés</div><div class="svc-d">Démontage de vos écrous antivol sur présentation obligatoire de votre carte d'identité et de la carte grise du véhicule concerné. Écrous retirés intacts, sans aucun dommage sur vos jantes, grâce à notre savoir-faire unique et professionnel.</div><div class="svc-req"><span class="svc-req-badge">🪪 Pièce d'identité</span><span class="svc-req-badge">📋 Carte grise</span></div></div>
+      <div class="svc-mich rv d2"><img src="images/michelin-pneu.png" alt="Michelin"></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMENT ÇA MARCHE -->
+<section id="process">
+  <div class="c">
+    <div style="text-align:center;max-width:560px;margin:0 auto">
+      <div class="sec-tag" style="justify-content:center">Comment ça marche</div>
+      <h2 class="sec-h">Simple comme un appel.</h2>
+      <p class="sec-sub" style="margin:0 auto">4 étapes, votre pneu est réglé.</p>
+    </div>
+    <div class="steps-g">
+      <div class="step rv"><div class="step-n">01</div><div class="step-ico">🔍</div><div class="step-t">Repérez la taille de vos pneus</div><div class="step-d">Avant d'appeler, notez la taille inscrite sur le flanc de votre pneu (ex : 205/55 R16). Vous ne savez pas où la trouver ? Pas de problème — on vous guide par téléphone.</div></div>
+      <div class="step rv d1"><div class="step-n">02</div><div class="step-ico">📱</div><div class="step-t">Appelez ou WhatsApp</div><div class="step-d">Décrivez la situation en 2 mots. Devis immédiat, aucune mauvaise surprise.</div></div>
+      <div class="step rv d2"><div class="step-n">03</div><div class="step-ico">🚐</div><div class="step-t">On arrive en moyenne en 40-45 min</div><div class="step-d">Le camion le plus proche part immédiatement avec le matériel adapté à votre véhicule.</div></div>
+      <div class="step rv d3"><div class="step-n">04</div><div class="step-ico">✅</div><div class="step-t">Repartez serein</div><div class="step-d">Pneus montés, équilibrés, pression vérifiée. Vous reprenez la route en sécurité.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ZONE IDF -->
+<section id="zone" class="zone-bg">
+  <div class="c">
+    <div class="sec-tag">Zone d'intervention</div>
+    <h2 class="sec-h">Toute l'Île-de-France,<br>sans exception.</h2>
+    <div class="zone-g">
+      <div>
+        <p class="sec-sub">Les 8 départements franciliens, 24h/24, 7j/7. En ville, sur autoroute, partout.</p>
+        <div class="depts">
+          <span class="dept on">75 · Paris</span>
+          <span class="dept on">77 · Seine-et-Marne</span>
+          <span class="dept on">78 · Yvelines</span>
+          <span class="dept on">91 · Essonne</span>
+          <span class="dept on">92 · Hauts-de-Seine</span>
+          <span class="dept on">93 · Seine-Saint-Denis</span>
+          <span class="dept on">94 · Val-de-Marne</span>
+          <span class="dept on">95 · Val-d'Oise</span>
+        </div>
+        <div class="zone-cta">
+          <p>Pas sûr que votre zone est couverte ?</p>
+          <a href="#tarifs" class="btn-p" style="display:inline-flex">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Vérifier via WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="zone-map rv">
+        <svg class="map3d" viewBox="15 68 470 405" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- ── COULEURS PAR DÉPARTEMENT ── -->
+            <!-- 77 Seine-et-Marne → TEAL -->
+            <linearGradient id="f77" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#14b8a6"/><stop offset="100%" stop-color="#0f766e"/></linearGradient>
+            <!-- 95 Val-d'Oise → ORANGE -->
+            <linearGradient id="f95" x1="0" y1="0" x2=".5" y2="1"><stop offset="0%" stop-color="#fb923c"/><stop offset="100%" stop-color="#c2410c"/></linearGradient>
+            <!-- 78 Yvelines → VIOLET -->
+            <linearGradient id="f78" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#7e22ce"/></linearGradient>
+            <!-- 91 Essonne → VERT -->
+            <linearGradient id="f91" x1="0" y1="0" x2=".5" y2="1"><stop offset="0%" stop-color="#22c55e"/><stop offset="100%" stop-color="#15803d"/></linearGradient>
+            <!-- 92 Hauts-de-Seine → BLEU -->
+            <linearGradient id="f92" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient>
+            <!-- 93 Seine-Saint-Denis → ROUGE -->
+            <linearGradient id="f93" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#b91c1c"/></linearGradient>
+            <!-- 94 Val-de-Marne → AMBRE/OR -->
+            <linearGradient id="f94" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#b45309"/></linearGradient>
+            <!-- 75 Paris → CYAN (couleur héro) -->
+            <linearGradient id="f75" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2ee9ff"/><stop offset="100%" stop-color="#00b8d4"/></linearGradient>
+            <!-- ── MURS D'EXTRUSION (couleurs sombres assorties) ── -->
+            <linearGradient id="w77" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#042b28"/><stop offset="100%" stop-color="#011210"/></linearGradient>
+            <linearGradient id="w95" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#431407"/><stop offset="100%" stop-color="#1f0904"/></linearGradient>
+            <linearGradient id="w78" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2e1065"/><stop offset="100%" stop-color="#150428"/></linearGradient>
+            <linearGradient id="w91" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#14532d"/><stop offset="100%" stop-color="#052212"/></linearGradient>
+            <linearGradient id="w92" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1e3a6e"/><stop offset="100%" stop-color="#0c1e3c"/></linearGradient>
+            <linearGradient id="w93" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#450a0a"/><stop offset="100%" stop-color="#200404"/></linearGradient>
+            <linearGradient id="w94" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#451a03"/><stop offset="100%" stop-color="#200a01"/></linearGradient>
+            <linearGradient id="w75" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#003844"/><stop offset="100%" stop-color="#001820"/></linearGradient>
+            <!-- ── FILTRES ── -->
+            <filter id="fglow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <filter id="fparis"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <filter id="fcity"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <!-- ── FOND ── -->
+            <radialGradient id="zbg2" cx="47%" cy="44%" r="52%"><stop offset="0%" stop-color="rgba(46,233,255,.08)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+            <pattern id="zdot2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r=".9" fill="rgba(46,233,255,.12)"/></pattern>
+          </defs>
+
+          <!-- FOND -->
+          <rect x="15" y="68" width="470" height="410" fill="url(#zdot2)" opacity=".6"/>
+          <ellipse cx="252" cy="240" rx="240" ry="220" fill="url(#zbg2)"/>
+
+          <!-- ═══ FORMES DES MURS (extrusion 3D) ═══ -->
+          <!-- Chaque département : mur offset (16,22) puis mur offset (9,13) -->
+          <g opacity=".9">
+            <!-- 77 Seine-et-Marne -->
+            <path d="M285,132 L455,125 L458,462 L248,462 L200,358 L250,262 L245,232 L265,210 L258,185 L285,175 Z" transform="translate(16,22)" fill="url(#w77)"/>
+            <path d="M285,132 L455,125 L458,462 L248,462 L200,358 L250,262 L245,232 L265,210 L258,185 L285,175 Z" transform="translate(9,13)" fill="url(#w77)" opacity=".7"/>
+            <!-- 95 Val-d'Oise -->
+            <path d="M42,78 L448,78 L450,135 L285,140 L280,150 L252,142 L220,152 L204,157 L158,160 L148,152 L90,146 L44,132 Z" transform="translate(16,22)" fill="url(#w95)"/>
+            <path d="M42,78 L448,78 L450,135 L285,140 L280,150 L252,142 L220,152 L204,157 L158,160 L148,152 L90,146 L44,132 Z" transform="translate(9,13)" fill="url(#w95)" opacity=".7"/>
+            <!-- 78 Yvelines -->
+            <path d="M42,78 L148,78 L148,152 L158,160 L148,172 L143,190 L162,208 L156,238 L128,268 L96,278 L52,252 L30,215 L28,162 Z" transform="translate(16,22)" fill="url(#w78)"/>
+            <path d="M42,78 L148,78 L148,152 L158,160 L148,172 L143,190 L162,208 L156,238 L128,268 L96,278 L52,252 L30,215 L28,162 Z" transform="translate(9,13)" fill="url(#w78)" opacity=".7"/>
+            <!-- 91 Essonne -->
+            <path d="M162,208 L188,215 L206,218 L220,232 L245,232 L250,262 L224,288 L186,296 L150,268 L128,268 L156,238 Z" transform="translate(16,22)" fill="url(#w91)"/>
+            <path d="M162,208 L188,215 L206,218 L220,232 L245,232 L250,262 L224,288 L186,296 L150,268 L128,268 L156,238 Z" transform="translate(9,13)" fill="url(#w91)" opacity=".7"/>
+            <!-- 92 Hauts-de-Seine -->
+            <path d="M152,162 L204,157 L202,172 L210,182 L206,200 L188,215 L162,208 L143,190 L148,172 Z" transform="translate(16,22)" fill="url(#w92)"/>
+            <path d="M152,162 L204,157 L202,172 L210,182 L206,200 L188,215 L162,208 L143,190 L148,172 Z" transform="translate(9,13)" fill="url(#w92)" opacity=".7"/>
+            <!-- 93 Seine-Saint-Denis -->
+            <path d="M220,152 L250,142 L280,150 L285,175 L265,185 L242,188 L235,180 L235,168 L232,155 Z" transform="translate(16,22)" fill="url(#w93)"/>
+            <path d="M220,152 L250,142 L280,150 L285,175 L265,185 L242,188 L235,180 L235,168 L232,155 Z" transform="translate(9,13)" fill="url(#w93)" opacity=".7"/>
+            <!-- 94 Val-de-Marne -->
+            <path d="M235,168 L235,180 L242,188 L258,205 L265,210 L245,232 L220,232 L206,218 L206,200 L210,182 L218,178 L226,178 Z" transform="translate(16,22)" fill="url(#w94)"/>
+            <path d="M235,168 L235,180 L242,188 L258,205 L265,210 L245,232 L220,232 L206,218 L206,200 L210,182 L218,178 L226,178 Z" transform="translate(9,13)" fill="url(#w94)" opacity=".7"/>
+            <!-- 75 Paris -->
+            <path d="M204,157 L220,152 L232,155 L235,168 L226,178 L218,178 L210,182 L202,172 Z" transform="translate(16,22)" fill="url(#w75)"/>
+            <path d="M204,157 L220,152 L232,155 L235,168 L226,178 L218,178 L210,182 L202,172 Z" transform="translate(9,13)" fill="url(#w75)" opacity=".7"/>
+          </g>
+
+          <!-- ═══ FACES TOP (couleurs vives) ═══ -->
+          <path id="led77" class="dp d77" d="M285,132 L455,125 L458,462 L248,462 L200,358 L250,262 L245,232 L265,210 L258,185 L285,175 Z" fill="url(#f77)" stroke="#14b8a6" stroke-width="2.5" stroke-linejoin="round" opacity=".82"/>
+          <path id="led95" class="dp d95" d="M42,78 L448,78 L450,135 L285,140 L280,150 L252,142 L220,152 L204,157 L158,160 L148,152 L90,146 L44,132 Z" fill="url(#f95)" stroke="#fb923c" stroke-width="2.5" stroke-linejoin="round" opacity=".85"/>
+          <path id="led78" class="dp d78" d="M42,78 L148,78 L148,152 L158,160 L148,172 L143,190 L162,208 L156,238 L128,268 L96,278 L52,252 L30,215 L28,162 Z" fill="url(#f78)" stroke="#a855f7" stroke-width="2.5" stroke-linejoin="round" opacity=".85"/>
+          <path id="led91" class="dp d91" d="M162,208 L188,215 L206,218 L220,232 L245,232 L250,262 L224,288 L186,296 L150,268 L128,268 L156,238 Z" fill="url(#f91)" stroke="#22c55e" stroke-width="2.5" stroke-linejoin="round" opacity=".85"/>
+          <path id="led92" class="dp d92" d="M152,162 L204,157 L202,172 L210,182 L206,200 L188,215 L162,208 L143,190 L148,172 Z" fill="url(#f92)" stroke="#60a5fa" stroke-width="2.5" stroke-linejoin="round" opacity=".9"/>
+          <path id="led93" class="dp d93" d="M220,152 L250,142 L280,150 L285,175 L265,185 L242,188 L235,180 L235,168 L232,155 Z" fill="url(#f93)" stroke="#f87171" stroke-width="2.5" stroke-linejoin="round" opacity=".9"/>
+          <path id="led94" class="dp d94" d="M235,168 L235,180 L242,188 L258,205 L265,210 L245,232 L220,232 L206,218 L206,200 L210,182 L218,178 L226,178 Z" fill="url(#f94)" stroke="#fbbf24" stroke-width="2.5" stroke-linejoin="round" opacity=".9"/>
+          <path id="led75" class="dp d75" d="M204,157 L220,152 L232,155 L235,168 L226,178 L218,178 L210,182 L202,172 Z" fill="url(#f75)" stroke="#2ee9ff" stroke-width="2.5" stroke-linejoin="round"/>
+
+          <!-- ARÊTES LUMINEUSES (bords top/left illuminés) -->
+          <g fill="none" pointer-events="none" opacity=".65">
+            <path d="M42,78 L448,78" stroke="rgba(100,200,255,.8)" stroke-width="1.5"/>
+            <path d="M42,78 L28,162" stroke="rgba(100,200,255,.6)" stroke-width="1.2"/>
+            <path d="M285,132 L455,125" stroke="rgba(13,200,180,.5)" stroke-width="1"/>
+            <path d="M152,162 L204,157" stroke="rgba(100,180,255,.9)" stroke-width="1.2"/>
+            <path d="M220,152 L250,142 L280,150" stroke="rgba(180,130,255,.8)" stroke-width="1.2"/>
+            <path d="M204,157 L220,152" stroke="rgba(46,233,255,1)" stroke-width="1.8"/>
+            <path d="M148,78 L148,152" stroke="rgba(80,160,255,.5)" stroke-width="1"/>
+          </g>
+
+          <!-- GLOW CONTOUR PARIS -->
+          <path d="M204,157 L220,152 L232,155 L235,168 L226,178 L218,178 L210,182 L202,172 Z" fill="rgba(46,233,255,.15)" stroke="#2ee9ff" stroke-width="2" filter="url(#fparis)"/>
+
+          <!-- SCAN RADAR -->
+          <circle cx="218" cy="167" r="20" fill="none" stroke="rgba(46,233,255,.15)" stroke-width="1" stroke-dasharray="4 6">
+            <animate attributeName="r" values="20;310;20" dur="8s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values=".8;0;.8" dur="8s" repeatCount="indefinite"/>
+          </circle>
+
+          <!-- RINGS PARIS -->
+          <circle cx="218" cy="167" r="10" fill="none" stroke="#2ee9ff" stroke-width="1.5" opacity=".9">
+            <animate attributeName="r" values="10;70;10" dur="3s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values=".9;0;.9" dur="3s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="218" cy="167" r="10" fill="none" stroke="#2ee9ff" stroke-width="1.2" opacity=".7">
+            <animate attributeName="r" values="10;70;10" dur="3s" begin="1s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values=".7;0;.7" dur="3s" begin="1s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="218" cy="167" r="10" fill="none" stroke="#2ee9ff" stroke-width="1" opacity=".5">
+            <animate attributeName="r" values="10;70;10" dur="3s" begin="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values=".5;0;.5" dur="3s" begin="2s" repeatCount="indefinite"/>
+          </circle>
+
+          <!-- PARIS DOT + LABEL PROMINENT -->
+          <circle cx="218" cy="167" r="12" fill="rgba(46,233,255,.3)" filter="url(#fparis)"/>
+          <circle cx="218" cy="167" r="6" fill="#2ee9ff"/>
+          <circle cx="218" cy="167" r="3" fill="white"/>
+          <!-- Label PARIS -->
+          <text x="218" y="195" text-anchor="middle" font-family="Sora,sans-serif" font-weight="900" font-size="11" fill="#2ee9ff" letter-spacing="2" filter="url(#fglow)">PARIS</text>
+          <text x="218" y="206" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(46,233,255,.65)">75 · Paris</text>
+
+          <!-- CITY MARKERS -->
+          <g filter="url(#fcity)">
+            <circle cx="110" cy="185" r="2.5" fill="rgba(80,150,255,.85)"/>
+            <circle cx="130" cy="100" r="2.5" fill="rgba(80,130,200,.8)"/>
+            <circle cx="215" cy="258" r="2.5" fill="rgba(0,200,150,.8)"/>
+            <circle cx="348" cy="270" r="2.5" fill="rgba(20,180,160,.75)"/>
+            <circle cx="255" cy="165" r="2.5" fill="rgba(160,120,255,.85)"/>
+            <circle cx="242" cy="210" r="2.5" fill="rgba(20,200,160,.85)"/>
+          </g>
+
+          <!-- LABELS DÉPARTEMENTS -->
+          <g font-family="Sora,sans-serif" font-weight="800" pointer-events="none">
+            <!-- 95 Val-d'Oise -->
+            <text x="240" y="112" text-anchor="middle" font-size="14" fill="#07090c">95</text>
+            <text x="240" y="126" text-anchor="middle" font-size="9" font-weight="600" font-family="Inter,sans-serif" fill="#07090c">Val-d'Oise</text>
+            <!-- 78 Yvelines -->
+            <text x="90" y="175" text-anchor="middle" font-size="14" fill="#07090c">78</text>
+            <text x="90" y="189" text-anchor="middle" font-size="9" font-weight="600" font-family="Inter,sans-serif" fill="#07090c">Yvelines</text>
+            <!-- 92 Hauts-de-Seine -->
+            <text x="163" y="178" text-anchor="middle" font-size="11" fill="#07090c">92</text>
+            <text x="163" y="189" text-anchor="middle" font-size="6.5" font-weight="600" font-family="Inter,sans-serif" fill="#07090c">Hauts-de-Seine</text>
+            <!-- 93 Seine-Saint-Denis -->
+            <text x="255" y="163" text-anchor="middle" font-size="11" fill="#07090c">93</text>
+            <text x="255" y="173" text-anchor="middle" font-size="6.5" font-weight="600" font-family="Inter,sans-serif" fill="#07090c">Seine-St-Denis</text>
+            <!-- 94 Val-de-Marne -->
+            <text x="238" y="210" text-anchor="middle" font-size="11" fill="#07090c">94</text>
+            <text x="238" y="221" text-anchor="middle" font-size="6.5" font-weight="600" font-family="Inter,sans-serif" fill="#07090c">Val-de-Marne</text>
+            <!-- 91 Essonne -->
+            <text x="193" y="248" text-anchor="middle" font-size="14" fill="#07090c">91</text>
+            <text x="193" y="262" text-anchor="middle" font-size="9" font-weight="600" font-family="Inter,sans-serif" fill="#07090c">Essonne</text>
+            <!-- 77 Seine-et-Marne -->
+            <text x="368" y="298" text-anchor="middle" font-size="14" fill="#07090c">77</text>
+            <text x="368" y="313" text-anchor="middle" font-size="9" font-weight="600" font-family="Inter,sans-serif" fill="#07090c">Seine-et-Marne</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFS -->
+<section id="tarifs">
+  <div class="c">
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <div class="sec-tag" style="justify-content:center">Tarification</div>
+      <h2 class="sec-h">Tarif sur devis,<br>gratuit et sans engagement.</h2>
+      <p class="sec-sub" style="margin:0 auto">Chaque intervention est différente. Décrivez votre situation — on vous donne un prix ferme immédiatement, avant de se déplacer.</p>
+    </div>
+
+    <div class="tarifs-flex">
+    <!-- Formulaire WhatsApp -->
+    <div class="wa-wrap rv">
+      <div class="wa-head">
+        <h3 style="display:flex;align-items:center;justify-content:space-between;width:100%"><span>Contactez-nous via WhatsApp</span><a href="#" class="logo" style="font-size:1.15rem;opacity:1;letter-spacing:-.01em"><em style="color:#2ee9ff;text-shadow:0 1px 4px rgba(0,0,0,.25)">D2</em><span>PNEUS</span></a></h3>
+      </div>
+      <div class="wa-body">
+        <input id="wa-nom" class="wa-field" type="text" placeholder="Nom" />
+        <input id="wa-tel" class="wa-field" type="tel" placeholder="Téléphone (Ex. +145867584)" />
+        <input id="wa-pneu" class="wa-field" type="text" placeholder="Taille de pneus" />
+        <textarea id="wa-msg" class="wa-field" placeholder="Message"></textarea>
+        <button class="wa-btn-send" onclick="envoyerWhatsApp()">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="rgba(255,255,255,.9)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Envoyer à WhatsApp
+        </button>
+      </div>
+    </div>
+    <img src="images/michelin-doigt.png" class="tarif-mich" alt="">
+    </div><!-- .tarifs-flex -->
+  </div>
+</section>
+
+<!-- AVIS -->
+<section id="avis" class="avis-bg">
+  <div class="c">
+    <div style="text-align:center;max-width:520px;margin:0 auto">
+      <div class="sec-tag" style="justify-content:center">Avis clients</div>
+      <h2 class="sec-h">Ils nous font confiance.</h2>
+    </div>
+  </div>
+  <div class="avis-carousels">
+    <div class="avis-mq-wrap">
+      <div class="avis-mq">
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Pneu crevé sur le périph à 23h, ils m'ont dit de prendre la prochaine sortie. Arrivés en 40 min, pros et rapides. Je recommande à 100%."</p><div class="rc-who"><div class="ava">KM</div><div><div class="rc-name">Karim M.</div><div class="rc-meta">Paris 13e · Urgence nuit</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Pneu crevé sur l'A4, ils m'ont guidé jusqu'à la sortie et sont arrivés rapidement. Très rassurant dans une situation stressante."</p><div class="rc-who"><div class="ava">SO</div><div><div class="rc-name">Sarah O.</div><div class="rc-meta">Val-de-Marne · Autoroute</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"4 pneus de ma Clio en bas de chez moi. Propre, rapide, tarif transparent annoncé avant. Aucune mauvaise surprise."</p><div class="rc-who"><div class="ava">TB</div><div><div class="rc-name">Thomas B.</div><div class="rc-meta">Boulogne · Pack 4 pneus</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Dimanche matin, pneu à plat devant chez moi. Intervention en moins d'une heure. Très pro, je retiens le numéro."</p><div class="rc-who"><div class="ava">ML</div><div><div class="rc-name">Marie L.</div><div class="rc-meta">Vincennes · Crevaison</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Appelé à 7h du matin avant d'aller au boulot. Ils ont répondu immédiatement et étaient là en 35 min. Service au top."</p><div class="rc-who"><div class="ava">AK</div><div><div class="rc-name">Ahmed K.</div><div class="rc-meta">Montreuil · Urgence</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Deux pneus avant à changer. Prix annoncé au téléphone, respecté à l'euro près. Travail soigné, propre."</p><div class="rc-who"><div class="ava">JP</div><div><div class="rc-name">Julie P.</div><div class="rc-meta">Saint-Denis · 2 pneus</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Crevaison à minuit, je ne savais pas quoi faire. Ils ont tout géré, calmes et efficaces. Merci mille fois."</p><div class="rc-who"><div class="ava">MD</div><div><div class="rc-name">Marc D.</div><div class="rc-meta">Créteil · Urgence nuit</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Panne avec mes enfants dans la voiture. Ils sont venus vite et ont tout expliqué. Vrais professionnels."</p><div class="rc-who"><div class="ava">NS</div><div><div class="rc-name">Nadia S.</div><div class="rc-meta">Versailles · Famille</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Pneu crevé sur le périph à 23h, ils m'ont dit de prendre la prochaine sortie. Arrivés en 40 min, pros et rapides. Je recommande à 100%."</p><div class="rc-who"><div class="ava">KM</div><div><div class="rc-name">Karim M.</div><div class="rc-meta">Paris 13e · Urgence nuit</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Pneu crevé sur l'A4, ils m'ont guidé jusqu'à la sortie et sont arrivés rapidement. Très rassurant dans une situation stressante."</p><div class="rc-who"><div class="ava">SO</div><div><div class="rc-name">Sarah O.</div><div class="rc-meta">Val-de-Marne · Autoroute</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"4 pneus de ma Clio en bas de chez moi. Propre, rapide, tarif transparent annoncé avant. Aucune mauvaise surprise."</p><div class="rc-who"><div class="ava">TB</div><div><div class="rc-name">Thomas B.</div><div class="rc-meta">Boulogne · Pack 4 pneus</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Dimanche matin, pneu à plat devant chez moi. Intervention en moins d'une heure. Très pro, je retiens le numéro."</p><div class="rc-who"><div class="ava">ML</div><div><div class="rc-name">Marie L.</div><div class="rc-meta">Vincennes · Crevaison</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Appelé à 7h du matin avant d'aller au boulot. Ils ont répondu immédiatement et étaient là en 35 min. Service au top."</p><div class="rc-who"><div class="ava">AK</div><div><div class="rc-name">Ahmed K.</div><div class="rc-meta">Montreuil · Urgence</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Deux pneus avant à changer. Prix annoncé au téléphone, respecté à l'euro près. Travail soigné, propre."</p><div class="rc-who"><div class="ava">JP</div><div><div class="rc-name">Julie P.</div><div class="rc-meta">Saint-Denis · 2 pneus</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Crevaison à minuit, je ne savais pas quoi faire. Ils ont tout géré, calmes et efficaces. Merci mille fois."</p><div class="rc-who"><div class="ava">MD</div><div><div class="rc-name">Marc D.</div><div class="rc-meta">Créteil · Urgence nuit</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Panne avec mes enfants dans la voiture. Ils sont venus vite et ont tout expliqué. Vrais professionnels."</p><div class="rc-who"><div class="ava">NS</div><div><div class="rc-name">Nadia S.</div><div class="rc-meta">Versailles · Famille</div></div></div></div>
+      </div>
+    </div>
+    <div class="avis-mq-wrap">
+      <div class="avis-mq rev">
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Jante voilée après un nid de poule. Ils ont géré tout ça sur place, plus besoin de grues. Excellent service."</p><div class="rc-who"><div class="ava">DR</div><div><div class="rc-name">David R.</div><div class="rc-meta">Nanterre · Jante abîmée</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Pression anormale d'un pneu, c'était la valve. Intervention rapide, tarif honnête. Je recommande sans hésiter."</p><div class="rc-who"><div class="ava">SM</div><div><div class="rc-name">Sophie M.</div><div class="rc-meta">Colombes · Valve</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Appelé en urgence sur ma route du travail. 40 min chrono, souriant et efficace. Parfait."</p><div class="rc-who"><div class="ava">YB</div><div><div class="rc-name">Youssef B.</div><div class="rc-meta">Bobigny · Urgence</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Crevaison en pleine semaine au pied de mon immeuble. Réponse immédiate, travail nickel. Merci !"</p><div class="rc-who"><div class="ava">ET</div><div><div class="rc-name">Emma T.</div><div class="rc-meta">Ivry · Crevaison</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Pneu de mon SUV crevé un vendredi soir. Pas de problème pour eux, ils sont venus sans rechigner."</p><div class="rc-who"><div class="ava">CV</div><div><div class="rc-name">Christophe V.</div><div class="rc-meta">Argenteuil · SUV</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"2h du matin, pneu à plat. Ils ont décroché au premier appel. En 45 min c'était réglé. Incroyable."</p><div class="rc-who"><div class="ava">FH</div><div><div class="rc-name">Fatima H.</div><div class="rc-meta">Aubervilliers · Nuit</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Samedi matin, crevaison devant le supermarché. Arrivée en 30 min, tarif raisonnable. Super service."</p><div class="rc-who"><div class="ava">NG</div><div><div class="rc-name">Nicolas G.</div><div class="rc-meta">Rueil · Week-end</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Avant un long trajet, j'ai appelé pour un contrôle pneus. Service rapide et rassurant. Merci !"</p><div class="rc-who"><div class="ava">LA</div><div><div class="rc-name">Leila A.</div><div class="rc-meta">Cergy · Long trajet</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Jante voilée après un nid de poule. Ils ont géré tout ça sur place, plus besoin de grues. Excellent service."</p><div class="rc-who"><div class="ava">DR</div><div><div class="rc-name">David R.</div><div class="rc-meta">Nanterre · Jante abîmée</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Pression anormale d'un pneu, c'était la valve. Intervention rapide, tarif honnête. Je recommande sans hésiter."</p><div class="rc-who"><div class="ava">SM</div><div><div class="rc-name">Sophie M.</div><div class="rc-meta">Colombes · Valve</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Appelé en urgence sur ma route du travail. 40 min chrono, souriant et efficace. Parfait."</p><div class="rc-who"><div class="ava">YB</div><div><div class="rc-name">Youssef B.</div><div class="rc-meta">Bobigny · Urgence</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Crevaison en pleine semaine au pied de mon immeuble. Réponse immédiate, travail nickel. Merci !"</p><div class="rc-who"><div class="ava">ET</div><div><div class="rc-name">Emma T.</div><div class="rc-meta">Ivry · Crevaison</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Pneu de mon SUV crevé un vendredi soir. Pas de problème pour eux, ils sont venus sans rechigner."</p><div class="rc-who"><div class="ava">CV</div><div><div class="rc-name">Christophe V.</div><div class="rc-meta">Argenteuil · SUV</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"2h du matin, pneu à plat. Ils ont décroché au premier appel. En 45 min c'était réglé. Incroyable."</p><div class="rc-who"><div class="ava">FH</div><div><div class="rc-name">Fatima H.</div><div class="rc-meta">Aubervilliers · Nuit</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Samedi matin, crevaison devant le supermarché. Arrivée en 30 min, tarif raisonnable. Super service."</p><div class="rc-who"><div class="ava">NG</div><div><div class="rc-name">Nicolas G.</div><div class="rc-meta">Rueil · Week-end</div></div></div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p class="rc-txt">"Avant un long trajet, j'ai appelé pour un contrôle pneus. Service rapide et rassurant. Merci !"</p><div class="rc-who"><div class="ava">LA</div><div><div class="rc-name">Leila A.</div><div class="rc-meta">Cergy · Long trajet</div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq-bg">
+  <div class="c">
+    <div style="text-align:center;max-width:480px;margin:0 auto">
+      <div class="sec-tag" style="justify-content:center">FAQ</div>
+      <h2 class="sec-h">Questions fréquentes.</h2>
+    </div>
+    <div class="faq-l">
+      <div class="faq-i"><div class="faq-q">Intervenez-vous vraiment la nuit et le weekend ?</div><div class="faq-a"><div class="faq-ai">Oui, 7j/7, 24h/24 y compris jours fériés. Appelez-nous pour un devis adapté à votre situation.</div></div></div>
+      <div class="faq-i"><div class="faq-q">Fournissez-vous les pneus ?</div><div class="faq-a"><div class="faq-ai">Parfois selon stock disponible. Vous pouvez commander vos pneus en ligne (livraison à notre adresse) et on intervient pour le montage. Appelez-nous pour organiser.</div></div></div>
+      <div class="faq-i"><div class="faq-q">Que se passe-t-il si mon pneu ne peut pas être réparé ?</div><div class="faq-a"><div class="faq-ai">On vous informe immédiatement. Solutions proposées : pneu de remplacement si disponible, pose de la roue de secours, ou assistance au remorquage. Diagnostic toujours gratuit.</div></div></div>
+      <div class="faq-i"><div class="faq-q">Quelle est la zone d'intervention exacte ?</div><div class="faq-a"><div class="faq-ai">Toute l'Île-de-France : Paris + départements 77, 78, 91, 92, 93, 94, 95. Attention : on n'intervient pas directement sur l'autoroute ni sur le périphérique parisien — si vous êtes en panne sur ces voies, appelez-nous et prenez la prochaine sortie en sécurité, on vous y rejoint immédiatement.</div></div></div>
+      <div class="faq-i"><div class="faq-q">Quels modes de paiement acceptez-vous ?</div><div class="faq-a"><div class="faq-ai">Carte bancaire (CB sans contact), virement instantané, espèces. Facture professionnelle avec TVA disponible sur demande.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="contact" class="cta-sec">
+  <img src="images/michelin-zen.png" class="cta-mich right" alt="">
+  <img src="images/michelin-zen.png" class="cta-mich left" alt="">
+  <div class="c">
+    <div class="sec-tag" style="justify-content:center">Urgence ou planification</div>
+    <h2 class="cta-h">
+      Un pneu ne prévient pas.
+      <span class="hl">Nous, on répond toujours.</span>
+    </h2>
+    <p class="cta-sub">40-45 min en moyenne. N'importe où en IDF. 7j/7, 24h/24.</p>
+    <div class="cta-btns">
+      <a href="#tarifs" class="btn-p" style="font-size:1rem;padding:.95rem 2.3rem">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        Écrire sur WhatsApp
+      </a>
+      <a href="tel:+33761069638" class="nav-btn" style="font-size:.95rem;padding:.95rem 1.9rem;border-radius:3rem" onclick="window.location.href='tel:+33761069638';return false;">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Appeler maintenant
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div>
+      <div class="logo"><em>DEPANN2</em><span>PNEUS</span></div>
+      <div class="ft-copy">© 2024 DEPANN2PNEUS — Île-de-France</div>
+    </div>
+    <div class="ft-links">
+      <a href="#services">Services</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#zone">Zone IDF</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING CTA -->
+<a href="#tarifs" id="fcta">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+// ── SCROLL EVENTS ──
+const bar = document.getElementById('bar');
+const nav = document.getElementById('nav');
+const fcta = document.getElementById('fcta');
+window.addEventListener('scroll', () => {
+  const p = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+  bar.style.width = p + '%';
+  nav.classList.toggle('sc', window.scrollY > 60);
+  fcta.classList.toggle('on', window.scrollY > 500);
+}, {passive: true});
+
+// ── REVEAL — cache seulement les éléments sous le fold ──
+const rvEls = document.querySelectorAll('.rv');
+const foldH = window.innerHeight;
+rvEls.forEach(el => {
+  if (el.getBoundingClientRect().top > foldH - 60) {
+    el.classList.add('hidden');
+  }
+});
+const ro = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('show');
+    ro.unobserve(e.target);
+  });
+}, {threshold: 0.06, rootMargin: '0px 0px -30px 0px'});
+rvEls.forEach(el => ro.observe(el));
+
+// ── COUNTERS ──
+const co = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = parseInt(el.dataset.t);
+    const t0 = performance.now();
+    const dur = 1400;
+    const tick = (now) => {
+      const prog = Math.min((now - t0) / dur, 1);
+      const ease = 1 - Math.pow(1 - prog, 3);
+      el.textContent = Math.round(ease * target);
+      if (prog < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    co.unobserve(el);
+  });
+}, {threshold: 0.5});
+document.querySelectorAll('.cnt').forEach(el => co.observe(el));
+
+// ── FAQ ──
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.closest('.faq-i');
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-i.open').forEach(i => i.classList.remove('open'));
+    if (!open) item.classList.add('open');
+  });
+});
+
+// ── WHATSAPP FORM ──
+function envoyerWhatsApp() {
+  const nom   = document.getElementById('wa-nom').value.trim();
+  const tel   = document.getElementById('wa-tel').value.trim();
+  const pneu  = document.getElementById('wa-pneu').value.trim();
+  const msg   = document.getElementById('wa-msg').value.trim();
+  if (!nom || !tel) { alert('Merci de renseigner votre nom et téléphone.'); return; }
+  const texte = `Bonjour, je souhaite un devis :\n👤 Nom : ${nom}\n📞 Téléphone : ${tel}${pneu ? '\n🔧 Taille pneus : ' + pneu : ''}${msg ? '\n💬 Message : ' + msg : ''}`;
+  window.open('https://wa.me/33761069638?text=' + encodeURIComponent(texte), '_blank');
+}
+</script>
+
+<script>
+// ── LED NÉON DÉPARTEMENTS — stroke animation (compatible Safari iOS) ──
+(function(){
+  var depts = [
+    { id:'led77', off:0   },
+    { id:'led95', off:600 },
+    { id:'led78', off:1200},
+    { id:'led91', off:1800},
+    { id:'led92', off:400 },
+    { id:'led93', off:1000},
+    { id:'led94', off:1500},
+    { id:'led75', off:800 }
+  ];
+  var PERIOD = 4000;
+  var els = depts.map(function(d){
+    return { el: document.getElementById(d.id), off: d.off };
+  });
+
+  function intensity(phase) {
+    if (phase < 0.38) return 0.15;
+    if (phase < 0.43) return 0.15 + (phase-0.38)/0.05*0.85;
+    if (phase < 0.48) return 1    - (phase-0.43)/0.05*0.85;
+    if (phase < 0.73) return 0.15;
+    if (phase < 0.75) return 0.15 - (phase-0.73)/0.02*0.1;
+    if (phase < 0.77) return 0.05 + (phase-0.75)/0.02*0.75;
+    if (phase < 0.79) return 0.8  - (phase-0.77)/0.02*0.65;
+    return 0.15;
+  }
+
+  function tick(ts) {
+    for (var i=0; i<els.length; i++) {
+      if (!els[i].el) continue;
+      var phase = ((ts + els[i].off) % PERIOD) / PERIOD;
+      var k = intensity(phase);
+      var sw = (2 + k * 7).toFixed(2);
+      var op = (0.7 + k * 0.3).toFixed(2);
+      els[i].el.setAttribute('stroke-width', sw);
+      els[i].el.setAttribute('stroke-opacity', op);
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
