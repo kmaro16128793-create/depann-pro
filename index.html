@@ -278,7 +278,7 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 .dept:hover,.dept.on{background:var(--cd);border-color:rgba(46,233,255,.28);color:var(--cyan)}
 .zone-cta{background:var(--surface);border:1px solid var(--border2);border-radius:var(--r);padding:1.75rem;margin-top:1.5rem}
 .zone-cta p{font-size:.83rem;color:var(--txt2);margin-bottom:.9rem}
-.zone-map{background:transparent;border:none;border-radius:0;overflow:visible;aspect-ratio:auto;display:flex;align-items:center;justify-content:center}
+.zone-map{background:transparent;border:none;border-radius:0;overflow:hidden;aspect-ratio:auto;display:flex;align-items:center;justify-content:center}
 .zone-g{align-items:start}
 /* ── CARTE 3D IDF ── */
 .map3d{width:100%;transform:perspective(1000px) rotateX(25deg) rotateY(-8deg) rotateZ(1.5deg);transform-origin:50% 55%;filter:drop-shadow(0 50px 90px rgba(0,0,0,.8));transition:transform .9s cubic-bezier(.2,0,.2,1),filter .9s}
@@ -709,7 +709,7 @@ textarea.wa-field{min-height:120px;resize:none}
           </defs>
 
           <!-- FOND -->
-          <rect x="15" y="68" width="470" height="410" fill="url(#zdot2)" opacity=".6"/>
+          <!-- zdot2 retiré -->
           <ellipse cx="252" cy="240" rx="240" ry="220" fill="url(#zbg2)"/>
 
           <!-- ═══ FORMES DES MURS (extrusion 3D) ═══ -->
