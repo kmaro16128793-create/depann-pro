@@ -53,8 +53,8 @@ ul{list-style:none}
   --f2:'Inter',sans-serif;
 }
 
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--txt);font-family:var(--f2);overflow-x:hidden;line-height:1.6}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
+body{background:var(--bg);color:var(--txt);font-family:var(--f2);overflow-x:hidden;max-width:100%;line-height:1.6}
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
@@ -115,7 +115,7 @@ nav .nav-btn svg{width:16px;height:16px}}
 /* ── HERO RIGHT — TIRE ── */
 .hero-r{position:absolute;top:50%;left:44%;transform:translateY(-50%);z-index:1;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:.75}
 @media(max-width:900px){.hero-r{top:auto;bottom:-60px;left:50%;transform:translateX(-50%);opacity:.35}}
-.tire-wrap{position:relative;width:320px;height:320px;display:flex;align-items:center;justify-content:center}
+.tire-wrap{position:relative;width:320px;height:320px;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .tire-glow{position:absolute;inset:-40px;border-radius:50%;background:radial-gradient(circle,var(--cg) 0%,transparent 62%);animation:gpulse 3.2s ease-in-out infinite}
 @keyframes gpulse{0%,100%{opacity:.45;transform:scale(1)}50%{opacity:.9;transform:scale(1.06)}}
 .tire-svg{width:100%;height:100%;animation:tspin 20s linear infinite;transform-origin:center}
@@ -138,7 +138,7 @@ nav .nav-btn svg{width:16px;height:16px}}
 .brands::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
 .brands::after{right:0;background:linear-gradient(-90deg,var(--bg),transparent)}
 .brands-lbl{text-align:center;font-size:.65rem;text-transform:uppercase;letter-spacing:.18em;color:var(--txt3);margin-bottom:1.4rem;font-weight:600}
-.mq-wrap{overflow:visible;padding:10px 0}
+.mq-wrap{overflow:hidden;padding:10px 0}
 .mq{display:flex;align-items:center;gap:2.6rem;animation:mq 55s linear infinite;width:max-content}
 .mq:hover{animation-play-state:paused}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -274,7 +274,7 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 .zone-g{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:2.5rem}
 @media(max-width:768px){.zone-g{grid-template-columns:1fr;gap:2rem}}
 .depts{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
-.dept{display:inline-flex;align-items:center;gap:.35rem;background:var(--surface);border:1px solid var(--border2);border-radius:2rem;padding:.38rem .85rem;font-size:.78rem;color:var(--txt2);font-family:var(--f1);font-weight:600;transition:border-color .2s,color .2s}
+.dept{display:inline-flex;align-items:center;gap:.35rem;background:var(--surface);border:1px solid var(--border2);border-radius:2rem;padding:.38rem .85rem;font-size:.78rem;color:var(--txt2);font-family:var(--f1);font-weight:600;transition:border-color .2s,color .2s;white-space:nowrap}
 .dept:hover,.dept.on{background:var(--cd);border-color:rgba(46,233,255,.28);color:var(--cyan)}
 .zone-cta{background:var(--surface);border:1px solid var(--border2);border-radius:var(--r);padding:1.75rem;margin-top:1.5rem}
 .zone-cta p{font-size:.83rem;color:var(--txt2);margin-bottom:.9rem}
@@ -651,7 +651,7 @@ textarea.wa-field{min-height:120px;resize:none}
     <h2 class="sec-h">Toute l'Île-de-France,<br>sans exception.</h2>
     <div class="zone-g">
       <div>
-        <p class="sec-sub">Les 8 départements franciliens, 24h/24, 7j/7. En ville, sur autoroute, partout.</p>
+        <p class="sec-sub">Les 8 départements franciliens, 24h/24, 7j/7. En ville, en banlieue, partout.</p>
         <div class="depts">
           <span class="dept on">75 · Paris</span>
           <span class="dept on">77 · Seine-et-Marne</span>
