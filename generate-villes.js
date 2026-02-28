@@ -40,7 +40,7 @@ const villes = [
   {
     slug: 'arnouville', nom: 'Arnouville', dep: '95', temps: '10-15', pop: 'secteur résidentiel',
     h1: 'Pneu à plat à Arnouville ?', hl: '10 minutes et vous repartez.',
-    sub: 'Arnouville est à 2 pas de notre base à Gonesse. On intervient parmi les plus rapidement de toute l\'IDF dans ce secteur. Réparation ou remplacement — on s\'adapte à votre situation.'
+    sub: 'Arnouville, secteur nord du 95 — on intervient parmi les plus rapidement de toute l\'IDF dans ce secteur. Réparation ou remplacement sur place — on s\'adapte à votre situation.'
   },
   {
     slug: 'goussainville', nom: 'Goussainville', dep: '95', temps: '10-20', pop: 'zone périurbaine et industrielle',
@@ -75,7 +75,7 @@ const villes = [
   },
   {
     slug: 'montreuil', nom: 'Montreuil', dep: '93', temps: '20-30', pop: 'centre-ville et zones d\'activité',
-    h1: 'Pneu à plat à Montreuil ?', hl: 'On arrive depuis Gonesse en 20-30 min.',
+    h1: 'Pneu à plat à Montreuil ?', hl: 'On est là en 20-30 min.',
     sub: 'Montreuil, aux portes de Paris — dépannage pneu rapide 7j/7 24h/24. Que ce soit sur le boulevard ou dans les rues résidentielles, on intervient sur place. Pas besoin de bouger votre voiture.'
   },
   // Seine-et-Marne 77
@@ -92,7 +92,7 @@ const villes = [
   {
     slug: 'chelles', nom: 'Chelles', dep: '77', temps: '25-35', pop: 'zones résidentielles et pavillonnaires',
     h1: 'Pneu à plat à Chelles ?', hl: 'Intervention rapide dans le 77.',
-    sub: 'Chelles, proche du 93 — on intervient rapidement depuis notre base. Zone pavillonnaire, bord de nationale, parking : on vient où vous êtes. Réparation ou remplacement sur place, 24h/24.'
+    sub: 'Chelles, proche du 93 — on intervient rapidement. Zone pavillonnaire, bord de nationale, parking : on vient où vous êtes. Réparation ou remplacement sur place, 24h/24.'
   },
   {
     slug: 'lagny-sur-marne', nom: 'Lagny-sur-Marne', dep: '77', temps: '30-40', pop: 'bords de Marne et zones résidentielles',

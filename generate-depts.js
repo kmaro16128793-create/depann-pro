@@ -76,7 +76,7 @@ const depts = [
   {
     slug: 'val-doise-95', code: '95', nom: "Val-d'Oise", region: 'Gonesse · Roissy · Sarcelles',
     h1: "Pneu crevé dans le Val-d'Oise ?", hl: 'Notre base est ici.',
-    sub: "Gonesse, Roissy, Sarcelles, Cergy — tout le 95 en moins de 30 min depuis notre base. Dépannage pneu mobile 24h/24, 7j/7.",
+    sub: "Gonesse, Roissy, Sarcelles, Cergy — tout le 95 couvert en moins de 30 min. Dépannage pneu mobile 24h/24, 7j/7.",
     villes: [
       { nom: 'Gonesse', slug: 'gonesse' },
       { nom: 'Roissy-en-France', slug: 'roissy-en-france' },
