@@ -6,9 +6,9 @@ const depts = [
     h1: 'Pneu crevé à Paris ?', hl: 'On arrive en 30 min.',
     sub: 'Dépannage pneu mobile dans tous les arrondissements de Paris, 24h/24 7j/7. Mercedes Sprinter équipé, toutes marques, devis gratuit.',
     villes: [
-      { nom: 'Paris 13e', slug: null }, { nom: 'Paris 18e', slug: null },
-      { nom: 'Paris 20e', slug: null }, { nom: 'Vincennes', slug: null },
-      { nom: 'Montreuil', slug: null }
+      { nom: 'Paris 13e', slug: 'paris-13e' }, { nom: 'Paris 18e', slug: 'paris-18e' },
+      { nom: 'Paris 20e', slug: 'paris-20e' }, { nom: 'Vincennes', slug: 'vincennes' },
+      { nom: 'Montreuil', slug: 'montreuil' }
     ]
   },
   {
@@ -16,9 +16,9 @@ const depts = [
     h1: 'Crevaison en Seine-et-Marne ?', hl: 'On couvre tout le 77.',
     sub: 'De Meaux à Melun, zones rurales comprises. Intervention pneu mobile 7j/7 24h/24 — on vient à vous, sans attendre un garage.',
     villes: [
-      { nom: 'Meaux', slug: null }, { nom: 'Melun', slug: null },
-      { nom: 'Chelles', slug: null }, { nom: 'Lagny-sur-Marne', slug: null },
-      { nom: 'Torcy', slug: null }
+      { nom: 'Meaux', slug: 'meaux' }, { nom: 'Melun', slug: 'melun' },
+      { nom: 'Chelles', slug: 'chelles' }, { nom: 'Lagny-sur-Marne', slug: 'lagny-sur-marne' },
+      { nom: 'Torcy', slug: 'torcy' }
     ]
   },
   {
@@ -26,9 +26,9 @@ const depts = [
     h1: 'Pneu à plat dans les Yvelines ?', hl: 'On se déplace partout.',
     sub: 'Versailles, Mantes-la-Jolie, Poissy et toutes les communes du 78. Dépannage pneu à domicile, nuit et week-end inclus.',
     villes: [
-      { nom: 'Versailles', slug: null }, { nom: 'Mantes-la-Jolie', slug: null },
-      { nom: 'Poissy', slug: null }, { nom: 'Saint-Germain-en-Laye', slug: null },
-      { nom: 'Rambouillet', slug: null }
+      { nom: 'Versailles', slug: 'versailles' }, { nom: 'Mantes-la-Jolie', slug: 'mantes-la-jolie' },
+      { nom: 'Poissy', slug: 'poissy' }, { nom: 'Saint-Germain-en-Laye', slug: 'saint-germain-en-laye' },
+      { nom: 'Rambouillet', slug: 'rambouillet' }
     ]
   },
   {
@@ -36,9 +36,9 @@ const depts = [
     h1: 'Pneu crevé en Essonne ?', hl: 'Intervention rapide dans le 91.',
     sub: "D'Évry à Massy, on couvre tout le 91. Voiture immobilisée ? On arrive en 40-45 min, équipé pour tout type de véhicule.",
     villes: [
-      { nom: 'Évry-Courcouronnes', slug: null }, { nom: 'Corbeil-Essonnes', slug: null },
-      { nom: 'Massy', slug: null }, { nom: 'Palaiseau', slug: null },
-      { nom: 'Longjumeau', slug: null }
+      { nom: 'Évry-Courcouronnes', slug: 'evry-courcouronnes' }, { nom: 'Corbeil-Essonnes', slug: 'corbeil-essonnes' },
+      { nom: 'Massy', slug: 'massy' }, { nom: 'Palaiseau', slug: 'palaiseau' },
+      { nom: 'Longjumeau', slug: 'longjumeau' }
     ]
   },
   {
@@ -46,9 +46,9 @@ const depts = [
     h1: 'Crevaison dans le 92 ?', hl: 'Hauts-de-Seine, on est là.',
     sub: 'Nanterre, Boulogne-Billancourt, Colombes… Dépannage pneu professionnel à domicile, disponible la nuit et le week-end.',
     villes: [
-      { nom: 'Nanterre', slug: null }, { nom: 'Boulogne-Billancourt', slug: null },
-      { nom: 'Colombes', slug: null }, { nom: 'Asnières-sur-Seine', slug: null },
-      { nom: 'Levallois-Perret', slug: null }
+      { nom: 'Nanterre', slug: 'nanterre' }, { nom: 'Boulogne-Billancourt', slug: 'boulogne-billancourt' },
+      { nom: 'Colombes', slug: 'colombes' }, { nom: 'Asnières-sur-Seine', slug: 'asnieres-sur-seine' },
+      { nom: 'Levallois-Perret', slug: 'levallois-perret' }
     ]
   },
   {
@@ -58,9 +58,9 @@ const depts = [
     villes: [
       { nom: 'Aulnay-sous-Bois', slug: 'aulnay-sous-bois' },
       { nom: 'Villepinte', slug: 'villepinte' },
-      { nom: 'Bobigny', slug: null },
-      { nom: 'Saint-Denis', slug: null },
-      { nom: 'Aubervilliers', slug: null }
+      { nom: 'Bobigny', slug: 'bobigny' },
+      { nom: 'Saint-Denis', slug: 'saint-denis' },
+      { nom: 'Aubervilliers', slug: 'aubervilliers' }
     ]
   },
   {
@@ -68,9 +68,9 @@ const depts = [
     h1: 'Pneu à plat dans le 94 ?', hl: 'Val-de-Marne, on arrive.',
     sub: 'Créteil, Ivry-sur-Seine, Orly et toutes les communes du 94. Dépannage pneu mobile en 40-45 min, 24h/24 7j/7.',
     villes: [
-      { nom: 'Créteil', slug: null }, { nom: 'Vincennes', slug: null },
-      { nom: 'Vitry-sur-Seine', slug: null }, { nom: 'Ivry-sur-Seine', slug: null },
-      { nom: 'Orly', slug: null }
+      { nom: 'Créteil', slug: 'creteil' }, { nom: 'Vincennes', slug: 'vincennes' },
+      { nom: 'Vitry-sur-Seine', slug: 'vitry-sur-seine' }, { nom: 'Ivry-sur-Seine', slug: 'ivry-sur-seine' },
+      { nom: 'Orly', slug: 'orly' }
     ]
   },
   {
@@ -209,7 +209,7 @@ h1 .hl{color:var(--cyan)}
 .sec-h{font-family:var(--f1);font-weight:800;font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:-.04em;margin-bottom:.6rem}
 .sec-sub{color:var(--txt2);margin-bottom:2rem;font-size:.92rem}
 .villes-grid{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:2.5rem}
-.ville-btn{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--f1);font-size:.82rem;font-weight:600;padding:.55rem 1.2rem;border-radius:2rem;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--txt2);white-space:nowrap;transition:all .2s}
+.ville-btn{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--f1);font-size:.82rem;font-weight:600;padding:.55rem 1.2rem;border-radius:2rem;border:1px solid rgba(255,107,53,.25);background:rgba(255,107,53,.07);color:rgba(255,107,53,.85);white-space:nowrap;transition:all .2s}
 .ville-lien{border-color:rgba(46,233,255,.2);background:rgba(46,233,255,.05);color:var(--cyan)}
 .ville-lien:hover{background:rgba(46,233,255,.12);border-color:rgba(46,233,255,.4)}
 .ville-btn:not(.ville-lien){cursor:default}

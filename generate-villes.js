@@ -52,6 +52,173 @@ const villes = [
     h1: 'Crevaison à Aulnay-sous-Bois ?', hl: 'On traverse pour vous en 20-25 min.',
     sub: 'Aulnay, c\'est notre zone de desserte en 93. Que ce soit sur le RN2, en zone pavillonnaire ou près des zones commerciales — on se déplace, on répare ou on remplace sur place. Pas de remorquage inutile.'
   },
+  // Paris 75
+  {
+    slug: 'paris-13e', nom: 'Paris 13e', dep: '75', temps: '25-35', pop: 'Olympiades, Butte-aux-Cailles, gare d\'Austerlitz',
+    h1: 'Pneu crevé dans le 13e ?', hl: 'On arrive dans Paris en 25-35 min.',
+    sub: 'Olympiades, Butte-aux-Cailles, bords de Seine — on intervient dans tout le 13e arrondissement. Stationnement en double-file, parking, bord de voie — on s\'adapte à la réalité parisienne.'
+  },
+  {
+    slug: 'paris-18e', nom: 'Paris 18e', dep: '75', temps: '25-35', pop: 'Montmartre, Goutte-d\'Or, Clignancourt',
+    h1: 'Pneu à plat dans le 18e ?', hl: 'Montmartre, on connaît les rues.',
+    sub: 'Montmartre, Goutte-d\'Or, Clignancourt — on intervient dans le 18e arrondissement 24h/24. Rues étroites, pentes, sens interdits : notre équipe connaît le terrain. On arrive, on règle, vous repartez.'
+  },
+  {
+    slug: 'paris-20e', nom: 'Paris 20e', dep: '75', temps: '25-35', pop: 'Belleville, Ménilmontant, Père-Lachaise',
+    h1: 'Crevaison dans le 20e arrondissement ?', hl: 'On intervient dans Paris 24h/24.',
+    sub: 'Belleville, Ménilmontant, Nation — dépannage pneu mobile dans le 20e. Nuit, week-end, jour férié : on répond toujours. Intervention sur place sans remorquage, devis gratuit avant départ.'
+  },
+  {
+    slug: 'vincennes', nom: 'Vincennes', dep: '94', temps: '25-30', pop: 'bords du bois de Vincennes',
+    h1: 'Pneu crevé à Vincennes ?', hl: 'On est là en moins de 30 min.',
+    sub: 'Vincennes, porte du bois — on intervient rapidement dans toute la ville. Domicile, parking, avenue de Paris : on vient à vous avec tout le matériel. Réparation ou remplacement, toujours honnête sur le prix.'
+  },
+  {
+    slug: 'montreuil', nom: 'Montreuil', dep: '93', temps: '20-30', pop: 'centre-ville et zones d\'activité',
+    h1: 'Pneu à plat à Montreuil ?', hl: 'On arrive depuis Gonesse en 20-30 min.',
+    sub: 'Montreuil, aux portes de Paris — dépannage pneu rapide 7j/7 24h/24. Que ce soit sur le boulevard ou dans les rues résidentielles, on intervient sur place. Pas besoin de bouger votre voiture.'
+  },
+  // Seine-et-Marne 77
+  {
+    slug: 'meaux', nom: 'Meaux', dep: '77', temps: '35-45', pop: 'centre historique et zones commerciales',
+    h1: 'Crevaison à Meaux ?', hl: 'On couvre le 77, on arrive.',
+    sub: 'Meaux, préfecture de Seine-et-Marne — intervention pneu mobile 7j/7 24h/24. Zone commerciale, rocade, centre-ville : on se déplace partout. Devis immédiat par téléphone avant qu\'on parte.'
+  },
+  {
+    slug: 'melun', nom: 'Melun', dep: '77', temps: '40-50', pop: 'île Saint-Étienne et zones périurbaines',
+    h1: 'Pneu crevé à Melun ?', hl: 'Le 77, c\'est notre zone.',
+    sub: 'Melun, Dammarie-les-Lys, secteur sud — on intervient dans toute la zone 7j/7 24h/24. Voiture immobilisée sur la N6 ou dans une rue ? On arrive avec le matériel complet. Pas de surprise sur le prix.'
+  },
+  {
+    slug: 'chelles', nom: 'Chelles', dep: '77', temps: '25-35', pop: 'zones résidentielles et pavillonnaires',
+    h1: 'Pneu à plat à Chelles ?', hl: 'Intervention rapide dans le 77.',
+    sub: 'Chelles, proche du 93 — on intervient rapidement depuis notre base. Zone pavillonnaire, bord de nationale, parking : on vient où vous êtes. Réparation ou remplacement sur place, 24h/24.'
+  },
+  {
+    slug: 'lagny-sur-marne', nom: 'Lagny-sur-Marne', dep: '77', temps: '30-40', pop: 'bords de Marne et zones résidentielles',
+    h1: 'Crevaison à Lagny-sur-Marne ?', hl: 'On se déplace dans tout le 77.',
+    sub: 'Lagny-sur-Marne, Val Maubuée — dépannage pneu mobile 24h/24. Que vous soyez sur la Francilienne ou dans une rue de Lagny, on vient à vous. Devis gratuit, tarif ferme avant intervention.'
+  },
+  {
+    slug: 'torcy', nom: 'Torcy', dep: '77', temps: '30-40', pop: 'ville nouvelle et Marne-la-Vallée',
+    h1: 'Pneu crevé à Torcy ?', hl: 'Marne-la-Vallée, on arrive.',
+    sub: 'Torcy, au cœur de la ville nouvelle — on intervient 7j/7 24h/24. Près de Disneyland, en zone résidentielle ou sur la N3 : on se déplace avec tout le matériel pro. Aucun frais caché.'
+  },
+  // Yvelines 78
+  {
+    slug: 'versailles', nom: 'Versailles', dep: '78', temps: '40-50', pop: 'château, centre-ville et quartiers résidentiels',
+    h1: 'Pneu crevé à Versailles ?', hl: 'On traverse l\'IDF pour vous.',
+    sub: 'Versailles, centre-ville ou quartiers résidentiels — dépannage pneu mobile 24h/24. Aucun endroit trop loin pour nous. Réparation sur place ou remplacement, toutes marques, devis gratuit.'
+  },
+  {
+    slug: 'mantes-la-jolie', nom: 'Mantes-la-Jolie', dep: '78', temps: '45-55', pop: 'centre-ville et Val-de-Seine',
+    h1: 'Crevaison à Mantes-la-Jolie ?', hl: 'On couvre tout le 78.',
+    sub: 'Mantes-la-Jolie, secteur Seine-et-Oise — intervention pneu 7j/7 24h/24. Sur l\'A13, en ville ou dans un parking : on vient à vous avec le matériel complet. Devis immédiat, prix ferme.'
+  },
+  {
+    slug: 'poissy', nom: 'Poissy', dep: '78', temps: '35-45', pop: 'bords de Seine et zones industrielles',
+    h1: 'Pneu à plat à Poissy ?', hl: 'Intervention mobile dans les Yvelines.',
+    sub: 'Poissy, bords de Seine — on intervient dans le 78 7j/7 24h/24. Zone industrielle, résidentielle ou bord de route : on arrive équipé. Réparation crevaison ou remplacement sur place.'
+  },
+  {
+    slug: 'saint-germain-en-laye', nom: 'Saint-Germain-en-Laye', dep: '78', temps: '35-45', pop: 'forêt et centre historique',
+    h1: 'Crevaison à Saint-Germain-en-Laye ?', hl: 'On arrive dans le 78.',
+    sub: 'Saint-Germain-en-Laye, terrasse et forêt — dépannage pneu 24h/24 7j/7. Parking château, avenue, bord de forêt : peu importe l\'endroit, on vient vous dépanner sur place. Devis gratuit.'
+  },
+  {
+    slug: 'rambouillet', nom: 'Rambouillet', dep: '78', temps: '50-60', pop: 'forêt de Rambouillet et centre-ville',
+    h1: 'Pneu crevé à Rambouillet ?', hl: 'Jusqu\'au bout des Yvelines.',
+    sub: 'Rambouillet, sud du 78 — on se déplace même loin. Pneu crevé en forêt, en ville ou sur une nationale : on arrive 24h/24 avec le matériel. Pas de remorquage, on répare sur place quand c\'est possible.'
+  },
+  // Essonne 91
+  {
+    slug: 'evry-courcouronnes', nom: 'Évry-Courcouronnes', dep: '91', temps: '35-45', pop: 'préfecture de l\'Essonne et zones commerciales',
+    h1: 'Pneu crevé à Évry ?', hl: 'Intervention rapide dans le 91.',
+    sub: 'Évry-Courcouronnes, préfecture de l\'Essonne — dépannage pneu 24h/24. Centre commercial, voie rapide, quartiers résidentiels : on intervient partout. Devis gratuit, tarif ferme avant départ.'
+  },
+  {
+    slug: 'corbeil-essonnes', nom: 'Corbeil-Essonnes', dep: '91', temps: '40-50', pop: 'bords de Seine et zones industrielles',
+    h1: 'Crevaison à Corbeil-Essonnes ?', hl: 'On couvre l\'Essonne entière.',
+    sub: 'Corbeil-Essonnes, confluence Seine-Essonne — intervention pneu mobile 7j/7 24h/24. Zone industrielle, bord de nationale ou centre-ville : on vient à vous. Réparation ou remplacement, toutes marques.'
+  },
+  {
+    slug: 'massy', nom: 'Massy', dep: '91', temps: '30-40', pop: 'pôle d\'affaires et zones résidentielles',
+    h1: 'Pneu à plat à Massy ?', hl: 'Dépannage rapide dans le 91.',
+    sub: 'Massy, pôle tertiaire du 91 — on intervient en 30-40 min 24h/24. Parking entreprise, rue résidentielle ou sortie de RER : on vient à vous équipé. Pas de stress, on gère tout sur place.'
+  },
+  {
+    slug: 'palaiseau', nom: 'Palaiseau', dep: '91', temps: '35-45', pop: 'plateau de Saclay et zones universitaires',
+    h1: 'Crevaison à Palaiseau ?', hl: 'On arrive dans l\'Essonne.',
+    sub: 'Palaiseau, plateau de Saclay — dépannage pneu 24h/24. École Polytechnique, zones résidentielles, nationales : on intervient partout. Devis gratuit, montage sur place, toutes marques.'
+  },
+  {
+    slug: 'longjumeau', nom: 'Longjumeau', dep: '91', temps: '35-45', pop: 'zones pavillonnaires et commerciales',
+    h1: 'Pneu crevé à Longjumeau ?', hl: 'L\'Essonne, on la couvre.',
+    sub: 'Longjumeau, sud-ouest du 91 — intervention pneu mobile 7j/7 24h/24. Zone pavillonnaire, nationale, zone commerciale : on se déplace à votre position. Réparation crevaison ou remplacement sur place.'
+  },
+  // Hauts-de-Seine 92
+  {
+    slug: 'nanterre', nom: 'Nanterre', dep: '92', temps: '25-35', pop: 'La Défense et zones résidentielles',
+    h1: 'Pneu crevé à Nanterre ?', hl: 'La Défense, on intervient.',
+    sub: 'Nanterre, La Défense — dépannage pneu 24h/24 dans le 92. Parking tour, voie rapide, quartier résidentiel : on arrive équipé. Intervention rapide, toutes marques, devis gratuit au téléphone.'
+  },
+  {
+    slug: 'boulogne-billancourt', nom: 'Boulogne-Billancourt', dep: '92', temps: '30-40', pop: 'bords de Seine et quartiers d\'affaires',
+    h1: 'Crevaison à Boulogne-Billancourt ?', hl: 'On traverse pour vous dans le 92.',
+    sub: 'Boulogne-Billancourt — dépannage pneu mobile 24h/24. Avenue Édouard Vaillant, quais de Seine, zones résidentielles : on intervient partout. Pas de remorquage, réparation sur place si possible.'
+  },
+  {
+    slug: 'colombes', nom: 'Colombes', dep: '92', temps: '25-35', pop: 'zones pavillonnaires et grandes artères',
+    h1: 'Pneu à plat à Colombes ?', hl: 'Hauts-de-Seine, on est là.',
+    sub: 'Colombes, proche Clichy et Asnières — intervention pneu 7j/7 24h/24. Grande artère, parking ou rue résidentielle : on vient à vous. Montage, réparation, équilibrage — tout sur place.'
+  },
+  {
+    slug: 'asnieres-sur-seine', nom: 'Asnières-sur-Seine', dep: '92', temps: '25-35', pop: 'bords de Seine et centre-ville',
+    h1: 'Pneu crevé à Asnières ?', hl: 'On arrive dans le 92 vite.',
+    sub: 'Asnières-sur-Seine, bords de Seine — dépannage pneu 24h/24. Que vous soyez en ville ou sur une nationale, on intervient sur place. Réparation crevaison ou remplacement toutes marques, devis gratuit.'
+  },
+  {
+    slug: 'levallois-perret', nom: 'Levallois-Perret', dep: '92', temps: '30-40', pop: 'centre d\'affaires et zones résidentielles',
+    h1: 'Crevaison à Levallois-Perret ?', hl: 'On intervient dans le 92.',
+    sub: 'Levallois-Perret, entre Paris et Neuilly — dépannage pneu 24h/24. Parking sous-terrain, avenue, bord de périphérique : on arrive équipé. Devis immédiat, intervention sans remorquage.'
+  },
+  // Seine-Saint-Denis 93
+  {
+    slug: 'bobigny', nom: 'Bobigny', dep: '93', temps: '20-30', pop: 'préfecture du 93 et zones d\'activité',
+    h1: 'Pneu crevé à Bobigny ?', hl: 'On arrive dans le 93 sans attendre.',
+    sub: 'Bobigny, préfecture du 93 — dépannage pneu 24h/24 7j/7. Rocade, centre-ville, zone industrielle : on vient à vous avec le matériel pro. Réparation ou remplacement sur place, prix ferme avant départ.'
+  },
+  {
+    slug: 'saint-denis', nom: 'Saint-Denis', dep: '93', temps: '20-30', pop: 'Stade de France et zones urbaines',
+    h1: 'Crevaison à Saint-Denis ?', hl: 'Stade de France, on connaît.',
+    sub: 'Saint-Denis, aux portes de Paris — intervention pneu rapide 24h/24. Abords du Stade, rue résidentielle ou nationale : on se déplace directement à votre position. Devis gratuit, pas de surprise.'
+  },
+  {
+    slug: 'aubervilliers', nom: 'Aubervilliers', dep: '93', temps: '20-30', pop: 'zones d\'activité et quartiers résidentiels',
+    h1: 'Pneu à plat à Aubervilliers ?', hl: 'On est dans le coin en 20-30 min.',
+    sub: 'Aubervilliers, proche Paris 19e — dépannage pneu 7j/7 24h/24. Zone d\'activité, bord de canal, rue résidentielle : on intervient partout. Aucun frais de déplacement caché, devis gratuit.'
+  },
+  // Val-de-Marne 94
+  {
+    slug: 'creteil', nom: 'Créteil', dep: '94', temps: '25-35', pop: 'préfecture du 94 et lac de Créteil',
+    h1: 'Pneu crevé à Créteil ?', hl: 'On arrive dans le 94.',
+    sub: 'Créteil, préfecture du Val-de-Marne — dépannage pneu 24h/24. Lac de Créteil, centre commercial, zone résidentielle : on intervient partout. Réparation sur place ou remplacement, toutes marques.'
+  },
+  {
+    slug: 'vitry-sur-seine', nom: 'Vitry-sur-Seine', dep: '94', temps: '25-35', pop: 'bords de Seine et zones industrielles',
+    h1: 'Crevaison à Vitry-sur-Seine ?', hl: 'Dépannage pneu 94, on arrive.',
+    sub: 'Vitry-sur-Seine — intervention pneu mobile 7j/7 24h/24. Zone industrielle, nationale, quartier résidentiel : on vient à votre position avec le matériel complet. Devis gratuit, prix ferme avant départ.'
+  },
+  {
+    slug: 'ivry-sur-seine', nom: 'Ivry-sur-Seine', dep: '94', temps: '25-35', pop: 'bords de Seine et secteur résidentiel',
+    h1: 'Pneu à plat à Ivry-sur-Seine ?', hl: 'Val-de-Marne, on est là.',
+    sub: 'Ivry-sur-Seine, proche Paris 13e — dépannage pneu 24h/24. Quais de Seine, avenue de Verdun, rues résidentielles : on intervient sur place. Réparation ou remplacement toutes marques, sans remorquage.'
+  },
+  {
+    slug: 'orly', nom: 'Orly', dep: '94', temps: '30-40', pop: 'aéroport d\'Orly et zones d\'activité',
+    h1: 'Crevaison près d\'Orly ?', hl: 'Aéroport Orly, on intervient.',
+    sub: 'Zone aéroport d\'Orly, N7, zones d\'activité — on connaît le secteur. Dépannage pneu 24h/24, intervention rapide même en zone aéroportuaire. Réparation ou remplacement sur place, devis gratuit.'
+  },
 ];
 
 function page(v) {

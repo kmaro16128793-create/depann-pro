@@ -110,7 +110,7 @@ h1 .hl{color:var(--cyan)}
 .sec-h{font-family:var(--f1);font-weight:800;font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:-.04em;margin-bottom:.6rem}
 .sec-sub{color:var(--txt2);margin-bottom:2rem;font-size:.92rem}
 .villes-grid{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:2.5rem}
-.ville-btn{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--f1);font-size:.82rem;font-weight:600;padding:.55rem 1.2rem;border-radius:2rem;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--txt2);white-space:nowrap;transition:all .2s}
+.ville-btn{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--f1);font-size:.82rem;font-weight:600;padding:.55rem 1.2rem;border-radius:2rem;border:1px solid rgba(255,107,53,.25);background:rgba(255,107,53,.07);color:rgba(255,107,53,.85);white-space:nowrap;transition:all .2s}
 .ville-lien{border-color:rgba(46,233,255,.2);background:rgba(46,233,255,.05);color:var(--cyan)}
 .ville-lien:hover{background:rgba(46,233,255,.12);border-color:rgba(46,233,255,.4)}
 .ville-btn:not(.ville-lien){cursor:default}
@@ -189,11 +189,11 @@ footer{border-top:1px solid var(--border);padding:2rem clamp(1.5rem,5vw,5rem)}
     <h2 class="sec-h">Où on intervient en Paris</h2>
     <p class="sec-sub">Sélectionnez votre ville pour voir les détails d'intervention. Les villes <span style="color:var(--cyan)">en bleu</span> ont une page dédiée. <strong style="color:#fff">On couvre toutes les communes du secteur dans un rayon de 50 km autour de votre position.</strong></p>
     <div class="villes-grid">
-      <span class="ville-btn">📞 Paris 13e</span>
-      <span class="ville-btn">📞 Paris 18e</span>
-      <span class="ville-btn">📞 Paris 20e</span>
-      <span class="ville-btn">📞 Vincennes</span>
-      <span class="ville-btn">📞 Montreuil</span>
+      <a href="depannage-pneu-paris-13e.html" class="ville-btn ville-lien">Paris 13e</a>
+      <a href="depannage-pneu-paris-18e.html" class="ville-btn ville-lien">Paris 18e</a>
+      <a href="depannage-pneu-paris-20e.html" class="ville-btn ville-lien">Paris 20e</a>
+      <a href="depannage-pneu-vincennes.html" class="ville-btn ville-lien">Vincennes</a>
+      <a href="depannage-pneu-montreuil.html" class="ville-btn ville-lien">Montreuil</a>
     </div>
     <div class="info-box">
       <p><strong>📍 Votre ville n'est pas dans la liste ?</strong> Pas d'inquiétude — on intervient dans <strong>toutes les communes du Paris et dans un rayon de 50 km autour de chez vous</strong>. Si vous êtes en Île-de-France, on vient chez vous. Appelez le <a href="tel:+33761069638" style="color:var(--orange)">07 61 06 96 38</a> pour confirmer.</p>
