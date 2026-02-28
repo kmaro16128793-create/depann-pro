@@ -1201,13 +1201,13 @@ function envoyerWhatsApp() {
   const lieu = document.getElementById('wa-lieu').value.trim();
   const msg  = document.getElementById('wa-msg').value.trim();
   if (!nom || !tel) { alert('Merci de renseigner votre nom et téléphone.'); return; }
-  const ligne1 = '🚨 *NOUVELLE DEMANDE D2PNEUS* 🚨%0A%0A';
-  const ligne2 = '👤 *Nom :* ' + encodeURIComponent(nom) + '%0A';
-  const ligne3 = '📞 *Tél :* ' + encodeURIComponent(tel) + '%0A';
-  const ligne4 = pneu ? '📐 *Dimensions :* ' + encodeURIComponent(pneu) + '%0A' : '';
-  const ligne5 = lieu ? '📍 *Lieu :* ' + encodeURIComponent(lieu) + '%0A%0A' : '%0A';
-  const ligne6 = msg  ? '💬 *Message :* %0A' + encodeURIComponent(msg) : '';
-  window.open('https://wa.me/33761069638?text=' + ligne1 + ligne2 + ligne3 + ligne4 + ligne5 + ligne6, '_blank');
+  const texte = '🚨 *NOUVELLE DEMANDE D2PNEUS* 🚨\n\n'
+    + '👤 *Nom :* ' + nom + '\n'
+    + '📞 *Tél :* ' + tel + '\n'
+    + (pneu ? '📐 *Dimensions :* ' + pneu + '\n' : '')
+    + (lieu ? '📍 *Lieu :* ' + lieu + '\n\n' : '\n')
+    + (msg  ? '💬 *Message :*\n' + msg : '');
+  window.location.href = 'https://api.whatsapp.com/send?phone=33761069638&text=' + encodeURIComponent(texte);
 }
 </script>
 
