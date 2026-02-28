@@ -102,7 +102,7 @@ nav .nav-btn svg{width:16px;height:16px}}
 .badge::before{content:'';width:.42rem;height:.42rem;background:var(--orange);border-radius:50%;animation:pdot 1.6s ease-in-out infinite;animation-play-state:var(--ap,paused)}
 @keyframes pdot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.6}}
 
-.hero-h1{font-family:var(--f1);font-weight:900;font-size:clamp(2.8rem,5.5vw,5.2rem);line-height:1.0;letter-spacing:-.04em;color:#fff}
+.hero-h1{font-family:var(--f1);font-weight:900;font-size:clamp(2.8rem,5.5vw,5.2rem);line-height:1.0;letter-spacing:-.04em;color:#fff;content-visibility:auto;contain-intrinsic-size:1px 120px}
 .hero-h1 .ac{display:block;color:var(--cyan)}
 
 .hero-sub{font-size:1.05rem;color:var(--txt2);max-width:460px;line-height:1.75}
@@ -326,7 +326,7 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 .map3d{width:100%;transform:perspective(1000px) rotateX(25deg) rotateY(-8deg) rotateZ(1.5deg);transform-origin:50% 55%;filter:drop-shadow(0 50px 90px rgba(0,0,0,.8));transition:transform .9s cubic-bezier(.2,0,.2,1),filter .9s}
 .map3d:hover{transform:perspective(1000px) rotateX(18deg) rotateY(-5deg) rotateZ(.8deg);filter:drop-shadow(0 70px 110px rgba(0,0,0,.85))}
 @media(max-width:768px){.map3d{transform:none;filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}.map3d:hover{transform:none}}
-.dp{transition:opacity .25s;cursor:pointer}
+.dp{transition:stroke-opacity .3s,stroke-width .3s,opacity .25s;cursor:pointer}
 
 /* ── TARIFS ── */
 .trf-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.5rem}
