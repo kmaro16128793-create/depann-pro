@@ -60,37 +60,78 @@ function page(v) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#07090c">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-<title>Dépannage pneu ${v.nom} 24h/24 — DEPAN2PNEUS IDF 24H</title>
-<meta name="description" content="Pneu crevé à ${v.nom} (${v.dep}) ? DEPAN2PNEUS intervient en ${v.temps} min, 7j/7 24h/24. Montage et réparation pneu sur place. Appelez le 07 61 06 96 38.">
-<meta property="og:title" content="Dépannage pneu ${v.nom} — DEPAN2PNEUS IDF 24H">
-<meta property="og:description" content="Intervention pneu en ${v.temps} min à ${v.nom}. 7j/7 24h/24. Devis gratuit.">
-<meta property="og:type" content="website">
+<title>Dépannage Pneu ${v.nom} 24h/24 ⚡ Intervention ${v.temps} min — DEPAN2PNEUS IDF</title>
+<meta name="description" content="🚗 Pneu crevé à ${v.nom} ? DEPAN2PNEUS arrive en ${v.temps} min, 7j/7 24h/24. Montage, réparation, équilibrage sur place. Devis gratuit ☎ 07 61 06 96 38.">
+<meta name="keywords" content="dépannage pneu ${v.nom}, pneu crevé ${v.nom}, réparation pneu ${v.nom}, montage pneu ${v.nom} domicile, dépannage pneu ${deptNames[v.dep]}, depannage pneu idf 24h">
 <link rel="canonical" href="https://kmaro16128793-create.github.io/depann-pro/depannage-pneu-${v.slug}.html">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="DEPAN2PNEUS IDF 24H">
+<meta property="og:title" content="Dépannage Pneu ${v.nom} — Intervention ${v.temps} min 24h/24 | DEPAN2PNEUS">
+<meta property="og:description" content="Pneu crevé à ${v.nom} ? On arrive en ${v.temps} min, 7j/7 24h/24. Réparation ou remplacement sur place. Devis gratuit au 07 61 06 96 38.">
+<meta property="og:url" content="https://kmaro16128793-create.github.io/depann-pro/depannage-pneu-${v.slug}.html">
+<meta property="og:image" content="https://kmaro16128793-create.github.io/depann-pro/images/og-preview.png">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dépannage Pneu ${v.nom} — ${v.temps} min | DEPAN2PNEUS 24h/24">
+<meta name="twitter:description" content="Pneu crevé à ${v.nom} ? On intervient en ${v.temps} min, 7j/7 24h/24. Devis gratuit.">
+<meta name="twitter:image" content="https://kmaro16128793-create.github.io/depann-pro/images/og-preview.png">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness","AutoRepair"],
-  "name": "DEPAN2PNEUS IDF 24H",
-  "description": "Dépannage pneu crevé à ${v.nom} et en Île-de-France. Intervention en ${v.temps} min, 7j/7 24h/24.",
-  "url": "https://kmaro16128793-create.github.io/depann-pro/depannage-pneu-${v.slug}.html",
-  "telephone": "+33761069638",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "5bis Rue des Frères Montgolfier",
-    "addressLocality": "Gonesse",
-    "postalCode": "95500",
-    "addressRegion": "Val-d'Oise",
-    "addressCountry": "FR"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness","AutoRepair"],
+    "name": "DEPAN2PNEUS IDF 24H",
+    "description": "Dépannage pneu mobile à ${v.nom} — intervention en ${v.temps} min, 7j/7 24h/24. Réparation et remplacement de pneus sur place.",
+    "url": "https://kmaro16128793-create.github.io/depann-pro/depannage-pneu-${v.slug}.html",
+    "telephone": "+33761069638",
+    "priceRange": "€€",
+    "image": "https://kmaro16128793-create.github.io/depann-pro/images/og-preview.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "5bis Rue des Frères Montgolfier",
+      "addressLocality": "Gonesse",
+      "postalCode": "95500",
+      "addressRegion": "Val-d'Oise",
+      "addressCountry": "FR"
+    },
+    "geo": {"@type":"GeoCoordinates","latitude":"49.0000","longitude":"2.4500"},
+    "areaServed": [
+      {"@type":"City","name":"${v.nom}"},
+      {"@type":"AdministrativeArea","name":"${deptNames[v.dep]}"},
+      {"@type":"AdministrativeArea","name":"Île-de-France"}
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": ["https://kmaro16128793-create.github.io/depann-pro/"]
   },
-  "areaServed": {"@type": "City", "name": "${v.nom}"},
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://kmaro16128793-create.github.io/depann-pro/"},
+      {"@type":"ListItem","position":2,"name":"${deptNames[v.dep]}","item":"https://kmaro16128793-create.github.io/depann-pro/departement-${deptSlugs[v.dep]}.html"},
+      {"@type":"ListItem","position":3,"name":"Dépannage pneu ${v.nom}","item":"https://kmaro16128793-create.github.io/depann-pro/depannage-pneu-${v.slug}.html"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Dépannage pneu à ${v.nom}",
+    "description": "Service de dépannage pneu mobile à ${v.nom} — intervention en ${v.temps} min. Réparation crevaison, remplacement pneu, équilibrage, montage toutes marques.",
+    "provider": {"@type":"LocalBusiness","name":"DEPAN2PNEUS IDF 24H"},
+    "areaServed": {"@type":"City","name":"${v.nom}"},
+    "availableChannel": {"@type":"ServiceChannel","servicePhone":{"@type":"ContactPoint","telephone":"+33761069638","contactType":"customer service","availableLanguage":"French"}}
   }
-}
+]
 <\/script>
 <style>
 :root{--bg:#07090c;--cyan:#2ee9ff;--orange:#ff6b35;--txt:#e8eaf0;--txt2:rgba(232,234,240,.6);--txt3:rgba(232,234,240,.35);--border:rgba(255,255,255,.06);--f1:'Sora',sans-serif;--f2:'Inter',sans-serif}

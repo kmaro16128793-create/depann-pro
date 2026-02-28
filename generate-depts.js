@@ -3,6 +3,8 @@ const fs = require('fs');
 const depts = [
   {
     slug: 'paris-75', code: '75', nom: 'Paris', region: 'Paris',
+    h1: 'Pneu crevé à Paris ?', hl: 'On arrive en 30 min.',
+    sub: 'Dépannage pneu mobile dans tous les arrondissements de Paris, 24h/24 7j/7. Mercedes Sprinter équipé, toutes marques, devis gratuit.',
     villes: [
       { nom: 'Paris 13e', slug: null }, { nom: 'Paris 18e', slug: null },
       { nom: 'Paris 20e', slug: null }, { nom: 'Vincennes', slug: null },
@@ -11,6 +13,8 @@ const depts = [
   },
   {
     slug: 'seine-et-marne-77', code: '77', nom: 'Seine-et-Marne', region: 'Meaux · Melun · Chelles',
+    h1: 'Crevaison en Seine-et-Marne ?', hl: 'On couvre tout le 77.',
+    sub: 'De Meaux à Melun, zones rurales comprises. Intervention pneu mobile 7j/7 24h/24 — on vient à vous, sans attendre un garage.',
     villes: [
       { nom: 'Meaux', slug: null }, { nom: 'Melun', slug: null },
       { nom: 'Chelles', slug: null }, { nom: 'Lagny-sur-Marne', slug: null },
@@ -19,6 +23,8 @@ const depts = [
   },
   {
     slug: 'yvelines-78', code: '78', nom: 'Yvelines', region: 'Versailles · Mantes · Poissy',
+    h1: 'Pneu à plat dans les Yvelines ?', hl: 'On se déplace partout.',
+    sub: 'Versailles, Mantes-la-Jolie, Poissy et toutes les communes du 78. Dépannage pneu à domicile, nuit et week-end inclus.',
     villes: [
       { nom: 'Versailles', slug: null }, { nom: 'Mantes-la-Jolie', slug: null },
       { nom: 'Poissy', slug: null }, { nom: 'Saint-Germain-en-Laye', slug: null },
@@ -27,6 +33,8 @@ const depts = [
   },
   {
     slug: 'essonne-91', code: '91', nom: 'Essonne', region: 'Évry · Massy · Palaiseau',
+    h1: 'Pneu crevé en Essonne ?', hl: 'Intervention rapide dans le 91.',
+    sub: "D'Évry à Massy, on couvre tout le 91. Voiture immobilisée ? On arrive en 40-45 min, équipé pour tout type de véhicule.",
     villes: [
       { nom: 'Évry-Courcouronnes', slug: null }, { nom: 'Corbeil-Essonnes', slug: null },
       { nom: 'Massy', slug: null }, { nom: 'Palaiseau', slug: null },
@@ -35,6 +43,8 @@ const depts = [
   },
   {
     slug: 'hauts-de-seine-92', code: '92', nom: 'Hauts-de-Seine', region: 'Nanterre · Boulogne · Colombes',
+    h1: 'Crevaison dans le 92 ?', hl: 'Hauts-de-Seine, on est là.',
+    sub: 'Nanterre, Boulogne-Billancourt, Colombes… Dépannage pneu professionnel à domicile, disponible la nuit et le week-end.',
     villes: [
       { nom: 'Nanterre', slug: null }, { nom: 'Boulogne-Billancourt', slug: null },
       { nom: 'Colombes', slug: null }, { nom: 'Asnières-sur-Seine', slug: null },
@@ -43,6 +53,8 @@ const depts = [
   },
   {
     slug: 'seine-saint-denis-93', code: '93', nom: 'Seine-Saint-Denis', region: 'Aulnay · Villepinte · Bobigny',
+    h1: 'Pneu crevé dans le 93 ?', hl: 'On arrive sans attendre.',
+    sub: 'Aulnay, Bobigny, Saint-Denis, Villepinte — tout le 93 couvert 24h/24. Aucun frais de déplacement caché, devis immédiat.',
     villes: [
       { nom: 'Aulnay-sous-Bois', slug: 'aulnay-sous-bois' },
       { nom: 'Villepinte', slug: 'villepinte' },
@@ -53,6 +65,8 @@ const depts = [
   },
   {
     slug: 'val-de-marne-94', code: '94', nom: 'Val-de-Marne', region: 'Créteil · Ivry · Orly',
+    h1: 'Pneu à plat dans le 94 ?', hl: 'Val-de-Marne, on arrive.',
+    sub: 'Créteil, Ivry-sur-Seine, Orly et toutes les communes du 94. Dépannage pneu mobile en 40-45 min, 24h/24 7j/7.',
     villes: [
       { nom: 'Créteil', slug: null }, { nom: 'Vincennes', slug: null },
       { nom: 'Vitry-sur-Seine', slug: null }, { nom: 'Ivry-sur-Seine', slug: null },
@@ -61,6 +75,8 @@ const depts = [
   },
   {
     slug: 'val-doise-95', code: '95', nom: "Val-d'Oise", region: 'Gonesse · Roissy · Sarcelles',
+    h1: "Pneu crevé dans le Val-d'Oise ?", hl: 'Notre base est ici.',
+    sub: "Gonesse, Roissy, Sarcelles, Cergy — tout le 95 en moins de 30 min depuis notre base. Dépannage pneu mobile 24h/24, 7j/7.",
     villes: [
       { nom: 'Gonesse', slug: 'gonesse' },
       { nom: 'Roissy-en-France', slug: 'roissy-en-france' },
@@ -86,22 +102,77 @@ function page(d) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#07090c">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-<title>Dépannage pneu ${d.nom} (${d.code}) 24h/24 — DEPAN2PNEUS IDF 24H</title>
-<meta name="description" content="Pneu crevé en ${d.nom} (${d.code}) ? DEPAN2PNEUS intervient 7j/7 24h/24 dans tout le département. Appelez le 07 61 06 96 38.">
-<meta property="og:title" content="Dépannage pneu ${d.nom} — DEPAN2PNEUS IDF 24H">
-<meta property="og:type" content="website">
+<title>Dépannage Pneu ${d.nom} (${d.code}) 24h/24 ⚡ Toutes communes — DEPAN2PNEUS IDF</title>
+<meta name="description" content="🚗 Pneu crevé en ${d.nom} ? DEPAN2PNEUS couvre tout le ${d.code}, 7j/7 24h/24. ${d.region}. Intervention mobile, devis gratuit ☎ 07 61 06 96 38.">
+<meta name="keywords" content="dépannage pneu ${d.nom}, pneu crevé ${d.nom}, réparation pneu ${d.code}, dépannage pneu ${d.region.replace(/\s·\s/g,', ')}, montage pneu domicile ${d.nom}, depannage pneu idf 24h">
 <link rel="canonical" href="https://kmaro16128793-create.github.io/depann-pro/departement-${d.slug}.html">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="DEPAN2PNEUS IDF 24H">
+<meta property="og:title" content="Dépannage Pneu ${d.nom} (${d.code}) — Toutes communes 24h/24 | DEPAN2PNEUS">
+<meta property="og:description" content="Pneu crevé en ${d.nom} ? On couvre tout le département 7j/7 24h/24. ${d.region}. Intervention mobile, devis gratuit au 07 61 06 96 38.">
+<meta property="og:url" content="https://kmaro16128793-create.github.io/depann-pro/departement-${d.slug}.html">
+<meta property="og:image" content="https://kmaro16128793-create.github.io/depann-pro/images/og-preview.png">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dépannage Pneu ${d.nom} (${d.code}) — 24h/24 | DEPAN2PNEUS IDF">
+<meta name="twitter:description" content="Pneu crevé en ${d.nom} ? Toutes communes couvertes, 7j/7 24h/24. Devis gratuit.">
+<meta name="twitter:image" content="https://kmaro16128793-create.github.io/depann-pro/images/og-preview.png">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness","AutoRepair"],
-  "name": "DEPAN2PNEUS IDF 24H",
-  "description": "Dépannage pneu en ${d.nom} (${d.code}), 7j/7 24h/24.",
-  "telephone": "+33761069638",
-  "address": {"@type":"PostalAddress","streetAddress":"5bis Rue des Frères Montgolfier","addressLocality":"Gonesse","postalCode":"95500","addressCountry":"FR"},
-  "areaServed": {"@type":"AdministrativeArea","name":"${d.nom}"}
-}
+[
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness","AutoRepair"],
+    "name": "DEPAN2PNEUS IDF 24H",
+    "description": "Dépannage pneu mobile dans tout le ${d.nom} (${d.code}) — 7j/7 24h/24. Toutes communes, rayon 50 km. Réparation et remplacement sur place.",
+    "url": "https://kmaro16128793-create.github.io/depann-pro/departement-${d.slug}.html",
+    "telephone": "+33761069638",
+    "priceRange": "€€",
+    "image": "https://kmaro16128793-create.github.io/depann-pro/images/og-preview.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "5bis Rue des Frères Montgolfier",
+      "addressLocality": "Gonesse",
+      "postalCode": "95500",
+      "addressRegion": "Val-d'Oise",
+      "addressCountry": "FR"
+    },
+    "geo": {"@type":"GeoCoordinates","latitude":"49.0000","longitude":"2.4500"},
+    "areaServed": [
+      {"@type":"AdministrativeArea","name":"${d.nom}","identifier":"${d.code}"},
+      {"@type":"AdministrativeArea","name":"Île-de-France"}
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": ["https://kmaro16128793-create.github.io/depann-pro/"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://kmaro16128793-create.github.io/depann-pro/"},
+      {"@type":"ListItem","position":2,"name":"Zone IDF","item":"https://kmaro16128793-create.github.io/depann-pro/#zone"},
+      {"@type":"ListItem","position":3,"name":"${d.nom} (${d.code})","item":"https://kmaro16128793-create.github.io/depann-pro/departement-${d.slug}.html"}
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Dépannage pneu ${d.nom} (${d.code})",
+    "description": "Service de dépannage pneu mobile dans tout le ${d.nom} — toutes communes, 7j/7 24h/24. Réparation crevaison, remplacement, équilibrage, montage toutes marques.",
+    "provider": {"@type":"LocalBusiness","name":"DEPAN2PNEUS IDF 24H"},
+    "areaServed": {"@type":"AdministrativeArea","name":"${d.nom}","identifier":"${d.code}"},
+    "availableChannel": {"@type":"ServiceChannel","servicePhone":{"@type":"ContactPoint","telephone":"+33761069638","contactType":"customer service","availableLanguage":"French"}}
+  }
+]
 <\/script>
 <style>
 :root{--bg:#07090c;--cyan:#2ee9ff;--orange:#ff6b35;--txt:#e8eaf0;--txt2:rgba(232,234,240,.6);--txt3:rgba(232,234,240,.35);--border:rgba(255,255,255,.06);--f1:'Sora',sans-serif;--f2:'Inter',sans-serif}
@@ -196,8 +267,8 @@ footer{border-top:1px solid var(--border);padding:2rem clamp(1.5rem,5vw,5rem)}
 <section class="hero">
   <div class="hero-inner">
     <div class="badge">Département ${d.code} · ${d.region}</div>
-    <h1>Dépannage pneu<br><span class="hl">${d.nom}</span></h1>
-    <p class="hero-sub">Pneu crevé en ${d.nom} ? DEPAN2PNEUS intervient 7j/7 24h/24. On couvre tout le département — toutes communes confondues, dans un rayon de <strong>50 km</strong> autour de votre position. Même si votre ville n'est pas listée, on vient chez vous.</p>
+    <h1>${d.h1}<br><span class="hl">${d.hl}</span></h1>
+    <p class="hero-sub">${d.sub}</p>
     <div class="btns">
       <a href="tel:+33761069638" class="btn-call">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
