@@ -45,7 +45,7 @@
 
 /* ── CTA FINAL ── */
 .cta-sec{background:var(--bg2);border-top:1px solid var(--border2);padding:6rem clamp(1.5rem,5vw,5rem);text-align:center;position:relative;overflow:hidden}
-.cta-mich{position:absolute;top:50%;margin-top:-115px;height:230px;opacity:.88;pointer-events:none;z-index:0;animation:mich-float 4s ease-in-out infinite;animation-play-state:var(--ap,paused);will-change:transform}
+.cta-mich{position:absolute;top:50%;margin-top:-115px;height:230px;width:auto;opacity:.88;pointer-events:none;z-index:0;animation:mich-float 4s ease-in-out infinite;animation-play-state:var(--ap,paused);will-change:transform}
 .cta-mich.right{right:4vw}
 .cta-mich.left{left:4vw;transform:scaleX(-1)}
 @keyframes mich-float{0%,100%{transform:translateY(0) scaleX(var(--mx,1))}50%{transform:translateY(-10px) scaleX(var(--mx,1))}}
