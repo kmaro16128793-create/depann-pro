@@ -21,9 +21,19 @@
 <meta property="og:title" content="DEPANN2PNEUS — Dépannage pneus 40-45 min IDF">
 <meta property="og:type" content="website">
 <title>DEPANN2PNEUS — Dépannage pneus à domicile Île-de-France</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/hero-bg.webp" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/sora-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-latin.woff2" crossorigin>
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/inter-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/inter-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/inter-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/inter-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/inter-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/inter-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Sora';font-style:normal;font-weight:300 900;font-display:swap;src:url('fonts/sora-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Sora';font-style:normal;font-weight:300 900;font-display:swap;src:url('fonts/sora-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 img,svg{display:block;max-width:100%}
@@ -71,14 +81,16 @@ nav.sc{background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filte
 .nav-links{display:flex;align-items:center;gap:2rem;font-size:.83rem;font-weight:500;color:var(--txt2)}
 .nav-links a:hover{color:var(--txt)}
 @media(max-width:768px){.nav-links{display:none}}
-.nav-btn{display:inline-flex;align-items:center;gap:.45rem;background:var(--cyan);color:#07090c;font-family:var(--f1);font-weight:700;font-size:.82rem;padding:.5rem 1.2rem;border-radius:2rem;letter-spacing:.02em;transition:transform .18s,box-shadow .18s;white-space:nowrap;animation:led-pulse-cyan 2.4s ease-in-out infinite}
-.nav-btn:hover{transform:translateY(-1px);box-shadow:0 0 20px rgba(46,233,255,1),0 0 45px rgba(46,233,255,.7),0 0 90px rgba(46,233,255,.4),0 8px 22px rgba(46,233,255,.4);animation:none}
+.nav-btn{display:inline-flex;align-items:center;gap:.45rem;background:var(--cyan);color:#07090c;font-family:var(--f1);font-weight:700;font-size:.82rem;padding:.5rem 1.2rem;border-radius:2rem;letter-spacing:.02em;transition:transform .18s,box-shadow .18s;white-space:nowrap;position:relative}
+.nav-btn::before{content:'';position:absolute;inset:0;border-radius:inherit;background:transparent;box-shadow:0 0 14px rgba(46,233,255,.9),0 0 35px rgba(46,233,255,.6),0 0 65px rgba(46,233,255,.25),0 6px 22px rgba(46,233,255,.45);animation:glow-fade-c 2.4s ease-in-out infinite;animation-play-state:var(--ap,paused);pointer-events:none}
+.nav-btn:hover{transform:translateY(-1px);box-shadow:0 0 20px rgba(46,233,255,1),0 0 45px rgba(46,233,255,.7),0 0 90px rgba(46,233,255,.4),0 8px 22px rgba(46,233,255,.4)}
+.nav-btn:hover::before{display:none}
 @media(max-width:768px){nav .nav-btn{padding:.55rem .75rem;font-size:0;gap:0;border-radius:50%;width:2.4rem;height:2.4rem;justify-content:center}
 nav .nav-btn svg{width:16px;height:16px}}
 
 /* ── HERO ── */
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 clamp(1.5rem,5vw,5rem);padding-top:5rem;padding-bottom:4rem;position:relative;overflow:hidden;background:url('images/hero-bg.jpg') center center/cover no-repeat;background-attachment:fixed}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,9,12,.82) 0%,rgba(7,9,12,.55) 55%,rgba(7,9,12,.25) 100%),radial-gradient(ellipse 70% 60% at 72% 40%,rgba(46,233,255,.05) 0%,transparent 65%);pointer-events:none;z-index:0}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 clamp(1.5rem,5vw,5rem);padding-top:5rem;padding-bottom:4rem;position:relative;overflow:hidden;background:url('images/hero-bg.webp') center center/cover no-repeat}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,9,12,.82) 0%,rgba(7,9,12,.55) 55%,rgba(7,9,12,.25) 100%),radial-gradient(ellipse 70% 60% at 72% 40%,rgba(46,233,255,.05) 0%,transparent 65%);pointer-events:none;z-index:1}
 .hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(46,233,255,.055) 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(ellipse 85% 85% at center,black 0%,transparent 72%);pointer-events:none;z-index:0}
 @media(max-width:900px){.hero{text-align:center;padding-top:7rem;padding-bottom:3rem;background-attachment:scroll;background-size:cover;background-position:68% center;display:flex;flex-direction:column;justify-content:center}}
 @media(max-width:900px){.hero::before{background:linear-gradient(90deg,rgba(7,9,12,.92) 0%,rgba(7,9,12,.85) 45%,rgba(7,9,12,.35) 75%,rgba(7,9,12,.05) 100%)}}
@@ -87,7 +99,7 @@ nav .nav-btn svg{width:16px;height:16px}}
 @media(max-width:900px){.hero-l{max-width:100%;align-items:center}}
 
 .badge{display:inline-flex;align-items:center;gap:.45rem;background:var(--od);border:1px solid rgba(255,107,53,.22);color:var(--orange);font-family:var(--f1);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.32rem .8rem;border-radius:2rem;width:fit-content}
-.badge::before{content:'';width:.42rem;height:.42rem;background:var(--orange);border-radius:50%;animation:pdot 1.6s ease-in-out infinite}
+.badge::before{content:'';width:.42rem;height:.42rem;background:var(--orange);border-radius:50%;animation:pdot 1.6s ease-in-out infinite;animation-play-state:var(--ap,paused)}
 @keyframes pdot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.6}}
 
 .hero-h1{font-family:var(--f1);font-weight:900;font-size:clamp(2.8rem,5.5vw,5.2rem);line-height:1.0;letter-spacing:-.04em;color:#fff}
@@ -99,8 +111,10 @@ nav .nav-btn svg{width:16px;height:16px}}
 .hero-btns{display:flex;align-items:center;gap:.85rem;flex-wrap:wrap}
 @media(max-width:900px){.hero-btns{justify-content:center}}
 
-.btn-p{display:inline-flex;align-items:center;gap:.55rem;background:linear-gradient(90deg,#4cef50,#1fd13a);color:#fff;font-family:var(--f1);font-weight:800;font-size:.95rem;padding:.8rem 1.9rem;border-radius:3rem;transition:transform .18s,box-shadow .18s;animation:led-pulse 2.4s ease-in-out infinite}
-.btn-p:hover{transform:translateY(-2px);box-shadow:0 0 20px rgba(34,197,94,1),0 0 45px rgba(34,197,94,.7),0 0 90px rgba(34,197,94,.4),0 14px 36px rgba(31,211,58,.6);animation:none}
+.btn-p{display:inline-flex;align-items:center;gap:.55rem;background:linear-gradient(90deg,#4cef50,#1fd13a);color:#fff;font-family:var(--f1);font-weight:800;font-size:.95rem;padding:.8rem 1.9rem;border-radius:3rem;transition:transform .18s,box-shadow .18s;position:relative}
+.btn-p::before{content:'';position:absolute;inset:0;border-radius:inherit;background:transparent;box-shadow:0 0 14px rgba(34,197,94,.9),0 0 35px rgba(34,197,94,.6),0 0 65px rgba(34,197,94,.25),0 6px 28px rgba(31,211,58,.6);animation:glow-fade-g 2.4s ease-in-out infinite;animation-play-state:var(--ap,paused);pointer-events:none}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 0 20px rgba(34,197,94,1),0 0 45px rgba(34,197,94,.7),0 0 90px rgba(34,197,94,.4),0 14px 36px rgba(31,211,58,.6)}
+.btn-p:hover::before{display:none}
 .btn-s{display:inline-flex;align-items:center;gap:.45rem;color:var(--txt);font-family:var(--f1);font-weight:600;font-size:.9rem;padding:.8rem 1.4rem;border:1px solid var(--border2);border-radius:3rem;transition:border-color .18s,background .18s}
 .btn-s:hover{border-color:var(--border);background:var(--surface)}
 .call-line{display:inline-flex;align-items:center;gap:.5rem;color:var(--cyan);font-family:var(--f1);font-size:.9rem;font-weight:500;margin-top:1rem;text-decoration:none;opacity:.85;transition:opacity .2s}
@@ -116,15 +130,41 @@ nav .nav-btn svg{width:16px;height:16px}}
 .hero-r{position:absolute;top:50%;left:44%;transform:translateY(-50%);z-index:1;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:.75}
 @media(max-width:900px){.hero-r{top:auto;bottom:-60px;left:50%;transform:translateX(-50%);opacity:.35}}
 .tire-wrap{position:relative;width:320px;height:320px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.tire-glow{position:absolute;inset:-40px;border-radius:50%;background:radial-gradient(circle,var(--cg) 0%,transparent 62%);animation:gpulse 3.2s ease-in-out infinite}
+.tire-glow{position:absolute;inset:-40px;border-radius:50%;background:radial-gradient(circle,var(--cg) 0%,transparent 62%);animation:gpulse 3.2s ease-in-out infinite;animation-play-state:var(--ap,paused)}
 @keyframes gpulse{0%,100%{opacity:.45;transform:scale(1)}50%{opacity:.9;transform:scale(1.06)}}
-.tire-svg{width:100%;height:100%;animation:tspin 20s linear infinite;transform-origin:center}
+.tire-svg{width:100%;height:100%;animation:tspin 20s linear infinite;transform-origin:center;will-change:transform;animation-play-state:var(--ap,paused)}
 @keyframes tspin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+
+#fcta{position:fixed;bottom:1.4rem;right:1.4rem;z-index:800;display:flex;align-items:center;gap:.45rem;background:linear-gradient(90deg,#4cef50,#1fd13a);color:#fff;font-family:var(--f1);font-weight:800;font-size:.87rem;padding:.7rem 1.4rem;border-radius:3rem;transform:translateY(100px);transition:transform .3s ease;cursor:pointer;animation:led-pulse 2.4s ease-in-out infinite}#fcta.on{transform:translateY(0)}
+/* ── REVEAL — éléments visibles par défaut, animation au scroll ── */
+.rv{transition:opacity .55s ease,transform .55s ease}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
+/* .hidden ajouté par JS seulement sur éléments hors viewport */
+.rv.hidden{opacity:0;transform:translateY(22px)}
+.rv.hidden.show{opacity:1;transform:none}
+
+/* ── WhatsApp Form ── */
+.wa-wrap{max-width:520px;margin:2.5rem auto 0;border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35);border:1px solid rgba(37,217,102,.15);transition:transform 0.4s cubic-bezier(0.16,1,0.3,1),box-shadow 0.4s cubic-bezier(0.16,1,0.3,1),border-color 0.4s ease}
+.wa-wrap:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(0,0,0,.45),0 0 40px rgba(37,217,102,.18);border-color:rgba(37,217,102,.45)}
+.wa-head{background:linear-gradient(90deg,#4cef50,#1fd13a);padding:1.1rem 1.4rem;display:flex;align-items:center;justify-content:space-between}
+.wa-head h3{color:#fff;font-family:var(--f1);font-weight:700;font-size:1.05rem}
+.wa-head-x{color:rgba(255,255,255,.7);font-size:1.1rem;cursor:pointer;background:none;border:none;line-height:1;padding:.2rem .4rem;transition:color .2s}
+.wa-head-x:hover{color:#fff}
+.wa-body{background:linear-gradient(145deg,#0ecfb0 0%,#2adba8 25%,#38d9c4 50%,#29c9d4 75%,#1bb8d0 100%);padding:1.5rem 1.4rem 1.6rem}
+.wa-field{width:100%;border:none;border-radius:14px;padding:.9rem 1.1rem;font-size:.92rem;color:#2d4a3e;font-family:var(--f2);outline:none;margin-bottom:.9rem;position:relative;background:linear-gradient(110deg,rgba(255,255,255,.42) 0%,rgba(255,255,255,.42) 42%,rgba(255,255,255,.18) 42%,rgba(255,255,255,.18) 100%);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.5);transition:background .2s}
+.wa-field::placeholder{color:rgba(30,70,55,.65);font-size:.9rem}
+.wa-field:focus{background:linear-gradient(110deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,.55) 42%,rgba(255,255,255,.28) 42%,rgba(255,255,255,.28) 100%);outline:none}
+textarea.wa-field{min-height:120px;resize:none}
+.wa-btn-send{width:100%;background:linear-gradient(90deg,#4cef50,#1fd13a);color:#fff;border:none;border-radius:50px;padding:1.05rem 1.5rem;font-size:1rem;font-weight:700;font-family:var(--f1);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.65rem;transition:filter .2s,transform .15s,box-shadow .2s;margin-top:.3rem;animation:led-pulse 2.4s ease-in-out infinite}
+.wa-btn-send:hover{filter:brightness(1.08);transform:translateY(-1px);box-shadow:0 0 20px rgba(34,197,94,1),0 0 45px rgba(34,197,94,.7),0 0 90px rgba(34,197,94,.4);animation:none}
+@media(max-width:540px){.wa-body{padding:1.2rem 1rem}.wa-head{padding:.85rem .9rem}.wa-head h3{font-size:.8rem;gap:.5rem}.wa-head h3 a.logo{font-size:.95rem!important}}
 
 /* ── STATS STRIP ── */
 .stats{background:var(--bg2);border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:2.5rem clamp(1.5rem,5vw,5rem)}
-.stats-g{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
-@media(max-width:700px){.stats-g{grid-template-columns:repeat(2,1fr)}}
+.stats-g{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}
+@media(max-width:900px){.stats-g{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.stats-g{grid-template-columns:repeat(2,1fr)}.stats-g .stat:last-child{grid-column:1/-1;text-align:center}}
 .stat{text-align:center}
 .stat-n{font-family:var(--f1);font-weight:900;font-size:clamp(2.4rem,3.8vw,3.2rem);color:#fff;line-height:1;letter-spacing:-.035em}
 .stat-n em{color:var(--cyan);font-style:normal}
@@ -139,7 +179,7 @@ nav .nav-btn svg{width:16px;height:16px}}
 .brands::after{right:0;background:linear-gradient(-90deg,var(--bg),transparent)}
 .brands-lbl{text-align:center;font-size:.65rem;text-transform:uppercase;letter-spacing:.18em;color:var(--txt3);margin-bottom:1.4rem;font-weight:600}
 .mq-wrap{overflow:hidden;padding:10px 0}
-.mq{display:flex;align-items:center;gap:2.6rem;animation:mq 55s linear infinite;width:max-content}
+.mq{display:flex;align-items:center;gap:2.6rem;animation:mq 55s linear infinite;width:max-content;will-change:transform;animation-play-state:var(--ap,paused)}
 .mq:hover{animation-play-state:paused}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 /* ── LOGOS MARQUES PREMIUM ── */
@@ -148,7 +188,7 @@ nav .nav-btn svg{width:16px;height:16px}}
   flex-shrink:0;position:relative;
   opacity:.9;
   transition:opacity .35s cubic-bezier(.2,0,.2,1),transform .35s cubic-bezier(.2,0,.2,1),box-shadow .35s;
-  animation:logo-float 5s ease-in-out infinite;
+  animation:logo-float 5s ease-in-out infinite;animation-play-state:var(--ap,paused);
 }
 @keyframes logo-float{
   0%,100%{transform:translateY(0)}
@@ -276,6 +316,8 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 .depts{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
 .dept{display:inline-flex;align-items:center;gap:.35rem;background:var(--surface);border:1px solid var(--border2);border-radius:2rem;padding:.38rem .85rem;font-size:.78rem;color:var(--txt2);font-family:var(--f1);font-weight:600;transition:border-color .2s,color .2s;white-space:nowrap;letter-spacing:0}
 .dept:hover,.dept.on{background:var(--cd);border-color:rgba(46,233,255,.28);color:var(--cyan)}
+.depts.villes .dept{background:rgba(255,107,53,.06);border-color:rgba(255,107,53,.22);color:rgba(255,107,53,.8)}
+.depts.villes .dept:hover,.depts.villes .dept.on{background:rgba(255,107,53,.14);border-color:rgba(255,107,53,.55);color:var(--orange)}
 .zone-cta{background:var(--surface);border:1px solid var(--border2);border-radius:var(--r);padding:1.75rem;margin-top:1.5rem}
 .zone-cta p{font-size:.83rem;color:var(--txt2);margin-bottom:.9rem}
 .zone-map{background:transparent;border:none;border-radius:0;overflow:hidden;aspect-ratio:auto;display:flex;align-items:center;justify-content:center}
@@ -283,6 +325,7 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 /* ── CARTE 3D IDF ── */
 .map3d{width:100%;transform:perspective(1000px) rotateX(25deg) rotateY(-8deg) rotateZ(1.5deg);transform-origin:50% 55%;filter:drop-shadow(0 50px 90px rgba(0,0,0,.8));transition:transform .9s cubic-bezier(.2,0,.2,1),filter .9s}
 .map3d:hover{transform:perspective(1000px) rotateX(18deg) rotateY(-5deg) rotateZ(.8deg);filter:drop-shadow(0 70px 110px rgba(0,0,0,.85))}
+@media(max-width:768px){.map3d{transform:none;filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}.map3d:hover{transform:none}}
 .dp{transition:opacity .25s;cursor:pointer}
 
 /* ── TARIFS ── */
@@ -318,9 +361,9 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 .avis-mq-wrap::before,.avis-mq-wrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none}
 .avis-mq-wrap::before{left:0;background:linear-gradient(90deg,var(--bg2),transparent)}
 .avis-mq-wrap::after{right:0;background:linear-gradient(-90deg,var(--bg2),transparent)}
-.avis-mq{display:flex;gap:1.1rem;width:max-content;animation:rmq 50s linear infinite}
+.avis-mq{display:flex;gap:1.1rem;width:max-content;animation:rmq 50s linear infinite;will-change:transform;animation-play-state:var(--ap,paused)}
 .avis-mq.rev{animation-direction:reverse}
-.avis-mq:hover{animation-play-state:paused}
+@media(hover:hover){.avis-mq:hover{animation-play-state:paused}}
 @keyframes rmq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .rc{background:var(--surface);border:1px solid var(--border2);border-radius:var(--rl);padding:1.1rem 1.4rem;width:270px;min-width:270px;transition:border-color .2s}
 .rc:hover{border-color:var(--border)}
@@ -332,7 +375,7 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 .rc-meta{font-size:.7rem;color:var(--txt3);margin-top:.1rem}
 
 /* ── FAQ ── */
-.faq-bg{background:url('images/faq-bg.jpg') center center/cover no-repeat;position:relative}
+.faq-bg{background:url('images/faq-bg.webp') center center/cover no-repeat;position:relative}
 @media(max-width:900px){.faq-bg{background-position:right center;background-size:auto 140%}}
 .faq-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,9,12,.92) 0%,rgba(7,9,12,.78) 50%,rgba(7,9,12,.88) 100%);pointer-events:none;z-index:0}
 .faq-bg .c{position:relative;z-index:1}
@@ -348,12 +391,12 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 
 /* ── CTA FINAL ── */
 .cta-sec{background:var(--bg2);border-top:1px solid var(--border2);padding:6rem clamp(1.5rem,5vw,5rem);text-align:center;position:relative;overflow:hidden}
-.cta-mich{position:absolute;top:50%;margin-top:-115px;height:230px;opacity:.88;pointer-events:none;z-index:0;animation:mich-float 4s ease-in-out infinite;filter:drop-shadow(0 20px 40px rgba(46,233,255,.12))}
+.cta-mich{position:absolute;top:50%;margin-top:-115px;height:230px;opacity:.88;pointer-events:none;z-index:0;animation:mich-float 4s ease-in-out infinite;animation-play-state:var(--ap,paused);filter:drop-shadow(0 20px 40px rgba(46,233,255,.12));will-change:transform}
 .cta-mich.right{right:4vw}
 .cta-mich.left{left:4vw;transform:scaleX(-1)}
 @keyframes mich-float{0%,100%{transform:translateY(0) scaleX(var(--mx,1))}50%{transform:translateY(-10px) scaleX(var(--mx,1))}}
-@keyframes led-pulse-cyan{0%,100%{box-shadow:0 0 8px rgba(46,233,255,.5),0 0 20px rgba(46,233,255,.3),0 0 40px rgba(46,233,255,.15),0 6px 22px rgba(46,233,255,.25)}50%{box-shadow:0 0 14px rgba(46,233,255,.9),0 0 35px rgba(46,233,255,.6),0 0 65px rgba(46,233,255,.25),0 6px 22px rgba(46,233,255,.45)}}
-@keyframes led-pulse{0%,100%{box-shadow:0 0 8px rgba(34,197,94,.5),0 0 20px rgba(34,197,94,.3),0 0 40px rgba(34,197,94,.15),0 6px 28px rgba(31,211,58,.4)}50%{box-shadow:0 0 14px rgba(34,197,94,.9),0 0 35px rgba(34,197,94,.6),0 0 65px rgba(34,197,94,.25),0 6px 28px rgba(31,211,58,.6)}}
+@keyframes glow-fade-c{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes glow-fade-g{0%,100%{opacity:.45}50%{opacity:1}}
 .cta-mich.right{--mx:1}.cta-mich.left{--mx:-1}
 @media(max-width:900px){.cta-sec{overflow:visible;padding-bottom:8rem}.cta-mich{height:110px;top:auto;bottom:0;margin-top:0;opacity:.6}
 .cta-mich.right{right:0}.cta-mich.left{left:0}}
@@ -362,7 +405,7 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 .tarifs-flex .wa-wrap{margin:0;flex-shrink:0}
 .tarif-mich{height:auto;width:auto;max-height:510px;flex:1 1 auto;min-width:0;opacity:1;pointer-events:none;animation:mich-float 4s ease-in-out infinite}
 @media(max-width:1299px){.tarif-mich{display:none}}
-@media(max-width:900px){#contact .btn-p,#contact .nav-btn{font-size:.78rem!important;padding:.65rem 1.1rem!important}}
+@media(max-width:900px){#cta .btn-p,#cta .nav-btn{font-size:.78rem!important;padding:.65rem 1.1rem!important}}
 
 /* ═══ MOBILE — BIBENDUM SOUS FORMULAIRE ══════════════════════════════════════ */
 @media(max-width:768px){
@@ -383,33 +426,167 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.2rem c
 .ft-links a:hover{color:var(--txt2)}
 
 /* ── FLOAT CTA ── */
-#fcta{position:fixed;bottom:1.4rem;right:1.4rem;z-index:800;display:flex;align-items:center;gap:.45rem;background:linear-gradient(90deg,#4cef50,#1fd13a);color:#fff;font-family:var(--f1);font-weight:800;font-size:.87rem;padding:.7rem 1.4rem;border-radius:3rem;transform:translateY(100px);transition:transform .3s ease;cursor:pointer;animation:led-pulse 2.4s ease-in-out infinite}
-#fcta.on{transform:translateY(0)}
+
+
 #fcta:hover{box-shadow:0 0 20px rgba(34,197,94,1),0 0 45px rgba(34,197,94,.7),0 0 90px rgba(34,197,94,.4);animation:none}
 
-/* ── REVEAL — éléments visibles par défaut, animation au scroll ── */
-.rv{transition:opacity .55s ease,transform .55s ease}
-.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
-/* .hidden ajouté par JS seulement sur éléments hors viewport */
-.rv.hidden{opacity:0;transform:translateY(22px)}
-.rv.hidden.show{opacity:1;transform:none}
 
-/* ── WhatsApp Form ── */
-.wa-wrap{max-width:520px;margin:2.5rem auto 0;border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35);border:1px solid rgba(37,217,102,.15);transition:transform 0.4s cubic-bezier(0.16,1,0.3,1),box-shadow 0.4s cubic-bezier(0.16,1,0.3,1),border-color 0.4s ease}
-.wa-wrap:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(0,0,0,.45),0 0 40px rgba(37,217,102,.18);border-color:rgba(37,217,102,.45)}
-.wa-head{background:linear-gradient(90deg,#4cef50,#1fd13a);padding:1.1rem 1.4rem;display:flex;align-items:center;justify-content:space-between}
-.wa-head h3{color:#fff;font-family:var(--f1);font-weight:700;font-size:1.05rem}
-.wa-head-x{color:rgba(255,255,255,.7);font-size:1.1rem;cursor:pointer;background:none;border:none;line-height:1;padding:.2rem .4rem;transition:color .2s}
-.wa-head-x:hover{color:#fff}
-.wa-body{background:linear-gradient(145deg,#0ecfb0 0%,#2adba8 25%,#38d9c4 50%,#29c9d4 75%,#1bb8d0 100%);padding:1.5rem 1.4rem 1.6rem}
-.wa-field{width:100%;border:none;border-radius:14px;padding:.9rem 1.1rem;font-size:.92rem;color:#2d4a3e;font-family:var(--f2);outline:none;margin-bottom:.9rem;position:relative;background:linear-gradient(110deg,rgba(255,255,255,.42) 0%,rgba(255,255,255,.42) 42%,rgba(255,255,255,.18) 42%,rgba(255,255,255,.18) 100%);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.5);transition:background .2s}
-.wa-field::placeholder{color:rgba(30,70,55,.65);font-size:.9rem}
-.wa-field:focus{background:linear-gradient(110deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,.55) 42%,rgba(255,255,255,.28) 42%,rgba(255,255,255,.28) 100%);outline:none}
-textarea.wa-field{min-height:120px;resize:none}
-.wa-btn-send{width:100%;background:linear-gradient(90deg,#4cef50,#1fd13a);color:#fff;border:none;border-radius:50px;padding:1.05rem 1.5rem;font-size:1rem;font-weight:700;font-family:var(--f1);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.65rem;transition:filter .2s,transform .15s,box-shadow .2s;margin-top:.3rem;animation:led-pulse 2.4s ease-in-out infinite}
-.wa-btn-send:hover{filter:brightness(1.08);transform:translateY(-1px);box-shadow:0 0 20px rgba(34,197,94,1),0 0 45px rgba(34,197,94,.7),0 0 90px rgba(34,197,94,.4);animation:none}
-@media(max-width:540px){.wa-body{padding:1.2rem 1rem}.wa-head{padding:.85rem .9rem}.wa-head h3{font-size:.8rem;gap:.5rem}.wa-head h3 a.logo{font-size:.95rem!important}}
+/* === PERF: content-visibility sur sections hors-écran === */
+#avis,#faq,#cta{content-visibility:auto;contain-intrinsic-size:1px 600px}
+/* === PERF: will-change sur éléments animés === */
+.tire-glow,.badge::before{will-change:transform,opacity}
+.nav-btn::before,.btn-p::before{will-change:opacity}
+.brand-logo{will-change:transform}
+.cta-mich{will-change:transform}
+/* === PERF: led-pulse manquant === */
+@keyframes led-pulse{0%,100%{opacity:.9}50%{opacity:1}}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AutoRepair"],
+  "name": "DEPAN2PNEUS IDF 24H",
+  "alternateName": "Crevaison Depan2Pneus IDF 24H",
+  "description": "Dépannage pneu crevé à domicile en Île-de-France. Intervention en 40-45 min, 7j/7, 24h/24. Montage, réparation et remplacement de pneus toutes marques sur place.",
+  "url": "https://kmaro16128793-create.github.io/depann-pro/",
+  "telephone": "+33761069638",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "5bis Rue des Frères Montgolfier",
+    "addressLocality": "Gonesse",
+    "postalCode": "95500",
+    "addressRegion": "Val-d'Oise",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.9922,
+    "longitude": 2.4575
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Paris"},
+    {"@type": "City", "name": "Gonesse"},
+    {"@type": "City", "name": "Roissy-en-France"},
+    {"@type": "City", "name": "Villepinte"},
+    {"@type": "City", "name": "Aulnay-sous-Bois"},
+    {"@type": "City", "name": "Bobigny"},
+    {"@type": "City", "name": "Créteil"},
+    {"@type": "AdministrativeArea", "name": "Île-de-France"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services dépannage pneu",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Réparation pneu crevé à domicile",
+          "description": "Réparation sur place de votre pneu crevé partout en Île-de-France"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Remplacement de pneu à domicile",
+          "description": "Montage et équilibrage de pneus toutes marques à domicile ou sur la route"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dépannage urgence pneu 24h/24",
+          "description": "Intervention d'urgence en 40-45 min, nuit, week-end et jours fériés"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gonflage et vérification pression",
+          "description": "Contrôle et gonflage des pneus à l'azote ou à l'air"
+        }
+      }
+    ]
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+33761069638",
+    "contactType": "customer support",
+    "availableLanguage": "French",
+    "hoursAvailable": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  },
+  "sameAs": [
+    "https://www.google.com/maps?q=DEPAN2PNEUS+IDF+24H,+5bis+Rue+des+Fr%C3%A8res+Montgolfier,+95500+Gonesse"
+  ],
+  "hasMap": "https://www.google.com/maps?q=DEPAN2PNEUS+IDF+24H,+5bis+Rue+des+Fr%C3%A8res+Montgolfier,+95500+Gonesse",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card",
+  "slogan": "Pneu crevé ? On arrive en 40-45 min, 7j/7 24h/24"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Intervenez-vous vraiment la nuit et le weekend ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, 7j/7, 24h/24 y compris jours fériés. Appelez-nous pour un devis adapté à votre situation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Fournissez-vous les pneus ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Parfois selon stock disponible. Vous pouvez commander vos pneus en ligne (livraison à notre adresse) et on intervient pour le montage. Appelez-nous pour organiser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que se passe-t-il si mon pneu ne peut pas être réparé ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On vous informe immédiatement. Solutions proposées : pneu de remplacement si disponible, pose de la roue de secours, ou assistance au remorquage. Diagnostic toujours gratuit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la zone d'intervention exacte ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Toute l'Île-de-France : Paris + départements 77, 78, 91, 92, 93, 94, 95. On n'intervient pas directement sur autoroute ou périphérique — appelez-nous, prenez la prochaine sortie, on vous y rejoint immédiatement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels modes de paiement acceptez-vous ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Carte bancaire (CB sans contact), virement instantané, espèces. Facture professionnelle avec TVA disponible sur demande."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -430,6 +607,7 @@ textarea.wa-field{min-height:120px;resize:none}
   </a>
 </nav>
 
+<main>
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-l">
@@ -444,7 +622,7 @@ textarea.wa-field{min-height:120px;resize:none}
     <p class="hero-sub">Dépannage pneus à domicile partout en Île-de-France. Mercedes Sprinter équipé, toutes marques. Intervention immédiate.</p>
 
     <div class="hero-btns">
-      <a href="#tarifs" class="btn-p">
+      <a href="#contact" class="btn-p">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
         Écrire sur WhatsApp
       </a>
@@ -523,7 +701,8 @@ textarea.wa-field{min-height:120px;resize:none}
     <div class="stat rv"><div class="stat-n"><span class="cnt" data-t="40">40</span><em>-45 min</em></div><div class="stat-l">Délai moyen d'intervention</div></div>
     <div class="stat rv d1"><div class="stat-n"><span class="cnt" data-t="24">24</span><em>h/24</em></div><div class="stat-l">Disponible 7j/7</div></div>
     <div class="stat rv d2"><div class="stat-n"><span class="cnt" data-t="8">8</span><em>+</em></div><div class="stat-l">Départements IDF</div></div>
-    <div class="stat rv d3"><div class="stat-n"><span class="cnt" data-t="8700">0</span><em>+</em></div><div class="stat-l">Clients satisfaits</div></div>
+    <div class="stat rv d3"><div class="stat-n"><span class="cnt" data-t="16820">0</span><em>+</em></div><div class="stat-l">Clients satisfaits</div></div>
+    <div class="stat rv d4"><div class="stat-n"><span class="cnt" data-t="15">0</span><em>+</em></div><div class="stat-l">Ans d'expérience</div></div>
   </div>
 </div>
 
@@ -533,42 +712,42 @@ textarea.wa-field{min-height:120px;resize:none}
   <div class="mq-wrap">
     <div class="mq">
       <!-- MICHELIN -->
-      <span class="brand-logo real michelin"><img src="images/logo-michelin.png" alt="Michelin"></span>
+      <span class="brand-logo real michelin"><picture><source srcset="images/logo-michelin.webp" type="image/webp"><img src="images/logo-michelin.png" alt="Michelin" width="52" height="52" loading="lazy"></picture></span>
       <!-- GOODYEAR -->
-      <span class="brand-logo real"><img src="images/logo-goodyear.png" alt="Goodyear"></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-goodyear.webp" type="image/webp"><img src="images/logo-goodyear.png" alt="Goodyear" width="100" height="38" loading="lazy"></picture></span>
       <!-- CONTINENTAL -->
-      <span class="brand-logo real"><img src="images/logo-continental.png" alt="Continental"></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-continental.webp" type="image/webp"><img src="images/logo-continental.png" alt="Continental" width="100" height="38" loading="lazy"></picture></span>
       <!-- BRIDGESTONE -->
-      <span class="brand-logo real"><img src="images/logo-bridgestone.png" alt="Bridgestone"></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-bridgestone.webp" type="image/webp"><img src="images/logo-bridgestone.png" alt="Bridgestone" width="100" height="38" loading="lazy"></picture></span>
       <!-- PIRELLI -->
-      <span class="brand-logo real"><img src="images/logo-pirelli.png" alt="Pirelli"></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-pirelli.webp" type="image/webp"><img src="images/logo-pirelli.png" alt="Pirelli" width="100" height="38" loading="lazy"></picture></span>
       <!-- DUNLOP -->
-      <span class="brand-logo real"><img src="images/logo-dunlop.svg" alt="Dunlop"></span>
+      <span class="brand-logo real"><img src="images/logo-dunlop.svg" alt="Dunlop" width="100" height="38" loading="lazy"></span>
       <!-- HANKOOK -->
-      <span class="brand-logo real"><img src="images/logo-hankook.png" alt="Hankook"></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-hankook.webp" type="image/webp"><img src="images/logo-hankook.png" alt="Hankook" width="100" height="38" loading="lazy"></picture></span>
       <!-- YOKOHAMA -->
-      <span class="brand-logo real"><img src="images/logo-yokohama.png" alt="Yokohama"></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-yokohama.webp" type="image/webp"><img src="images/logo-yokohama.png" alt="Yokohama" width="100" height="38" loading="lazy"></picture></span>
       <!-- BFGOODRICH -->
-      <span class="brand-logo real"><img src="images/logo-bfgoodrich.svg" alt="BFGoodrich"></span>
+      <span class="brand-logo real"><img src="images/logo-bfgoodrich.svg" alt="BFGoodrich" width="100" height="38" loading="lazy"></span>
       <!-- FALKEN -->
-      <span class="brand-logo real"><img src="images/logo-falken.png" alt="Falken"></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-falken.webp" type="image/webp"><img src="images/logo-falken.png" alt="Falken" width="100" height="38" loading="lazy"></picture></span>
       <!-- TOYO -->
-      <span class="brand-logo real"><img src="images/logo-toyo.png" alt="Toyo Tires"></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-toyo.webp" type="image/webp"><img src="images/logo-toyo.png" alt="Toyo Tires" width="100" height="38" loading="lazy"></picture></span>
       <!-- NOKIAN -->
-      <span class="brand-logo real"><img src="images/logo-nokian.png" alt="Nokian"></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-nokian.webp" type="image/webp"><img src="images/logo-nokian.png" alt="Nokian" width="100" height="38" loading="lazy"></picture></span>
       <!-- === DUPLICATE pour loop === -->
-      <span class="brand-logo real michelin"><img src="images/logo-michelin.png" alt="Michelin"></span>
-      <span class="brand-logo real"><img src="images/logo-goodyear.png" alt="Goodyear"></span>
-      <span class="brand-logo real"><img src="images/logo-continental.png" alt="Continental"></span>
-      <span class="brand-logo real"><img src="images/logo-bridgestone.png" alt="Bridgestone"></span>
-      <span class="brand-logo real"><img src="images/logo-pirelli.png" alt="Pirelli"></span>
-      <span class="brand-logo real"><img src="images/logo-dunlop.svg" alt="Dunlop"></span>
-      <span class="brand-logo real"><img src="images/logo-hankook.png" alt="Hankook"></span>
-      <span class="brand-logo real"><img src="images/logo-yokohama.png" alt="Yokohama"></span>
-      <span class="brand-logo real"><img src="images/logo-bfgoodrich.svg" alt="BFGoodrich"></span>
-      <span class="brand-logo real"><img src="images/logo-falken.png" alt="Falken"></span>
-      <span class="brand-logo real"><img src="images/logo-toyo.png" alt="Toyo Tires"></span>
-      <span class="brand-logo real"><img src="images/logo-nokian.png" alt="Nokian"></span>
+      <span class="brand-logo real michelin"><picture><source srcset="images/logo-michelin.webp" type="image/webp"><img src="images/logo-michelin.png" alt="Michelin" width="52" height="52" loading="lazy"></picture></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-goodyear.webp" type="image/webp"><img src="images/logo-goodyear.png" alt="Goodyear" width="100" height="38" loading="lazy"></picture></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-continental.webp" type="image/webp"><img src="images/logo-continental.png" alt="Continental" width="100" height="38" loading="lazy"></picture></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-bridgestone.webp" type="image/webp"><img src="images/logo-bridgestone.png" alt="Bridgestone" width="100" height="38" loading="lazy"></picture></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-pirelli.webp" type="image/webp"><img src="images/logo-pirelli.png" alt="Pirelli" width="100" height="38" loading="lazy"></picture></span>
+      <span class="brand-logo real"><img src="images/logo-dunlop.svg" alt="Dunlop" width="100" height="38" loading="lazy"></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-hankook.webp" type="image/webp"><img src="images/logo-hankook.png" alt="Hankook" width="100" height="38" loading="lazy"></picture></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-yokohama.webp" type="image/webp"><img src="images/logo-yokohama.png" alt="Yokohama" width="100" height="38" loading="lazy"></picture></span>
+      <span class="brand-logo real"><img src="images/logo-bfgoodrich.svg" alt="BFGoodrich" width="100" height="38" loading="lazy"></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-falken.webp" type="image/webp"><img src="images/logo-falken.png" alt="Falken" width="100" height="38" loading="lazy"></picture></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-toyo.webp" type="image/webp"><img src="images/logo-toyo.png" alt="Toyo Tires" width="100" height="38" loading="lazy"></picture></span>
+      <span class="brand-logo real"><picture><source srcset="images/logo-nokian.webp" type="image/webp"><img src="images/logo-nokian.png" alt="Nokian" width="100" height="38" loading="lazy"></picture></span>
     </div>
   </div>
 </div>
@@ -622,7 +801,7 @@ textarea.wa-field{min-height:120px;resize:none}
       <div class="svc rv d2"><div class="svc-no">05</div><div class="svc-ico">🛞</div><div class="svc-t">Retrait roue de secours</div><div class="svc-d">Démontage de la roue galette, pose du pneu définitif. Tout se fait sur place.</div></div>
       <div class="svc rv d3"><div class="svc-no">06</div><div class="svc-ico">🚨</div><div class="svc-t">Panne sur autoroute</div><div class="svc-d">On n'intervient pas directement sur l'autoroute. Appelez-nous et sortez à la prochaine sortie — on vous y rejoint rapidement.</div></div>
       <div class="svc rv d1"><div class="svc-no">07</div><div class="svc-ico">🔑</div><div class="svc-t">Écrous antivol perdus / cassés</div><div class="svc-d">Démontage de vos écrous antivol sur présentation obligatoire de votre carte d'identité et de la carte grise du véhicule concerné. Écrous retirés intacts, sans aucun dommage sur vos jantes, grâce à notre savoir-faire unique et professionnel.</div><div class="svc-req"><span class="svc-req-badge">🪪 Pièce d'identité</span><span class="svc-req-badge">📋 Carte grise</span></div></div>
-      <div class="svc-mich rv d2"><img src="images/michelin-pneu.png" alt="Michelin"></div>
+      <div class="svc-mich rv d2"><picture><source srcset="images/michelin-pneu.webp" type="image/webp"><img src="images/michelin-pneu.png" alt="Michelin"></picture></div>
     </div>
   </div>
 </section>
@@ -653,18 +832,30 @@ textarea.wa-field{min-height:120px;resize:none}
       <div>
         <p class="sec-sub">Les 8 départements franciliens, 24h/24, 7j/7. En ville, en banlieue, partout.</p>
         <div class="depts">
-          <span class="dept on">75&nbsp;Paris</span>
-          <span class="dept on">77&nbsp;Seine-et-Marne</span>
-          <span class="dept on">78&nbsp;Yvelines</span>
-          <span class="dept on">91&nbsp;Essonne</span>
-          <span class="dept on">92&nbsp;Hauts-de-Seine</span>
-          <span class="dept on">93&nbsp;Seine-Saint-Denis</span>
-          <span class="dept on">94&nbsp;Val-de-Marne</span>
-          <span class="dept on">95&nbsp;Val-d'Oise</span>
+          <a href="departement-paris-75.html" class="dept on">75&nbsp;Paris</a>
+          <a href="departement-seine-et-marne-77.html" class="dept on">77&nbsp;Seine-et-Marne</a>
+          <a href="departement-yvelines-78.html" class="dept on">78&nbsp;Yvelines</a>
+          <a href="departement-essonne-91.html" class="dept on">91&nbsp;Essonne</a>
+          <a href="departement-hauts-de-seine-92.html" class="dept on">92&nbsp;Hauts-de-Seine</a>
+          <a href="departement-seine-saint-denis-93.html" class="dept on">93&nbsp;Seine-Saint-Denis</a>
+          <a href="departement-val-de-marne-94.html" class="dept on">94&nbsp;Val-de-Marne</a>
+          <a href="departement-val-doise-95.html" class="dept on">95&nbsp;Val-d'Oise</a>
+        </div>
+        <p style="font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin:.9rem 0 .45rem;opacity:.8">⚡ Villes d'intervention les plus rapides — <span style="color:var(--cyan);opacity:1">en moyenne 30 min</span></p>
+        <div class="depts villes" style="margin-top:0">
+          <a href="depannage-pneu-gonesse.html" class="dept on">📍 Gonesse</a>
+          <a href="depannage-pneu-roissy-en-france.html" class="dept">Roissy-en-France</a>
+          <a href="depannage-pneu-villepinte.html" class="dept">Villepinte</a>
+          <a href="depannage-pneu-sarcelles.html" class="dept">Sarcelles</a>
+          <a href="depannage-pneu-garges-les-gonesse.html" class="dept">Garges-lès-Gonesse</a>
+          <a href="depannage-pneu-villiers-le-bel.html" class="dept">Villiers-le-Bel</a>
+          <a href="depannage-pneu-arnouville.html" class="dept">Arnouville</a>
+          <a href="depannage-pneu-goussainville.html" class="dept">Goussainville</a>
+          <a href="depannage-pneu-aulnay-sous-bois.html" class="dept">Aulnay-sous-Bois</a>
         </div>
         <div class="zone-cta">
           <p>Pas sûr que votre zone est couverte ?</p>
-          <a href="#tarifs" class="btn-p" style="display:inline-flex">
+          <a href="#contact" class="btn-p" style="display:inline-flex">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
             Vérifier via WhatsApp
           </a>
@@ -833,7 +1024,8 @@ textarea.wa-field{min-height:120px;resize:none}
   </div>
 </section>
 
-<!-- TARIFS -->
+<!-- TARIFS / CONTACT -->
+<span id="contact" style="display:block;height:0;overflow:hidden;pointer-events:none;scroll-margin-top:55px"></span>
 <section id="tarifs">
   <div class="c">
     <div style="text-align:center;max-width:600px;margin:0 auto">
@@ -859,7 +1051,7 @@ textarea.wa-field{min-height:120px;resize:none}
         </button>
       </div>
     </div>
-    <img src="images/michelin-doigt.png" class="tarif-mich" alt="">
+    <picture><source srcset="images/michelin-doigt.webp" type="image/webp"><img src="images/michelin-doigt.png" class="tarif-mich" alt=""></picture>
     </div><!-- .tarifs-flex -->
   </div>
 </section>
@@ -934,9 +1126,9 @@ textarea.wa-field{min-height:120px;resize:none}
 </section>
 
 <!-- CTA FINAL -->
-<section id="contact" class="cta-sec">
-  <img src="images/michelin-zen.png" class="cta-mich right" alt="">
-  <img src="images/michelin-zen.png" class="cta-mich left" alt="">
+<section id="cta" class="cta-sec">
+  <picture><source srcset="images/michelin-zen.webp" type="image/webp"><img src="images/michelin-zen.png" class="cta-mich right" alt=""></picture>
+  <picture><source srcset="images/michelin-zen.webp" type="image/webp"><img src="images/michelin-zen.png" class="cta-mich left" alt=""></picture>
   <div class="c">
     <div class="sec-tag" style="justify-content:center">Urgence ou planification</div>
     <h2 class="cta-h">
@@ -945,7 +1137,7 @@ textarea.wa-field{min-height:120px;resize:none}
     </h2>
     <p class="cta-sub">40-45 min en moyenne. N'importe où en IDF. 7j/7, 24h/24.</p>
     <div class="cta-btns">
-      <a href="#tarifs" class="btn-p" style="font-size:1rem;padding:.95rem 2.3rem">
+      <a href="#contact" class="btn-p" style="font-size:1rem;padding:.95rem 2.3rem">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
         Écrire sur WhatsApp
       </a>
@@ -957,24 +1149,26 @@ textarea.wa-field{min-height:120px;resize:none}
   </div>
 </section>
 
+</main>
 <!-- FOOTER -->
 <footer>
   <div class="ft">
     <div>
       <div class="logo"><em>DEPANN2</em><span>PNEUS</span></div>
-      <div class="ft-copy">© 2024 DEPANN2PNEUS — Île-de-France</div>
+      <div class="ft-copy">© 2026 DEPAN2PNEUS IDF 24H — Île-de-France</div>
     </div>
     <div class="ft-links">
       <a href="#services">Services</a>
       <a href="#tarifs">Tarifs</a>
       <a href="#zone">Zone IDF</a>
       <a href="#faq">FAQ</a>
+      <a href="mentions-legales.html">Mentions légales</a>
     </div>
   </div>
 </footer>
 
 <!-- FLOATING CTA -->
-<a href="#tarifs" id="fcta">
+<a href="#contact" id="fcta">
   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
   WhatsApp
 </a>
@@ -1094,5 +1288,6 @@ function envoyerWhatsApp() {
   requestAnimationFrame(tick);
 })();
 </script>
+<script>requestAnimationFrame(()=>requestAnimationFrame(()=>document.documentElement.style.setProperty('--ap','running')));</script>
 </body>
 </html>
