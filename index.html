@@ -22,7 +22,7 @@
 <meta property="og:type" content="website">
 <title>DEPANN2PNEUS — Dépannage pneus à domicile Île-de-France</title>
 <link rel="preload" as="image" href="images/hero-bg.webp" fetchpriority="high">
-<link rel="preload" as="font" type="font/woff2" href="fonts/sora-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/sora-subset.woff2" crossorigin fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="fonts/inter-latin.woff2" crossorigin>
 <style>
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/inter-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -32,7 +32,7 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/inter-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/inter-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Sora';font-style:normal;font-weight:300 900;font-display:swap;src:url('fonts/sora-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Sora';font-style:normal;font-weight:300 900;font-display:swap;src:url('fonts/sora-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Sora';font-style:normal;font-weight:300 900;font-display:optional;src:url('fonts/sora-subset.woff2') format('woff2');unicode-range:U+0020-007E,U+00A9,U+00B7,U+00C9,U+00CE,U+00E0,U+00E2,U+00E7,U+00E8,U+00E9,U+00EA,U+00EE,U+00F4,U+00F9,U+00FB,U+2014,U+20AC}
 </style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -316,7 +316,7 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 .depts{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
 .dept{display:inline-flex;align-items:center;gap:.35rem;background:var(--surface);border:1px solid var(--border2);border-radius:2rem;padding:.38rem .85rem;font-size:.78rem;color:var(--txt2);font-family:var(--f1);font-weight:600;transition:border-color .2s,color .2s;white-space:nowrap;letter-spacing:0}
 .dept:hover,.dept.on{background:var(--cd);border-color:rgba(46,233,255,.28);color:var(--cyan)}
-.depts.villes .dept{background:rgba(255,107,53,.06);border-color:rgba(255,107,53,.22);color:rgba(255,107,53,.8)}
+.depts.villes .dept{background:rgba(255,107,53,.06);border-color:rgba(255,107,53,.22);color:#ff6b35}
 .depts.villes .dept:hover,.depts.villes .dept.on{background:rgba(255,107,53,.14);border-color:rgba(255,107,53,.55);color:var(--orange)}
 .zone-cta{background:var(--surface);border:1px solid var(--border2);border-radius:var(--r);padding:1.75rem;margin-top:1.5rem}
 .zone-cta p{font-size:.83rem;color:var(--txt2);margin-bottom:.9rem}
@@ -421,8 +421,8 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 /* ── FOOTER ── */
 footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.2rem clamp(1.5rem,5vw,5rem)}
 .ft{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.ft-copy{font-size:.77rem;color:var(--txt3);margin-top:.35rem}
-.ft-links{display:flex;gap:1.4rem;font-size:.77rem;color:var(--txt3)}
+.ft-copy{font-size:.77rem;color:rgba(232,234,240,.55);margin-top:.35rem}
+.ft-links{display:flex;gap:1.4rem;font-size:.77rem;color:rgba(232,234,240,.55)}
 .ft-links a:hover{color:var(--txt2)}
 
 /* ── FLOAT CTA ── */
@@ -1051,7 +1051,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.2rem c
         </button>
       </div>
     </div>
-    <picture><source srcset="images/michelin-doigt.webp" type="image/webp"><img src="images/michelin-doigt.png" class="tarif-mich" alt=""></picture>
+    <picture><source srcset="images/michelin-doigt.webp" type="image/webp"><img src="images/michelin-doigt.png" class="tarif-mich" alt="" width="400" height="294"></picture>
     </div><!-- .tarifs-flex -->
   </div>
 </section>
@@ -1186,13 +1186,11 @@ window.addEventListener('scroll', () => {
 }, {passive: true});
 
 // ── REVEAL — cache seulement les éléments sous le fold ──
-const rvEls = document.querySelectorAll('.rv');
+const rvEls = [...document.querySelectorAll('.rv')];
 const foldH = window.innerHeight;
-rvEls.forEach(el => {
-  if (el.getBoundingClientRect().top > foldH - 60) {
-    el.classList.add('hidden');
-  }
-});
+// Batch reads THEN batch writes — évite le forced reflow (RWRWRW → RRRRWWWW)
+const tops = rvEls.map(el => el.getBoundingClientRect().top);
+rvEls.forEach((el, i) => { if (tops[i] > foldH - 60) el.classList.add('hidden'); });
 const ro = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (!e.isIntersecting) return;
@@ -1273,6 +1271,7 @@ function envoyerWhatsApp() {
     return 0.15;
   }
 
+  var ledRunning = false;
   function tick(ts) {
     for (var i=0; i<els.length; i++) {
       if (!els[i].el) continue;
@@ -1285,7 +1284,19 @@ function envoyerWhatsApp() {
     }
     requestAnimationFrame(tick);
   }
-  requestAnimationFrame(tick);
+  // Démarrer seulement quand la section zone est visible — évite rAF CPU pendant le chargement initial
+  var zoneEl = document.getElementById('zone');
+  if (zoneEl && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries, obs) {
+      if (entries[0].isIntersecting && !ledRunning) {
+        ledRunning = true;
+        requestAnimationFrame(tick);
+        obs.disconnect();
+      }
+    }, {rootMargin:'200px'}).observe(zoneEl);
+  } else {
+    requestAnimationFrame(tick);
+  }
 })();
 </script>
 <script>requestAnimationFrame(()=>requestAnimationFrame(()=>document.documentElement.style.setProperty('--ap','running')));</script>
