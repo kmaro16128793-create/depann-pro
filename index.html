@@ -1002,10 +1002,11 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
         <h3 style="display:flex;align-items:center;justify-content:space-between;width:100%"><span>Contactez-nous via WhatsApp</span><a href="#" class="logo" style="font-size:1.15rem;opacity:1;letter-spacing:-.01em"><em style="color:#2ee9ff;text-shadow:0 1px 4px rgba(0,0,0,.25)">D2</em><span>PNEUS</span></a></h3>
       </div>
       <div class="wa-body">
-        <input id="wa-nom" class="wa-field" type="text" placeholder="Nom" />
-        <input id="wa-tel" class="wa-field" type="tel" placeholder="Téléphone (Ex. +145867584)" />
-        <input id="wa-pneu" class="wa-field" type="text" placeholder="Taille de pneus" />
-        <textarea id="wa-msg" class="wa-field" placeholder="Message"></textarea>
+        <input id="wa-nom" class="wa-field" type="text" placeholder="👤 Votre nom" />
+        <input id="wa-tel" class="wa-field" type="tel" placeholder="📞 Téléphone (ex: 06 12 34 56 78)" />
+        <input id="wa-pneu" class="wa-field" type="text" placeholder="📐 Dimensions pneus (ex: 225/45/18)" />
+        <input id="wa-lieu" class="wa-field" type="text" placeholder="📍 Ville / Lieu d'intervention" />
+        <textarea id="wa-msg" class="wa-field" placeholder="💬 Message (optionnel)"></textarea>
         <button class="wa-btn-send" onclick="envoyerWhatsApp()">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="rgba(255,255,255,.9)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
           Envoyer à WhatsApp
@@ -1194,13 +1195,19 @@ document.querySelectorAll('.faq-q').forEach(q => {
 
 // ── WHATSAPP FORM ──
 function envoyerWhatsApp() {
-  const nom   = document.getElementById('wa-nom').value.trim();
-  const tel   = document.getElementById('wa-tel').value.trim();
-  const pneu  = document.getElementById('wa-pneu').value.trim();
-  const msg   = document.getElementById('wa-msg').value.trim();
+  const nom  = document.getElementById('wa-nom').value.trim();
+  const tel  = document.getElementById('wa-tel').value.trim();
+  const pneu = document.getElementById('wa-pneu').value.trim();
+  const lieu = document.getElementById('wa-lieu').value.trim();
+  const msg  = document.getElementById('wa-msg').value.trim();
   if (!nom || !tel) { alert('Merci de renseigner votre nom et téléphone.'); return; }
-  const texte = `Bonjour, je souhaite un devis :\n👤 Nom : ${nom}\n📞 Téléphone : ${tel}${pneu ? '\n🔧 Taille pneus : ' + pneu : ''}${msg ? '\n💬 Message : ' + msg : ''}`;
-  window.open('https://wa.me/33761069638?text=' + encodeURIComponent(texte), '_blank');
+  const ligne1 = '🚨 *NOUVELLE DEMANDE D2PNEUS* 🚨%0A%0A';
+  const ligne2 = '👤 *Nom :* ' + encodeURIComponent(nom) + '%0A';
+  const ligne3 = '📞 *Tél :* ' + encodeURIComponent(tel) + '%0A';
+  const ligne4 = pneu ? '📐 *Dimensions :* ' + encodeURIComponent(pneu) + '%0A' : '';
+  const ligne5 = lieu ? '📍 *Lieu :* ' + encodeURIComponent(lieu) + '%0A%0A' : '%0A';
+  const ligne6 = msg  ? '💬 *Message :* %0A' + encodeURIComponent(msg) : '';
+  window.open('https://wa.me/33761069638?text=' + ligne1 + ligne2 + ligne3 + ligne4 + ligne5 + ligne6, '_blank');
 }
 </script>
 
