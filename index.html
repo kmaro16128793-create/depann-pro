@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<link rel="preload" as="font" type="font/woff2" href="fonts/sora-subset.woff2" crossorigin fetchpriority="high">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="shortcut icon" href="images/favicon.svg">
   <!-- Open Graph — aperçu WhatsApp / réseaux sociaux -->
@@ -22,7 +23,6 @@
 <meta property="og:type" content="website">
 <title>DEPANN2PNEUS — Dépannage pneus à domicile Île-de-France</title>
 <link rel="preload" as="image" href="images/hero-bg.webp" fetchpriority="high">
-<link rel="preload" as="font" type="font/woff2" href="fonts/sora-subset.woff2" crossorigin fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="fonts/inter-latin.woff2" crossorigin>
 <style>
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/inter-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -32,7 +32,7 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/inter-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/inter-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Sora';font-style:normal;font-weight:300 900;font-display:swap;src:url('fonts/sora-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Sora';font-style:normal;font-weight:300 900;font-display:optional;src:url('fonts/sora-subset.woff2') format('woff2');unicode-range:U+0020-007E,U+00A9,U+00B7,U+00C9,U+00CE,U+00E0,U+00E2,U+00E7,U+00E8,U+00E9,U+00EA,U+00EE,U+00F4,U+00F9,U+00FB,U+2014,U+20AC}
+@font-face{font-family:'Sora';font-style:normal;font-weight:300 900;font-display:swap;src:url('fonts/sora-subset.woff2') format('woff2');unicode-range:U+0020-007E,U+00A9,U+00B7,U+00C9,U+00CE,U+00E0,U+00E2,U+00E7,U+00E8,U+00E9,U+00EA,U+00EE,U+00F4,U+00F9,U+00FB,U+2014,U+20AC}
 </style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -1242,61 +1242,23 @@ function envoyerWhatsApp() {
 }
 </script>
 
+<style>
+@keyframes neonPulse{0%,38%,73%,100%{stroke-opacity:.15;stroke-width:2.5}43%,48%{stroke-opacity:1;stroke-width:9}75%,79%{stroke-opacity:.8;stroke-width:7}}
+.dp.anim-active{animation:neonPulse 4s infinite ease-in-out;will-change:stroke-opacity,stroke-width}
+#led77{animation-delay:0s}#led95{animation-delay:.6s}#led78{animation-delay:1.2s}#led91{animation-delay:1.8s}
+#led92{animation-delay:.4s}#led93{animation-delay:1s}#led94{animation-delay:1.5s}#led75{animation-delay:.8s}
+</style>
 <script>
-// ── LED NÉON DÉPARTEMENTS — stroke animation (compatible Safari iOS) ──
+// ── LED NÉON DÉPARTEMENTS — CSS GPU animation ──
 (function(){
-  var depts = [
-    { id:'led77', off:0   },
-    { id:'led95', off:600 },
-    { id:'led78', off:1200},
-    { id:'led91', off:1800},
-    { id:'led92', off:400 },
-    { id:'led93', off:1000},
-    { id:'led94', off:1500},
-    { id:'led75', off:800 }
-  ];
-  var PERIOD = 4000;
-  var els = depts.map(function(d){
-    return { el: document.getElementById(d.id), off: d.off };
-  });
-
-  function intensity(phase) {
-    if (phase < 0.38) return 0.15;
-    if (phase < 0.43) return 0.15 + (phase-0.38)/0.05*0.85;
-    if (phase < 0.48) return 1    - (phase-0.43)/0.05*0.85;
-    if (phase < 0.73) return 0.15;
-    if (phase < 0.75) return 0.15 - (phase-0.73)/0.02*0.1;
-    if (phase < 0.77) return 0.05 + (phase-0.75)/0.02*0.75;
-    if (phase < 0.79) return 0.8  - (phase-0.77)/0.02*0.65;
-    return 0.15;
-  }
-
-  var ledRunning = false;
-  function tick(ts) {
-    for (var i=0; i<els.length; i++) {
-      if (!els[i].el) continue;
-      var phase = ((ts + els[i].off) % PERIOD) / PERIOD;
-      var k = intensity(phase);
-      var sw = (2 + k * 7).toFixed(2);
-      var op = (0.7 + k * 0.3).toFixed(2);
-      els[i].el.setAttribute('stroke-width', sw);
-      els[i].el.setAttribute('stroke-opacity', op);
-    }
-    requestAnimationFrame(tick);
-  }
-  // Démarrer seulement quand la section zone est visible — évite rAF CPU pendant le chargement initial
   var zoneEl = document.getElementById('zone');
-  if (zoneEl && 'IntersectionObserver' in window) {
-    new IntersectionObserver(function(entries, obs) {
-      if (entries[0].isIntersecting && !ledRunning) {
-        ledRunning = true;
-        requestAnimationFrame(tick);
-        obs.disconnect();
-      }
-    }, {rootMargin:'200px'}).observe(zoneEl);
-  } else {
-    requestAnimationFrame(tick);
-  }
+  if (!zoneEl) return;
+  new IntersectionObserver(function(entries, obs) {
+    if (entries[0].isIntersecting) {
+      document.querySelectorAll('.dp').forEach(function(el){ el.classList.add('anim-active'); });
+      obs.disconnect();
+    }
+  }, {rootMargin:'100px'}).observe(zoneEl);
 })();
 </script>
 <script>requestAnimationFrame(()=>requestAnimationFrame(()=>document.documentElement.style.setProperty('--ap','running')));</script>
