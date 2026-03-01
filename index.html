@@ -383,6 +383,26 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
   .gi-air{grid-column:2;grid-row:4}
 }
 
+/* === FLEET / TYPES VÉHICULES === */
+#fleet{background:var(--bg)}
+.fleet-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.5rem}
+.fleet-c{background:var(--surface);border:1px solid var(--border2);border-radius:var(--rl);padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:.55rem;transition:transform .22s,border-color .22s,box-shadow .22s;text-decoration:none;color:inherit;position:relative;overflow:hidden}
+.fleet-c::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right,var(--cd) 0%,transparent 55%);opacity:0;transition:opacity .3s}
+.fleet-c:hover{transform:translateY(-4px);border-color:var(--border);box-shadow:0 18px 40px rgba(0,0,0,.45);text-decoration:none;color:inherit}
+.fleet-c:hover::before{opacity:1}
+.fleet-c.is-link{cursor:pointer}
+.fleet-ico{width:2.8rem;height:2.8rem;display:flex;align-items:center;justify-content:center;background:var(--cd);border-radius:.75rem;font-size:1.3rem;position:relative;z-index:1}
+.fleet-t{font-family:var(--f1);font-weight:700;font-size:.98rem;color:#fff;position:relative;z-index:1}
+.fleet-d{font-size:.81rem;color:var(--txt2);line-height:1.6;position:relative;z-index:1;flex:1}
+.fleet-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.2rem;position:relative;z-index:1}
+.fleet-tag{font-size:.7rem;font-weight:600;padding:.2rem .55rem;border-radius:2rem;border:1px solid rgba(46,233,255,.2);color:var(--txt3);background:rgba(46,233,255,.06)}
+.fleet-tag.hot{border-color:rgba(255,107,53,.3);color:#ff9a6c;background:rgba(255,107,53,.08)}
+.fleet-tag.med{border-color:rgba(46,233,255,.35);color:var(--cyan);background:rgba(46,233,255,.1)}
+.fleet-link{margin-top:.6rem;font-size:.78rem;font-weight:700;color:var(--cyan);display:flex;align-items:center;gap:.3rem;position:relative;z-index:1}
+.fleet-link svg{transition:transform .2s}
+.fleet-c:hover .fleet-link svg{transform:translateX(4px)}
+@media(max-width:900px){.fleet-g{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.fleet-g{grid-template-columns:1fr}}
 /* === PERF: content-visibility sur sections hors-écran === */
 #avis,#faq,#cta{content-visibility:auto;contain-intrinsic-size:1px 600px}
 /* === PERF: will-change sur éléments animés === */
@@ -850,6 +870,96 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
       <div class="step rv d1"><div class="step-n">02</div><div class="step-ico">📱</div><div class="step-t">Appelez ou WhatsApp</div><div class="step-d">Décrivez la situation en 2 mots. Devis immédiat, aucune mauvaise surprise.</div></div>
       <div class="step rv d2"><div class="step-n">03</div><div class="step-ico">🚐</div><div class="step-t">On arrive en moyenne en 40-45 min</div><div class="step-d">Le camion le plus proche part immédiatement avec le matériel adapté à votre véhicule.</div></div>
       <div class="step rv d3"><div class="step-n">04</div><div class="step-ico">✅</div><div class="step-t">Repartez serein</div><div class="step-d">Pneus montés, équilibrés, pression vérifiée. Vous reprenez la route en sécurité.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPES DE VÉHICULES -->
+<section id="fleet">
+  <div class="c">
+    <div style="text-align:center;max-width:580px;margin:0 auto">
+      <div class="sec-tag" style="justify-content:center">Tous types de véhicules</div>
+      <h2 class="sec-h">On intervient sur quoi ?</h2>
+      <p class="sec-sub" style="margin:0 auto">Voiture, utilitaire, taxi, ambulance ou jante abîmée — DEPAN2PNEUS s'adapte à votre véhicule.</p>
+    </div>
+    <div class="fleet-g">
+
+      <!-- Voiture particulière -->
+      <div class="fleet-c">
+        <div class="fleet-ico">🚗</div>
+        <div class="fleet-t">Voitures particulières</div>
+        <div class="fleet-d">Citadines, berlines, SUV, monospaces, coupés. Toutes marques (Renault, Peugeot, VW, BMW, Mercedes, Toyota…). Crevaison, remplacement ou réparation selon le cas.</div>
+        <div class="fleet-tags">
+          <span class="fleet-tag">Citadine</span>
+          <span class="fleet-tag">SUV / 4x4</span>
+          <span class="fleet-tag">Berline</span>
+          <span class="fleet-tag">Monospace</span>
+        </div>
+      </div>
+
+      <!-- Taxis & VTC -->
+      <a href="depannage-pneu-taxi-vtc-paris-idf.html" class="fleet-c is-link">
+        <div class="fleet-ico">🚕</div>
+        <div class="fleet-t">Taxis & VTC</div>
+        <div class="fleet-d">G7, Uber, Bolt, Kapten — intervention prioritaire pour limiter l'immobilisation. Pneus Runflat (BMW Série 5, Mercedes Classe E) traités. CDG & Orly couverts.</div>
+        <div class="fleet-tags">
+          <span class="fleet-tag hot">Prioritaire</span>
+          <span class="fleet-tag">Runflat</span>
+          <span class="fleet-tag">CDG / Orly</span>
+        </div>
+        <div class="fleet-link">Page dédiée <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <!-- Ambulances & VSL -->
+      <a href="depannage-pneu-ambulance-vsl-idf.html" class="fleet-c is-link">
+        <div class="fleet-ico">🚑</div>
+        <div class="fleet-t">Ambulances & VSL</div>
+        <div class="fleet-d">Sprinter, Crafter, Master, Expert, Proace. Signalement patient pris en compte. Intervention urgente calée sur votre planning médical. AP-HP & hôpitaux IDF couverts.</div>
+        <div class="fleet-tags">
+          <span class="fleet-tag hot">Urgence médicale</span>
+          <span class="fleet-tag">AP-HP</span>
+          <span class="fleet-tag">VSL</span>
+        </div>
+        <div class="fleet-link">Page dédiée <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <!-- Utilitaires -->
+      <div class="fleet-c">
+        <div class="fleet-ico">🚐</div>
+        <div class="fleet-t">Utilitaires & fourgons</div>
+        <div class="fleet-d">Mercedes Sprinter, VW Crafter, Renault Master, Ford Transit, Citroën Jumpy. Jusqu'à 3,5T. Livraison, artisanat, e-commerce — on réduit votre immobilisation au minimum.</div>
+        <div class="fleet-tags">
+          <span class="fleet-tag">Sprinter</span>
+          <span class="fleet-tag">Master / Crafter</span>
+          <span class="fleet-tag">3,5T max</span>
+        </div>
+      </div>
+
+      <!-- Runflat & premium -->
+      <div class="fleet-c">
+        <div class="fleet-ico">🏎️</div>
+        <div class="fleet-t">Runflat & véhicules premium</div>
+        <div class="fleet-d">BMW (Série 3, 5, X5), Mercedes (GLC, GLE), Porsche, Tesla. Pneus Runflat roulés à plat identifiés, remplacement par paire recommandé. Grands diamètres 17→21 pouces traités.</div>
+        <div class="fleet-tags">
+          <span class="fleet-tag med">Runflat</span>
+          <span class="fleet-tag">17–21 pouces</span>
+          <span class="fleet-tag">BMW / Porsche</span>
+        </div>
+      </div>
+
+      <!-- Jantes alu -->
+      <a href="reparation-redressage-jante-alu-idf.html" class="fleet-c is-link">
+        <div class="fleet-ico">⚙️</div>
+        <div class="fleet-t">Jantes aluminium</div>
+        <div class="fleet-d">Jante voilée, soudure TIG, rayures de trottoir. Redressage sur machine + rénovation esthétique. Envoyez une photo sur WhatsApp pour un devis immédiat.</div>
+        <div class="fleet-tags">
+          <span class="fleet-tag">Redressage</span>
+          <span class="fleet-tag">Soudure TIG</span>
+          <span class="fleet-tag">Rayures trottoir</span>
+        </div>
+        <div class="fleet-link">Page dédiée <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
     </div>
   </div>
 </section>
