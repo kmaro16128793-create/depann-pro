@@ -57,7 +57,7 @@
 
 .tarifs-flex{display:flex;align-items:center;justify-content:center;gap:2.5rem;margin:2.5rem auto 0}
 .tarifs-flex .wa-wrap{margin:0;flex-shrink:0}
-.tarif-mich{height:460px;width:auto;opacity:1;pointer-events:none;animation:mich-float 4s ease-in-out infinite}
+.tarif-mich{height:540px;width:auto;opacity:1;pointer-events:none;animation:mich-float 4s ease-in-out infinite}
 @media(max-width:1299px){.tarif-mich{display:none}}
 @media(max-width:900px){#cta .btn-p,#cta .nav-btn{font-size:.78rem!important;padding:.65rem 1.1rem!important}}
 
