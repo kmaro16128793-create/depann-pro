@@ -229,7 +229,10 @@ function page(v) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#07090c">
-<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="shortcut icon" href="images/favicon.png">
 <title>Dépannage Pneu ${v.nom} 24h/24 ⚡ Intervention ${v.temps} min — DEPAN2PNEUS IDF</title>
 <meta name="description" content="🚗 Pneu crevé à ${v.nom} ? DEPAN2PNEUS arrive en ${v.temps} min, 7j/7 24h/24. Montage, réparation, équilibrage sur place. Devis gratuit ☎ 07 61 06 96 38.">
 <meta name="keywords" content="dépannage pneu ${v.nom}, pneu crevé ${v.nom}, réparation pneu ${v.nom}, montage pneu ${v.nom} domicile, dépannage pneu ${deptNames[v.dep]}, depannage pneu idf 24h">
