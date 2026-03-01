@@ -395,10 +395,13 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 .fleet-t{font-family:var(--f1);font-weight:700;font-size:.98rem;color:#fff;position:relative;z-index:1}
 .fleet-d{font-size:.81rem;color:var(--txt2);line-height:1.6;position:relative;z-index:1;flex:1}
 .fleet-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.2rem;position:relative;z-index:1}
-.fleet-tag{font-size:.7rem;font-weight:600;padding:.2rem .55rem;border-radius:2rem;border:1px solid rgba(46,233,255,.2);color:var(--txt3);background:rgba(46,233,255,.06)}
-.fleet-tag.hot{border-color:rgba(255,107,53,.3);color:#ff9a6c;background:rgba(255,107,53,.08)}
-.fleet-tag.med{border-color:rgba(46,233,255,.35);color:var(--cyan);background:rgba(46,233,255,.1)}
-.fleet-link{margin-top:.6rem;font-size:.78rem;font-weight:700;color:var(--cyan);display:flex;align-items:center;gap:.3rem;position:relative;z-index:1}
+.fleet-tag{font-size:.7rem;font-weight:600;padding:.22rem .6rem;border-radius:2rem;border:1px solid rgba(255,255,255,.13);color:rgba(255,255,255,.48);background:rgba(255,255,255,.05)}
+.fleet-tag.urgent{border-color:rgba(255,71,87,.5);color:#ff6b78;background:rgba(255,71,87,.13);font-weight:700}
+.fleet-tag.amber{border-color:rgba(255,165,2,.4);color:#ffc107;background:rgba(255,165,2,.1)}
+.fleet-tag.med{border-color:rgba(46,233,255,.4);color:var(--cyan);background:rgba(46,233,255,.1);font-weight:700}
+.fleet-tag.green{border-color:rgba(0,230,118,.38);color:#00e676;background:rgba(0,230,118,.08)}
+.fleet-link{margin-top:.6rem;font-size:.78rem;font-weight:700;color:var(--cyan);display:inline-flex;align-items:center;gap:.35rem;position:relative;z-index:1;padding:.3rem .7rem;background:rgba(46,233,255,.08);border:1px solid rgba(46,233,255,.22);border-radius:2rem;transition:background .2s,border-color .2s;align-self:flex-start}
+.fleet-c:hover .fleet-link{background:rgba(46,233,255,.16);border-color:rgba(46,233,255,.45)}
 .fleet-link svg{transition:transform .2s}
 .fleet-c:hover .fleet-link svg{transform:translateX(4px)}
 @media(max-width:900px){.fleet-g{grid-template-columns:1fr 1fr}}
@@ -903,9 +906,9 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
         <div class="fleet-t">Taxis & VTC</div>
         <div class="fleet-d">G7, Uber, Bolt, Kapten — intervention prioritaire pour limiter l'immobilisation. Pneus Runflat (BMW Série 5, Mercedes Classe E) traités. CDG & Orly couverts.</div>
         <div class="fleet-tags">
-          <span class="fleet-tag hot">Prioritaire</span>
-          <span class="fleet-tag">Runflat</span>
-          <span class="fleet-tag">CDG / Orly</span>
+          <span class="fleet-tag urgent">Prioritaire</span>
+          <span class="fleet-tag med">Runflat</span>
+          <span class="fleet-tag amber">CDG / Orly</span>
         </div>
         <div class="fleet-link">Page dédiée <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </a>
@@ -916,8 +919,8 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
         <div class="fleet-t">Ambulances & VSL</div>
         <div class="fleet-d">Sprinter, Crafter, Master, Expert, Proace. Signalement patient pris en compte. Intervention urgente calée sur votre planning médical. AP-HP & hôpitaux IDF couverts.</div>
         <div class="fleet-tags">
-          <span class="fleet-tag hot">Urgence médicale</span>
-          <span class="fleet-tag">AP-HP</span>
+          <span class="fleet-tag urgent">Urgence médicale</span>
+          <span class="fleet-tag amber">AP-HP</span>
           <span class="fleet-tag">VSL</span>
         </div>
         <div class="fleet-link">Page dédiée <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
@@ -942,8 +945,8 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
         <div class="fleet-d">BMW (Série 3, 5, X5), Mercedes (GLC, GLE), Porsche, Tesla. Pneus Runflat roulés à plat identifiés, remplacement par paire recommandé. Grands diamètres 17→21 pouces traités.</div>
         <div class="fleet-tags">
           <span class="fleet-tag med">Runflat</span>
-          <span class="fleet-tag">17–21 pouces</span>
-          <span class="fleet-tag">BMW / Porsche</span>
+          <span class="fleet-tag med">17–21 pouces</span>
+          <span class="fleet-tag med">BMW / Porsche</span>
         </div>
       </div>
 
@@ -953,8 +956,8 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
         <div class="fleet-t">Jantes aluminium</div>
         <div class="fleet-d">Jante voilée, soudure TIG, rayures de trottoir. Redressage sur machine + rénovation esthétique. Envoyez une photo sur WhatsApp pour un devis immédiat.</div>
         <div class="fleet-tags">
-          <span class="fleet-tag">Redressage</span>
-          <span class="fleet-tag">Soudure TIG</span>
+          <span class="fleet-tag green">Redressage</span>
+          <span class="fleet-tag green">Soudure TIG</span>
           <span class="fleet-tag">Rayures trottoir</span>
         </div>
         <div class="fleet-link">Page dédiée <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
