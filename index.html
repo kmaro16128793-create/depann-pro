@@ -23,6 +23,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <meta name="description" content="Pneu crevé ? DEPAN2PNEUS intervient en 40-45 min en Île-de-France, 7j/7 24h/24. Spécialiste dépannage pneu véhicules légers (75, 77, 78, 91, 92, 93, 94, 95). Devis gratuit.">
+<meta name="keywords" content="pneus, reparation pneu, depannage, pneu crevé, montage pneu, île-de-france, 24h/24, dépannage pneu domicile Paris, pneu crevé dimanche, garage ouvert dimanche IDF, pneu taxi VTC, redressage jante alu 92, soudure jante 93">
 <meta property="og:title" content="DEPAN2PNEUS — Dépannage pneus 40-45 min IDF">
 <meta property="og:type" content="website">
 <title>DEPAN2PNEUS — Dépannage pneu crevé véhicules légers IDF 24h/24</title>
@@ -355,6 +356,33 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 #fcta:hover{box-shadow:0 0 20px rgba(34,197,94,1),0 0 45px rgba(34,197,94,.7),0 0 90px rgba(34,197,94,.4);animation:none}
 
 
+/* === GALERIE ÉQUIPEMENTS === */
+#galerie{padding:5rem 0}
+#galerie .sec-sub{max-width:520px;margin-bottom:0}
+.gal-g{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 200px 180px;gap:.75rem;margin-top:2.5rem}
+.gal-i{border-radius:10px;overflow:hidden;position:relative;background:var(--card)}
+.gal-i img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+.gal-i:hover img{transform:scale(1.05)}
+.gal-lbl{position:absolute;bottom:0;left:0;right:0;padding:.55rem .85rem;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:0;transition:opacity .3s ease}
+.gal-i:hover .gal-lbl{opacity:1}
+.gi-van{grid-column:1;grid-row:1/3}
+.gi-tech{grid-column:2;grid-row:1}
+.gi-drive{grid-column:3;grid-row:1}
+.gi-shop{grid-column:2;grid-row:2}
+.gi-rack{grid-column:3;grid-row:2}
+.gi-int{grid-column:1;grid-row:3}
+.gi-air{grid-column:2/4;grid-row:3}
+@media(max-width:768px){
+  .gal-g{grid-template-columns:1fr 1fr;grid-template-rows:200px 150px 150px 150px}
+  .gi-van{grid-column:1/3;grid-row:1}
+  .gi-tech{grid-column:1;grid-row:2}
+  .gi-drive{grid-column:2;grid-row:2}
+  .gi-shop{grid-column:1;grid-row:3}
+  .gi-rack{grid-column:2;grid-row:3}
+  .gi-int{grid-column:1;grid-row:4}
+  .gi-air{grid-column:2;grid-row:4}
+}
+
 /* === PERF: content-visibility sur sections hors-écran === */
 #avis,#faq,#cta{content-visibility:auto;contain-intrinsic-size:1px 600px}
 /* === PERF: will-change sur éléments animés === */
@@ -543,7 +571,47 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
       "name": "Pour quels types de véhicules intervenez-vous ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nous sommes spécialistes exclusifs des véhicules légers : voitures de tourisme, citadines, SUV, monospaces et utilitaires légers type Mercedes Sprinter. Nous n'intervenons pas sur les motos ni les poids lourds, afin de garantir un matériel 100% adapté et une intervention ultra-rapide."
+        "text": "Nous dépannons tous les véhicules légers : citadines, berlines, SUV, 4x4, monospaces, utilitaires et fourgons jusqu'à 20m³ (Master, Sprinter, Ducato, Transit, Crafter), taxis et VTC, véhicules de prestige et sportives. Montage soigné sur jantes aluminium et pneus Runflat (roulage à plat). Nous n'intervenons pas sur les poids lourds au-delà de 20m³."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien coûte une réparation de pneu crevé à domicile en IDF ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le prix d'un dépannage pneu à domicile dépend de l'heure, du type d'intervention et de la localisation. Chez DEPAN2PNEUS, nous proposons des tarifs compétitifs et transparents communiqués dès l'appel, sans mauvaise surprise. Devis immédiat et gratuit par téléphone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Intervenez-vous pour un pneu crevé le dimanche ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, notre service d'assistance pneumatique mobile intervient 7j/7, dimanche et jours fériés inclus, 24h/24 partout en Île-de-France. Aucune majoration cachée pour le dimanche."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel est le délai d'intervention pour un dépannage pneu ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grâce à nos techniciens répartis en IDF, nous intervenons en moyenne sous 40 à 45 minutes après votre appel pour une réparation sur place ou à domicile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on réparer un pneu crevé sur le flanc ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, une crevaison sur le flanc n'est pas réparable pour des raisons de sécurité. Dans ce cas, notre dépanneur procède au remplacement immédiat du pneu sur place avec votre roue de secours ou un pneu de remplacement disponible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il changer les pneus par paire ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La loi française impose que les pneus d'un même essieu soient de structure identique et de dessin similaire. Pour votre sécurité et la validation du contrôle technique, le remplacement s'effectue par paire (2 pneus) si l'usure du pneu opposé dépasse les seuils réglementaires. Notre technicien vous informe de l'état du pneu symétrique lors de chaque intervention."
       }
     }
   ]
@@ -781,6 +849,24 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
       <div class="step rv d1"><div class="step-n">02</div><div class="step-ico">📱</div><div class="step-t">Appelez ou WhatsApp</div><div class="step-d">Décrivez la situation en 2 mots. Devis immédiat, aucune mauvaise surprise.</div></div>
       <div class="step rv d2"><div class="step-n">03</div><div class="step-ico">🚐</div><div class="step-t">On arrive en moyenne en 40-45 min</div><div class="step-d">Le camion le plus proche part immédiatement avec le matériel adapté à votre véhicule.</div></div>
       <div class="step rv d3"><div class="step-n">04</div><div class="step-ico">✅</div><div class="step-t">Repartez serein</div><div class="step-d">Pneus montés, équilibrés, pression vérifiée. Vous reprenez la route en sécurité.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE ÉQUIPEMENTS -->
+<section id="galerie">
+  <div class="c">
+    <div class="sec-tag">Notre équipement</div>
+    <h2 class="sec-h">Un atelier complet,<br>dans le camion.</h2>
+    <p class="sec-sub">Tout le matériel professionnel embarqué — pour intervenir aussi vite qu'efficacement, où que vous soyez.</p>
+    <div class="gal-g">
+      <div class="gal-i gi-van rv"><img src="images/sprinter_logo.png" alt="Mercedes Sprinter DEPAN2PNEUS" loading="lazy" width="800" height="600"><div class="gal-lbl">Notre Mercedes Sprinter</div></div>
+      <div class="gal-i gi-tech rv d1"><img src="images/technician.jpg" alt="Technicien pneus" loading="lazy" width="600" height="400"><div class="gal-lbl">Technicien certifié</div></div>
+      <div class="gal-i gi-drive rv d2"><img src="images/tire_tread.jpg" alt="Pneu haute performance" loading="lazy" width="600" height="400"><div class="gal-lbl">Pneus toutes marques</div></div>
+      <div class="gal-i gi-shop rv d1"><img src="images/workshop_tire.jpg" alt="Atelier pneus" loading="lazy" width="600" height="400"><div class="gal-lbl">Matériel pro</div></div>
+      <div class="gal-i gi-rack rv d2"><img src="images/tire_rack.jpg" alt="Stock de pneus" loading="lazy" width="600" height="400"><div class="gal-lbl">Stock embarqué</div></div>
+      <div class="gal-i gi-int rv d1"><img src="images/van_interior.jpg" alt="Intérieur van" loading="lazy" width="600" height="400"><div class="gal-lbl">Équipement intérieur</div></div>
+      <div class="gal-i gi-air rv d2"><img src="images/aerial_highway.jpg" alt="Île-de-France autoroute" loading="lazy" width="900" height="400"><div class="gal-lbl">Toute l'Île-de-France couverte</div></div>
     </div>
   </div>
 </section>
