@@ -394,7 +394,8 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 .fleet-c::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right,var(--cd) 0%,transparent 55%);opacity:0;transition:opacity .3s}
 .fleet-c:hover{transform:translateY(-4px);border-color:var(--border);box-shadow:0 18px 40px rgba(0,0,0,.45);text-decoration:none;color:inherit}
 .fleet-c:hover::before{opacity:1}
-.fleet-c.is-link{cursor:pointer}
+.fleet-c.is-link{cursor:pointer;border-color:rgba(46,233,255,.28)}
+.fleet-c.is-link:hover{border-color:rgba(46,233,255,.7);box-shadow:0 18px 40px rgba(0,0,0,.45),0 0 24px rgba(46,233,255,.12)}
 .fleet-ico{width:2.8rem;height:2.8rem;display:flex;align-items:center;justify-content:center;background:var(--cd);border-radius:.75rem;font-size:1.3rem;position:relative;z-index:1}
 .fleet-t{font-family:var(--f1);font-weight:700;font-size:.98rem;color:#fff;position:relative;z-index:1}
 .fleet-d{font-size:.81rem;color:var(--txt2);line-height:1.6;position:relative;z-index:1;flex:1}
@@ -404,9 +405,9 @@ section{padding:5.5rem clamp(1.5rem,5vw,5rem)}
 .fleet-tag.amber{border-color:rgba(255,165,2,.4);color:#ffc107;background:rgba(255,165,2,.1)}
 .fleet-tag.med{border-color:rgba(46,233,255,.4);color:var(--cyan);background:rgba(46,233,255,.1);font-weight:700}
 .fleet-tag.green{border-color:rgba(0,230,118,.38);color:#00e676;background:rgba(0,230,118,.08)}
-.fleet-link{margin-top:.6rem;font-size:.78rem;font-weight:700;color:var(--cyan);display:inline-flex;align-items:center;gap:.35rem;position:relative;z-index:1;padding:.3rem .7rem;background:rgba(46,233,255,.08);border:1px solid rgba(46,233,255,.22);border-radius:2rem;transition:background .2s,border-color .2s;align-self:flex-start}
-.fleet-c:hover .fleet-link{background:rgba(46,233,255,.16);border-color:rgba(46,233,255,.45)}
-.fleet-link svg{transition:transform .2s}
+.fleet-link{margin-top:auto;padding-top:.9rem;font-size:.8rem;font-weight:700;color:#07090c;display:flex;align-items:center;justify-content:center;gap:.4rem;position:relative;z-index:1;padding:.55rem .9rem;background:var(--cyan);border-radius:.55rem;transition:filter .2s,transform .15s;align-self:stretch}
+.fleet-c:hover .fleet-link{filter:brightness(1.1)}
+.fleet-link svg{transition:transform .2s;stroke:#07090c}
 .fleet-c:hover .fleet-link svg{transform:translateX(4px)}
 @media(max-width:900px){.fleet-g{grid-template-columns:1fr 1fr}}
 @media(max-width:540px){.fleet-g{grid-template-columns:1fr}}
