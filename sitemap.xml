@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://depan2pneus.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <!-- Pages Piliers Départements -->
+  <url><loc>https://depan2pneus.com/pneu-paris-75.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://depan2pneus.com/pneu-77-seine-et-marne.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://depan2pneus.com/pneu-78-yvelines.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://depan2pneus.com/pneu-91-essonne.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://depan2pneus.com/pneu-92-hauts-de-seine.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://depan2pneus.com/pneu-93-seine-saint-denis.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://depan2pneus.com/pneu-94-val-de-marne.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://depan2pneus.com/pneu-95-val-doise.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <!-- Pages Départements Génériques -->
   <url><loc>https://depan2pneus.com/departement-paris-75.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://depan2pneus.com/departement-seine-et-marne-77.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://depan2pneus.com/departement-yvelines-78.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://depan2pneus.com/departement-essonne-91.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://depan2pneus.com/departement-hauts-de-seine-92.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://depan2pneus.com/pneu-92-hauts-de-seine.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://depan2pneus.com/departement-seine-saint-denis-93.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://depan2pneus.com/pneu-93-seine-saint-denis.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://depan2pneus.com/departement-val-de-marne-94.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://depan2pneus.com/departement-val-doise-95.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- Pages Services Spéciaux -->
   <url><loc>https://depan2pneus.com/depannage-pneu-dimanche-paris-idf.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://depan2pneus.com/depannage-pneu-taxi-vtc-paris-idf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://depan2pneus.com/depannage-pneu-ambulance-vsl-idf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://depan2pneus.com/reparation-redressage-jante-alu-idf.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://depan2pneus.com/departement-val-de-marne-94.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://depan2pneus.com/departement-val-doise-95.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- Pages Villes -->
   <url><loc>https://depan2pneus.com/depannage-pneu-gonesse.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://depan2pneus.com/depannage-pneu-roissy-en-france.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://depan2pneus.com/depannage-pneu-villepinte.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
