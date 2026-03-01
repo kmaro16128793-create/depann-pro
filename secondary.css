@@ -55,9 +55,9 @@
 @media(max-width:900px){.cta-sec{overflow:visible;padding-bottom:8rem}.cta-mich{height:110px;top:auto;bottom:0;margin-top:0;opacity:.6}
 .cta-mich.right{right:0}.cta-mich.left{left:0}}
 
-.tarifs-flex{display:flex;align-items:center;justify-content:center;gap:2.5rem;margin:2.5rem auto 0}
+.tarifs-flex{display:flex;align-items:stretch;justify-content:center;gap:2.5rem;margin:2.5rem auto 0}
 .tarifs-flex .wa-wrap{margin:0;flex-shrink:0}
-.tarif-mich{height:auto;width:auto;max-height:510px;flex:1 1 auto;min-width:0;opacity:1;pointer-events:none;animation:mich-float 4s ease-in-out infinite}
+.tarif-mich{height:100%;width:auto;max-height:520px;max-width:380px;flex:1 1 auto;min-width:0;opacity:1;pointer-events:none;animation:mich-float 4s ease-in-out infinite;object-fit:contain;align-self:center}
 @media(max-width:1299px){.tarif-mich{display:none}}
 @media(max-width:900px){#cta .btn-p,#cta .nav-btn{font-size:.78rem!important;padding:.65rem 1.1rem!important}}
 
