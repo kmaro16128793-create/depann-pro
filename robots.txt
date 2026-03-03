@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://depan2pneus.com/sitemap.xml
