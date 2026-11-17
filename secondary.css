@@ -55,16 +55,16 @@
 @media(max-width:900px){.cta-sec{overflow:visible;padding-bottom:8rem}.cta-mich{height:110px;top:auto;bottom:0;margin-top:0;opacity:.6}
 .cta-mich.right{right:0}.cta-mich.left{left:0}}
 
-.tarifs-flex{display:flex;align-items:center;justify-content:center;gap:2.5rem;margin:2.5rem auto 0}
-.tarifs-flex .wa-wrap{margin:0;flex-shrink:0}
-.tarif-mich{height:540px;width:auto;opacity:1;pointer-events:none;animation:mich-float 4s ease-in-out infinite}
-@media(max-width:1299px){.tarif-mich{display:none}}
+.devis-flex{display:flex;align-items:center;justify-content:center;gap:2.5rem;margin:2.5rem auto 0}
+.devis-flex .wa-wrap{margin:0;flex-shrink:0}
+.devis-mich{height:540px;width:auto;opacity:1;pointer-events:none;animation:mich-float 4s ease-in-out infinite}
+@media(max-width:1299px){.devis-mich{display:none}}
 @media(max-width:900px){#cta .btn-p,#cta .nav-btn{font-size:.78rem!important;padding:.65rem 1.1rem!important}}
 
 /* ═══ MOBILE — BIBENDUM SOUS FORMULAIRE ══════════════════════════════════════ */
 @media(max-width:768px){
-  .tarifs-flex{flex-direction:column;align-items:center}
-  .tarif-mich{display:block;max-height:220px;width:auto;height:auto;margin-top:1.5rem}
+  .devis-flex{flex-direction:column;align-items:center}
+  .devis-mich{display:block;max-height:220px;width:auto;height:auto;margin-top:1.5rem}
 }
 .cta-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at center,rgba(46,233,255,.045),transparent 62%)}
 .cta-h{font-family:var(--f1);font-weight:900;font-size:clamp(2.3rem,4.5vw,4.2rem);letter-spacing:-.04em;color:#fff;line-height:1.05;position:relative;z-index:1}
