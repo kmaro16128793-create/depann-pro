@@ -158,9 +158,14 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
 .back-home{background:rgba(46,233,255,.05);color:var(--cyan)}
 .back-home::before{background:linear-gradient(135deg,rgba(46,233,255,.45) 0%,rgba(46,233,255,.08) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
 .back-home:hover{background:rgba(46,233,255,.1);color:#fff;box-shadow:0 8px 28px rgba(46,233,255,.22),0 0 0 1px rgba(46,233,255,.2)}
+.sec h3{font-family:var(--f1);font-weight:700;font-size:1.08rem;color:#fff;margin:1.8rem 0 .5rem}
+.sec p.txt{color:var(--txt2);font-size:.95rem;line-height:1.75;margin-bottom:1rem;max-width:780px}
+.sec p.txt strong{color:var(--txt)}
+.cimg{width:100%;max-width:780px;border-radius:1rem;border:1px solid var(--border);margin:1.2rem 0;display:block}
+.step-n{display:inline-flex;align-items:center;justify-content:center;width:1.7rem;height:1.7rem;border-radius:50%;background:rgba(46,233,255,.12);border:1px solid rgba(46,233,255,.3);color:var(--cyan);font-family:var(--f1);font-weight:800;font-size:.85rem;margin-right:.5rem;vertical-align:middle}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Vous couvrez la zone commerciale de Villiers-le-Bel ?","acceptedAnswer":{"@type":"Answer","text":"Oui, on intervient dans toute la commune, y compris les zones commerciales le long de la RD10. Nos camions circulent régulièrement entre Villiers-le-Bel et Gonesse."}},{"@type":"Question","name":"Quelle est la distance entre votre base et Villiers-le-Bel ?","acceptedAnswer":{"@type":"Answer","text":"Villiers-le-Bel est à environ 5 km de notre base de Gonesse. En conditions normales de circulation, on est chez vous en 10 à 20 minutes."}},{"@type":"Question","name":"Vous pouvez changer mes 4 pneus à Villiers-le-Bel ?","acceptedAnswer":{"@type":"Answer","text":"Oui, on fait le montage et l'équilibrage des 4 pneus sur place. Appelez au 07 61 06 96 38 avec la dimension de vos pneus pour qu'on prépare le stock."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Vous couvrez la zone commerciale de Villiers-le-Bel ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, on intervient dans toute la commune, y compris les zones commerciales le long de la RD10. Nos camions circulent régulièrement entre Villiers-le-Bel et Gonesse."}}, {"@type": "Question", "name": "Quelle est la distance entre votre base et Villiers-le-Bel ?", "acceptedAnswer": {"@type": "Answer", "text": "Villiers-le-Bel est à environ 5 km de notre base de Gonesse. En conditions normales de circulation, on est chez vous en 10 à 20 minutes."}}, {"@type": "Question", "name": "Vous pouvez changer mes 4 pneus à Villiers-le-Bel ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, on fait le montage et l'équilibrage des 4 pneus sur place. Appelez au 07 61 06 96 38 avec la dimension de vos pneus pour qu'on prépare le stock."}}, {"@type": "Question", "name": "Combien coûte un dépannage pneu à Villiers-le-Bel ?", "acceptedAnswer": {"@type": "Answer", "text": "Entre 80 € et 150 € selon l'intervention : réparation de crevaison, remplacement de pneu ou extraction d'écrou antivol. Le prix exact est annoncé au téléphone avant notre départ de Gonesse, et le diagnostic sur place est gratuit."}}, {"@type": "Question", "name": "Vous intervenez la nuit et le samedi à Villiers-le-Bel ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous sommes ouverts 24h/24 et 7j/7, samedi, dimanche et jours fériés compris. Aux Carreaux, à Puits-la-Marlière ou près de la gare, un technicien peut intervenir à toute heure."}}, {"@type": "Question", "name": "Vous pouvez monter des pneus que j'ai déjà achetés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous montons à Villiers-le-Bel les pneus que vous avez achetés, par exemple en ligne, avec équilibrage et serrage au couple. Appelez le 07 61 06 96 38 en précisant la dimension de vos pneus."}}, {"@type": "Question", "name": "Mon écrou antivol est bloqué, vous pouvez l'enlever ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, l'extraction d'écrou antivol fait partie de nos services. Si la clé est perdue ou l'écrou endommagé, le technicien le retire sur place à Villiers-le-Bel, sans abîmer la jante, puis s'occupe de votre pneu."}}, {"@type": "Question", "name": "Vous intervenez en parking souterrain à Villiers-le-Bel ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous intervenons en parking souterrain et en parking couvert, là où une dépanneuse ne peut souvent pas accéder. Précisez la hauteur limitée et le niveau lors de votre appel au 07 61 06 96 38."}}]}
 </script>
 </head>
 <body>
@@ -224,6 +229,93 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
       <div class="card"><div class="card-ico">💨</div><div class="card-t">Valve & pression</div><div class="card-d">Valve changée et pression vérifiée selon la fiche technique de votre véhicule</div></div>
       <div class="card"><div class="card-ico">🛡️</div><div class="card-t">Diagnostic gratuit</div><div class="card-d">Évaluation gratuite de l'état du pneu — on ne vous vend un pneu neuf que si le vôtre est irréparable</div></div>
     </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Bons réflexes</div>
+    <h2 class="sec-h">Pneu crevé à Villiers-le-Bel : les bons réflexes avant notre arrivée</h2>
+    <p class="txt">À Villiers-le-Bel, entre la RD10, la RD316 et la gare RER D Villiers-le-Bel – Gonesse – Arnouville, une crevaison peut vite bloquer un départ ou un retour de Paris. Notre base de Gonesse est toute proche : comptez <strong>10 à 15 minutes</strong>. En attendant, ces gestes protègent votre sécurité et les chances de réparer votre pneu plutôt que de le remplacer.</p>
+    <h3>Mettez-vous en sécurité avant tout</h3>
+    <p class="txt">Aux premiers signes — vibrations, bruit répété, voyant de pression, direction qui tire — ralentissez progressivement et garez-vous sur une zone plane et dégagée : parking, rue calme des Carreaux ou de Puits-la-Marlière, aire d'arrêt sur la RD316. Allumez vos feux de détresse et ne restez jamais immobilisé sur une voie de circulation rapide.</p>
+    <h3>Signalez votre présence</h3>
+    <p class="txt">Enfilez votre gilet de sécurité avant de descendre et faites sortir les passagers côté trottoir ou côté opposé au trafic. Hors agglomération, placez le triangle une trentaine de mètres en amont. Le soir et la nuit, fréquents pour les retours de gare, cette visibilité fait toute la différence.</p>
+    <h3>Ne roulez pas sur un pneu à plat</h3>
+    <p class="txt">Quelques centaines de mètres à plat suffisent à déchirer le flanc et à marquer la jante : la réparation devient impossible et le remplacement, obligatoire. Mieux vaut s'arrêter et appeler le <a href="tel:+33761069638">07 61 06 96 38</a> : notre atelier mobile vient à votre véhicule, partout à Villiers-le-Bel.</p>
+    <h3>Préparez les informations utiles</h3>
+    <p class="txt">Au téléphone, nous aurons besoin de votre localisation précise (quartier, rue, repère), de la dimension de vos pneus lue sur le flanc — par exemple 195/65 R15 — et de savoir si vous avez une roue de secours et la clé de l'écrou antivol. Préparées à l'avance, ces informations raccourcissent encore l'intervention.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Déroulé de l'intervention</div>
+    <h2 class="sec-h">Comment se déroule un dépannage pneu à Villiers-le-Bel</h2>
+    <p class="txt">Villiers-le-Bel se situe entre Sarcelles et Goussainville, à quelques minutes de notre base de Gonesse. Le déroulé d'un dépannage y est simple et identique à chaque fois : le voici, de l'appel à la remise en route.</p>
+    <h3><span class="step-n">1</span>Votre appel et la localisation précise</h3>
+    <p class="txt">Vous nous appelez au <a href="tel:+33761069638">07 61 06 96 38</a> ou vous écrivez sur WhatsApp. Nous situons ensemble votre véhicule : adresse aux Carreaux, rue de Puits-la-Marlière, parking de la gare Villiers-le-Bel – Gonesse – Arnouville, bord de la RD10 ou de la RD316. Une localisation nette, c'est une arrivée directe.</p>
+    <h3><span class="step-n">2</span>Diagnostic à distance et devis gratuit</h3>
+    <p class="txt">D'après vos indications, nous estimons la nature du problème et annonçons le tarif de l'intervention : <strong>entre 80 € et 150 €</strong> selon qu'il s'agit d'une réparation, d'un remplacement ou d'une extraction d'écrou antivol. Devis gratuit, sans engagement — vous savez avant notre départ ce que vous paierez.</p>
+    <h3><span class="step-n">3</span>Départ depuis notre base de Gonesse</h3>
+    <p class="txt">Le technicien part du 5bis rue des Frères Montgolfier, à Gonesse, avec le matériel de réparation, un stock de pneus et l'équilibreuse. Cette proximité nous permet d'annoncer <strong>10 à 15 minutes</strong> pour rejoindre Villiers-le-Bel en conditions normales de circulation.</p>
+    <img class="cimg" src="images/tire_tread.jpg" alt="Bande de roulement d'un pneu contrôlée lors d'un dépannage pneu à Villiers-le-Bel 95400" loading="lazy">
+    <h3><span class="step-n">4</span>Sécurisation de la zone d'intervention</h3>
+    <p class="txt">Sur place, le technicien sécurise d'abord la zone : signalisation, véhicule calé et levé dans les règles. Sur un parking de gare fréquenté ou au bord d'une départementale, cette étape conditionne une intervention sûre pour tout le monde.</p>
+    <h3><span class="step-n">5</span>Réparation ou remplacement sur place</h3>
+    <p class="txt">Le pneu est inspecté : perforation sur la bande de roulement et flanc sain, réparation par mèche ou champignon ; flanc touché, déchirure ou pneu ayant roulé à plat, remplacement avec montage et équilibrage sur place. Le <strong>diagnostic est gratuit</strong> et la décision vous est expliquée avant tout travail.</p>
+    <h3><span class="step-n">6</span>Contrôle de sécurité et remise en circulation</h3>
+    <p class="txt">Pression réglée, écrous serrés au couple, état visible des autres roues vérifié : vous repartez seulement lorsque tout est conforme. Règlement au tarif annoncé, et vous reprenez la route sans être passé par un remorquage.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Services en détail</div>
+    <h2 class="sec-h">Nos services de dépannage pneu à Villiers-le-Bel en détail</h2>
+    <p class="txt">Des quartiers des Carreaux et de Puits-la-Marlière aux axes RD10 et RD316, les besoins des automobilistes de Villiers-le-Bel couvrent toute la gamme du dépannage pneu. Voici ce que notre camion-atelier réalise sur place, sans que votre véhicule quitte son emplacement.</p>
+    <h3>Réparation de crevaison sur place</h3>
+    <p class="txt">La crevaison la plus fréquente — clou ou vis dans la bande de roulement — se répare sans changer le pneu. Nous effectuons la <a href="reparation-crevaison-idf.html">réparation de crevaison</a> par mèche ou champignon, avec contrôle de pression et d'étanchéité. C'est rapide et économique. Si le flanc est atteint ou la déchirure trop importante, nous vous le montrons et passons au remplacement, en toute transparence.</p>
+    <h3>Changement de pneu et montage sur place</h3>
+    <p class="txt">Pour un pneu irréparable ou un train complet à renouveler, le <a href="changement-pneu-domicile-idf.html">changement de pneu à domicile</a> se déroule devant chez vous ou sur votre lieu de travail à Villiers-le-Bel, équilibrage compris. Nous montons également vos pneus déjà achetés : vous profitez de votre prix d'achat, nous garantissons la pose, le serrage au couple et la pression.</p>
+    <img class="cimg" src="images/van_interior.jpg" alt="Camion-atelier mobile DEPAN2PNEUS et son équipement de montage de pneus pour Villiers-le-Bel, Val-d'Oise" loading="lazy">
+    <h3>Extraction d'écrou antivol</h3>
+    <p class="txt">Clé d'écrou antivol perdue ou écrou grippé : la roue refuse de se démonter et le dépannage semble impossible. Notre service d'<a href="extraction-ecrou-antivol-idf.html">extraction d'écrou antivol</a> dispose des extracteurs adaptés pour retirer l'écrou sur place, sans endommager la jante, et poursuivre immédiatement par la réparation ou le changement du pneu.</p>
+    <h3>Dépannage pneu sur voies rapides</h3>
+    <p class="txt">La RD316 et la RD10 supportent un trafic soutenu entre Sarcelles, Villiers-le-Bel et Goussainville. En cas de crevaison sur ces axes, nous assurons le <a href="pneu-creve-autoroute-idf.html">dépannage pneu sur autoroute</a> et voies rapides sur les zones accessibles en sécurité, avec signalisation renforcée. Votre priorité : vous mettre à l'abri, puis nous appeler.</p>
+    <h3>Intervention en parking souterrain</h3>
+    <p class="txt">Un pneu à plat en parking souterrain de résidence ou en parking couvert ne se traite pas avec une dépanneuse classique. Notre intervention en <a href="pneu-creve-parking-souterrain.html">parking souterrain</a> a lieu à l'emplacement même du véhicule ; indiquez-nous la hauteur limitée et le niveau quand vous appelez.</p>
+    <h3>Dépannage de nuit, le dimanche et les jours fériés</h3>
+    <p class="txt">Les horaires de la gare RER D ne s'arrêtent pas le week-end, nos interventions non plus. Nous réalisons le <a href="depannage-pneu-urgence-nuit.html">dépannage pneu de nuit</a> et les dépannages le <a href="reparation-pneu-dimanche-ferie.html">dimanche et les jours fériés</a> à Villiers-le-Bel, avec le même tarif annoncé avant départ.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Couverture locale</div>
+    <h2 class="sec-h">Quartiers et zones de Villiers-le-Bel couverts</h2>
+    <p class="txt">Commune résidentielle entre Sarcelles et Goussainville, Villiers-le-Bel est entièrement couverte par nos interventions, de ses quartiers d'habitat collectif à ses rues pavillonnaires et ses axes de transit.</p>
+    <h3>Les Carreaux</h3>
+    <p class="txt">Le quartier des Carreaux génère de nombreux appels : pneus crevés sur les parkings de résidence, dégonflages découverts au moment de partir travailler, roues à remplacer en urgence. Nous intervenons au pied des résidences et dans leurs parkings, avec un délai court depuis Gonesse qui limite l'attente, même tôt le matin.</p>
+    <h3>Puits-la-Marlière et les secteurs pavillonnaires</h3>
+    <p class="txt">À Puits-la-Marlière et dans les rues pavillonnaires de la commune, les interventions se font le plus souvent à domicile : montage de pneus achetés en ligne, réparation d'une crevaison lente, remplacement d'un pneu usé. Le camion-atelier travaille devant votre portail, sans déplacement de votre part.</p>
+    <h3>La gare RER D et les axes RD10 / RD316</h3>
+    <p class="txt">La gare Villiers-le-Bel – Gonesse – Arnouville, toute proche, est un point névralgique : beaucoup d'actifs y laissent leur voiture avant de rejoindre Paris. Nous couvrons son secteur et ses parkings, ainsi que les abords de la RD10 et de la RD316, axes quotidiens des déplacements entre Sarcelles et Goussainville.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Nos engagements</div>
+    <h2 class="sec-h">Pourquoi choisir DEPAN2PNEUS à Villiers-le-Bel</h2>
+    <h3>Basés à Gonesse, à quelques minutes de Villiers-le-Bel</h3>
+    <p class="txt">Notre base du 5bis rue des Frères Montgolfier, à Gonesse, est voisine de Villiers-le-Bel. Résultat : un délai réel de <strong>10 à 15 minutes</strong> et des techniciens qui connaissent les Carreaux, Puits-la-Marlière, la gare et les départementales du secteur — pas un service lointain qui découvre la commune.</p>
+    <h3>Ouverts 24h/24 et 7j/7, samedi compris</h3>
+    <p class="txt">Nous intervenons <strong>24h/24 et 7j/7, le samedi, le dimanche et les jours fériés compris</strong>. Un pneu crevé un samedi soir ou un dimanche matin à Villiers-le-Bel ne reste jamais sans solution jusqu'au lundi : un appel au <a href="tel:+33761069638">07 61 06 96 38</a> suffit.</p>
+    <h3>Un tarif clair, de 80 à 150 €, annoncé avant</h3>
+    <p class="txt">Nos tarifs sont annoncés d'emblée : <strong>entre 80 € et 150 €</strong> selon l'intervention. Le montant précis correspondant à votre situation vous est donné au téléphone, avant le départ du technicien, et le diagnostic sur place est gratuit. Aucune surprise au moment de payer.</p>
+    <h3>Tout sur place, sans remorquage</h3>
+    <p class="txt">Réparation, remplacement, équilibrage, extraction d'écrou antivol : tout se déroule là où votre véhicule est immobilisé. Vous repartez au volant de votre propre voiture, sans frais de remorquage, sans attente en garage et sans organisation compliquée pour récupérer votre véhicule.</p>
   </div>
 </section>
 
@@ -296,6 +388,26 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
     <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
       <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Vous pouvez changer mes 4 pneus à Villiers-le-Bel ?</summary>
       <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, on fait le montage et l'équilibrage des 4 pneus sur place. Appelez au 07 61 06 96 38 avec la dimension de vos pneus pour qu'on prépare le stock.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Combien coûte un dépannage pneu à Villiers-le-Bel ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Entre 80 € et 150 € selon l'intervention : réparation de crevaison, remplacement de pneu ou extraction d'écrou antivol. Le prix exact est annoncé au téléphone avant notre départ de Gonesse, et le diagnostic sur place est gratuit.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Vous intervenez la nuit et le samedi à Villiers-le-Bel ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, nous sommes ouverts 24h/24 et 7j/7, samedi, dimanche et jours fériés compris. Aux Carreaux, à Puits-la-Marlière ou près de la gare, un technicien peut intervenir à toute heure.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Vous pouvez monter des pneus que j'ai déjà achetés ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, nous montons à Villiers-le-Bel les pneus que vous avez achetés, par exemple en ligne, avec équilibrage et serrage au couple. Appelez le 07 61 06 96 38 en précisant la dimension de vos pneus.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Mon écrou antivol est bloqué, vous pouvez l'enlever ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, l'extraction d'écrou antivol fait partie de nos services. Si la clé est perdue ou l'écrou endommagé, le technicien le retire sur place à Villiers-le-Bel, sans abîmer la jante, puis s'occupe de votre pneu.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Vous intervenez en parking souterrain à Villiers-le-Bel ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, nous intervenons en parking souterrain et en parking couvert, là où une dépanneuse ne peut souvent pas accéder. Précisez la hauteur limitée et le niveau lors de votre appel au 07 61 06 96 38.</p>
     </details>
   </div>
 </section>
