@@ -158,9 +158,14 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
 .back-home{background:rgba(46,233,255,.05);color:var(--cyan)}
 .back-home::before{background:linear-gradient(135deg,rgba(46,233,255,.45) 0%,rgba(46,233,255,.08) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
 .back-home:hover{background:rgba(46,233,255,.1);color:#fff;box-shadow:0 8px 28px rgba(46,233,255,.22),0 0 0 1px rgba(46,233,255,.2)}
+.sec h3{font-family:var(--f1);font-weight:700;font-size:1.08rem;color:#fff;margin:1.8rem 0 .5rem}
+.sec p.txt{color:var(--txt2);font-size:.95rem;line-height:1.75;margin-bottom:1rem;max-width:780px}
+.sec p.txt strong{color:var(--txt)}
+.cimg{width:100%;max-width:780px;border-radius:1rem;border:1px solid var(--border);margin:1.2rem 0;display:block}
+.step-n{display:inline-flex;align-items:center;justify-content:center;width:1.7rem;height:1.7rem;border-radius:50%;background:rgba(46,233,255,.12);border:1px solid rgba(46,233,255,.3);color:var(--cyan);font-family:var(--f1);font-weight:800;font-size:.85rem;margin-right:.5rem;vertical-align:middle}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Vous couvrez le quartier des Lochères à Sarcelles ?","acceptedAnswer":{"@type":"Answer","text":"On couvre tous les quartiers de Sarcelles — Lochères, centre-ville, Chantepie, Prairies. Nos camions accèdent partout où un véhicule peut stationner."}},{"@type":"Question","name":"J'ai crevé près de la gare Garges-Sarcelles, vous venez en combien de temps ?","acceptedAnswer":{"@type":"Answer","text":"La gare Garges-Sarcelles est à 15-20 minutes maximum de notre position habituelle. Nos techniciens circulent souvent dans ce secteur, le délai peut être plus court. Appelez le 07 61 06 96 38."}},{"@type":"Question","name":"Vous intervenez sur le parking du centre commercial de Sarcelles ?","acceptedAnswer":{"@type":"Answer","text":"Oui, on intervient dans tous les parkings — centres commerciaux, résidences, parkings souterrains accessibles. On se gare à côté de votre véhicule et on travaille sur place."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Vous couvrez le quartier des Lochères à Sarcelles ?", "acceptedAnswer": {"@type": "Answer", "text": "On couvre tous les quartiers de Sarcelles — Lochères, centre-ville, Chantepie, Prairies. Nos camions accèdent partout où un véhicule peut stationner."}}, {"@type": "Question", "name": "J'ai crevé près de la gare Garges-Sarcelles, vous venez en combien de temps ?", "acceptedAnswer": {"@type": "Answer", "text": "La gare Garges-Sarcelles est à 15-20 minutes maximum de notre position habituelle. Nos techniciens circulent souvent dans ce secteur, le délai peut être plus court. Appelez le 07 61 06 96 38."}}, {"@type": "Question", "name": "Vous intervenez sur le parking du centre commercial de Sarcelles ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, on intervient dans tous les parkings — centres commerciaux, résidences, parkings souterrains accessibles. On se gare à côté de votre véhicule et on travaille sur place."}}, {"@type": "Question", "name": "Combien coûte un dépannage pneu à Sarcelles ?", "acceptedAnswer": {"@type": "Answer", "text": "Entre 80 € et 150 € selon l'intervention : réparation de crevaison, remplacement de pneu ou extraction d'écrou antivol. Le prix exact est annoncé au téléphone avant notre départ, et le diagnostic sur place est gratuit."}}, {"@type": "Question", "name": "Vous intervenez la nuit et le samedi à Sarcelles ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous sommes ouverts 24h/24 et 7j/7, samedi, dimanche et jours fériés compris. Que ce soit aux Lochères, à Chantepie ou près de la gare Garges-Sarcelles, un technicien peut partir de notre base de Gonesse à toute heure."}}, {"@type": "Question", "name": "Vous pouvez monter des pneus que j'ai déjà achetés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous montons à Sarcelles les pneus que vous avez achetés, par exemple en ligne, avec équilibrage et serrage au couple. Appelez le 07 61 06 96 38 en précisant la dimension de vos pneus."}}, {"@type": "Question", "name": "Mon écrou antivol est bloqué, vous pouvez l'enlever à Sarcelles ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous disposons de l'outillage d'extraction adapté. Si la clé d'origine est perdue ou l'écrou endommagé, le technicien le retire sur place, sans abîmer la jante, puis répare ou remplace votre pneu dans la foulée."}}, {"@type": "Question", "name": "J'ai crevé sur la RD316 ou la Francilienne près de Sarcelles, vous venez ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous intervenons sur les portions et aires accessibles de la RD316 et de la Francilienne (N104) autour de Sarcelles. Mettez-vous en sécurité à l'écart de la circulation, puis appelez le 07 61 06 96 38 en précisant votre sens de circulation."}}]}
 </script>
 </head>
 <body>
@@ -224,6 +229,93 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
       <div class="card"><div class="card-ico">💨</div><div class="card-t">Valve & pression</div><div class="card-d">Valve remplacée et pression ajustée au dixième de bar près</div></div>
       <div class="card"><div class="card-ico">🛡️</div><div class="card-t">Diagnostic gratuit</div><div class="card-d">On inspecte le pneu abîmé et on vous dit clairement : réparable ou pas</div></div>
     </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Bons réflexes</div>
+    <h2 class="sec-h">Pneu crevé à Sarcelles : les bons réflexes avant notre arrivée</h2>
+    <p class="txt">À Sarcelles, une crevaison survient souvent aux pires endroits : sur la RD316 au milieu du trafic, sur un parking des Flanades un samedi après-midi, ou au petit matin en partant vers la gare RER D Garges-Sarcelles. En attendant notre technicien — comptez <strong>15 à 20 minutes</strong> — quelques gestes simples protègent votre sécurité et, souvent, la réparabilité de votre pneu.</p>
+    <h3>Mettez-vous en sécurité avant tout</h3>
+    <p class="txt">Dès que vous sentez une vibration inhabituelle, un bruit de claquement ou que le voyant de pression s'allume, ralentissez en douceur et quittez la voie de circulation : une rue plus calme, un parking, le bas-côté large d'une avenue. Sur la RD316 ou aux abords de la Francilienne (N104), rejoignez une zone d'arrêt sûre et allumez vos feux de détresse. Ne terminez jamais votre trajet « sur la jante » pour rentrer chez vous.</p>
+    <h3>Signalez votre présence aux autres usagers</h3>
+    <p class="txt">Enfilez le gilet de sécurité avant de sortir, faites descendre vos passagers du côté opposé à la circulation et, hors agglomération, placez le triangle à une trentaine de mètres en amont. Dans les rues étroites de Sarcelles Village comme sur les grands boulevards des Lochères, être bien visible est la première des protections, surtout de nuit ou sous la pluie.</p>
+    <h3>Ne roulez pas sur un pneu à plat</h3>
+    <p class="txt">Continuer à rouler, même lentement, écrase le flanc du pneu contre la jante : la crevaison réparable devient un pneu détruit, et la facture grimpe. Si le pneu est complètement dégonflé, restez où vous êtes et appelez-nous au <a href="tel:+33761069638">07 61 06 96 38</a> : notre atelier mobile vient jusqu'à votre véhicule, où qu'il soit stationné à Sarcelles.</p>
+    <h3>Préparez les informations utiles</h3>
+    <p class="txt">Au téléphone, nous vous demanderons votre localisation précise (rue, quartier, point de repère comme la gare ou un parking), la dimension inscrite sur le flanc de vos pneus — par exemple 205/55 R16 — et si vous disposez d'une roue de secours et de la clé de l'écrou antivol. Ces trois informations nous permettent de partir de Gonesse avec exactement le bon matériel.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Déroulé de l'intervention</div>
+    <h2 class="sec-h">Comment se déroule un dépannage pneu à Sarcelles</h2>
+    <p class="txt">Ni remorquage, ni attente dans un centre auto bondé : le dépannage pneu mobile suit un déroulé fixe, de votre appel à votre redémarrage. Voici comment se passe une intervention à Sarcelles, étape par étape.</p>
+    <h3><span class="step-n">1</span>Votre appel et la localisation précise</h3>
+    <p class="txt">Vous nous joignez au <a href="tel:+33761069638">07 61 06 96 38</a> ou par WhatsApp. Nous repérons ensemble l'endroit exact : adresse dans les Lochères, parking aux Flanades, rue de Sarcelles Village, abords de la gare Garges-Sarcelles ou bord de la RD316. Plus la localisation est précise, plus le technicien arrive vite et au bon endroit.</p>
+    <h3><span class="step-n">2</span>Diagnostic à distance et devis gratuit</h3>
+    <p class="txt">À partir de ce que vous décrivez — objet planté dans le pneu, dégonflage lent ou éclatement — nous posons un premier diagnostic et nous vous annonçons le tarif. À Sarcelles comme partout, nos interventions se situent <strong>entre 80 € et 150 €</strong> selon la prestation. Devis gratuit, sans engagement : vous validez le prix avant que nous partions.</p>
+    <h3><span class="step-n">3</span>Départ depuis notre base de Gonesse</h3>
+    <p class="txt">Notre atelier mobile part du 5bis rue des Frères Montgolfier, à Gonesse, commune voisine de Sarcelles. C'est cette proximité qui nous permet d'annoncer un délai de <strong>15 à 20 minutes</strong> sur la commune, avec à bord le matériel de réparation, un stock de pneus et l'outillage d'équilibrage.</p>
+    <img class="cimg" src="images/van_interior.jpg" alt="Intérieur du camion-atelier mobile DEPAN2PNEUS équipé pour le dépannage pneu à Sarcelles 95200" loading="lazy">
+    <h3><span class="step-n">4</span>Sécurisation de la zone d'intervention</h3>
+    <p class="txt">Sur place, le technicien commence par sécuriser la zone : signalisation, véhicule calé, levage dans les règles. Sur un parking fréquenté ou en bord de route, cette étape protège tout le monde — vous, vos passagers et le technicien — pendant toute la durée des travaux.</p>
+    <h3><span class="step-n">5</span>Réparation ou remplacement sur place</h3>
+    <p class="txt">Le pneu est examiné : si la perforation est sur la bande de roulement et le flanc intact, réparation par mèche ou champignon. Si le pneu est déchiré, trop usé ou a roulé à plat, remplacement avec montage et équilibrage dans le camion-atelier. Le <strong>diagnostic est gratuit</strong> et nous ne remplaçons jamais un pneu réparable.</p>
+    <h3><span class="step-n">6</span>Contrôle final et remise en circulation</h3>
+    <p class="txt">Pression vérifiée, écrous serrés au couple, coup d'œil sur l'état visible des autres roues : vous ne repartez que lorsque tout est conforme. Vous réglez le montant annoncé au téléphone, et vous reprenez la route au volant de votre propre voiture, sans dépanneuse ni remorquage.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Services en détail</div>
+    <h2 class="sec-h">Nos services de dépannage pneu à Sarcelles en détail</h2>
+    <p class="txt">Du grand ensemble des Lochères aux pavillons de Sarcelles Village, les situations de crevaison se ressemblent mais ne se traitent pas toutes pareil. Voici, en détail, ce que notre atelier mobile réalise directement sur le lieu de votre panne à Sarcelles.</p>
+    <h3>Réparation de crevaison sur place</h3>
+    <p class="txt">Un clou ramassé sur un chantier, une vis sur un parking : la plupart des crevaisons se réparent sans changer le pneu. Quand la perforation se situe sur la bande de roulement, nous effectuons une <a href="reparation-crevaison-idf.html">réparation de crevaison</a> par mèche ou champignon, puis nous contrôlons pression et étanchéité. C'est l'intervention la plus rapide et la plus économique. Flanc touché ou déchirure trop large ? Nous vous le disons franchement et passons au remplacement.</p>
+    <h3>Changement de pneu et montage sur place</h3>
+    <p class="txt">Pneu irréparable, train de pneus à renouveler ou simple pose de votre roue de secours : nous assurons le <a href="changement-pneu-domicile-idf.html">changement de pneu à domicile</a> et sur tout lieu de stationnement à Sarcelles, avec équilibrage. Nous montons aussi les pneus que vous avez déjà achetés, par exemple en ligne : vous gardez le prix d'achat qui vous arrange, nous apportons la pose professionnelle.</p>
+    <img class="cimg" src="images/technician.jpg" alt="Technicien DEPAN2PNEUS en intervention de montage de pneu sur place à Sarcelles, Val-d'Oise" loading="lazy">
+    <h3>Extraction d'écrou antivol</h3>
+    <p class="txt">Clé d'écrou antivol égarée ou écrou abîmé : la roue ne se démonte plus, et aucun changement de pneu n'est possible, même en atelier. Notre service d'<a href="extraction-ecrou-antivol-idf.html">extraction d'écrou antivol</a> retire l'écrou bloqué sur place, avec l'outillage adapté et sans endommager la jante, puis enchaîne directement sur la réparation ou le remplacement du pneu.</p>
+    <h3>Dépannage pneu sur voie rapide et grands axes</h3>
+    <p class="txt">Sarcelles est bordée par la RD316 et proche de la Francilienne (N104), deux axes où une crevaison est particulièrement stressante. Nous réalisons le <a href="pneu-creve-autoroute-idf.html">dépannage pneu sur autoroute</a> et voies rapides sur les portions et aires accessibles, avec une signalisation renforcée. De votre côté : mettez-vous en sécurité, à l'écart du trafic, et appelez-nous.</p>
+    <h3>Intervention en parking souterrain</h3>
+    <p class="txt">Pneu à plat dans un parking souterrain de résidence ou un parking couvert des Flanades : les dépanneuses classiques n'y entrent souvent pas. Notre intervention en <a href="pneu-creve-parking-souterrain.html">parking souterrain</a> se fait à l'emplacement même de votre véhicule. Indiquez-nous simplement la hauteur limitée et le niveau lors de l'appel.</p>
+    <h3>Dépannage de nuit, le dimanche et les jours fériés</h3>
+    <p class="txt">Une crevaison un dimanche soir ou en pleine nuit ne doit pas attendre le lundi matin. Nous assurons le <a href="depannage-pneu-urgence-nuit.html">dépannage pneu de nuit</a> ainsi que les interventions le <a href="reparation-pneu-dimanche-ferie.html">dimanche et les jours fériés</a> à Sarcelles, avec le même délai court et le même tarif annoncé avant le départ.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Couverture locale</div>
+    <h2 class="sec-h">Quartiers et zones de Sarcelles couverts</h2>
+    <p class="txt">Sarcelles est une grande commune aux visages très différents : grand ensemble, quartiers pavillonnaires, village ancien, zones commerçantes. Nous les couvrons tous, sans exception, depuis notre base voisine de Gonesse.</p>
+    <h3>Les Lochères et Chantepie</h3>
+    <p class="txt">Le grand ensemble des Lochères et le quartier de Chantepie concentrent une grande partie de nos appels sarcellois : pneus crevés découverts le matin sur les parkings de résidence, dégonflages lents, roues à remplacer avant de partir travailler. Nous intervenons au pied des résidences comme dans leurs parkings couverts, et nous connaissons les accès de ces quartiers denses.</p>
+    <h3>Les Flanades et les zones commerçantes</h3>
+    <p class="txt">Autour des Flanades et des commerces du centre, les crevaisons arrivent souvent en pleine journée de courses, le samedi notamment. Notre technicien se gare à côté de votre véhicule sur le parking et travaille sur place : le temps de terminer vos achats, votre pneu est réparé ou remplacé et vous repartez normalement, sans remorquage.</p>
+    <h3>Sarcelles Village, la gare et la RD316</h3>
+    <p class="txt">Le village ancien, ses rues plus étroites et ses pavillons, fait aussi partie de notre quotidien, de même que le secteur de la gare RER D Garges-Sarcelles, où de nombreux actifs laissent leur voiture pour la journée. Enfin, nous couvrons les abords de la RD316 et les accès vers la Francilienne, axes très fréquentés aux heures de pointe.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Nos engagements</div>
+    <h2 class="sec-h">Pourquoi choisir DEPAN2PNEUS à Sarcelles</h2>
+    <h3>Basés à Gonesse, donc tout près de Sarcelles</h3>
+    <p class="txt">Notre atelier mobile est stationné au 5bis rue des Frères Montgolfier, à Gonesse, commune limitrophe du secteur. Pas de départ depuis l'autre bout de l'Île-de-France : pour Sarcelles, cela se traduit par un délai réel de <strong>15 à 20 minutes</strong> et par des techniciens qui connaissent les quartiers et les accès de la commune.</p>
+    <h3>Ouverts 24h/24 et 7j/7, samedi compris</h3>
+    <p class="txt">Nous intervenons <strong>24h/24 et 7j/7, le samedi, le dimanche et les jours fériés compris</strong>. Pneu crevé un samedi après-midi aux Flanades ou un dimanche soir en rentrant : un seul numéro fonctionne à toute heure, le <a href="tel:+33761069638">07 61 06 96 38</a>.</p>
+    <h3>Un tarif clair, de 80 à 150 €, annoncé avant</h3>
+    <p class="txt">Nos prix sont publics et simples : <strong>entre 80 € et 150 €</strong> selon l'intervention. Au téléphone, nous annonçons le montant correspondant à votre situation avant de partir, et le diagnostic sur place est gratuit. Pas de facture découverte une fois le pneu démonté : le prix annoncé est le prix payé.</p>
+    <h3>Tout sur place, sans remorquage</h3>
+    <p class="txt">Réparation, remplacement, équilibrage, extraction d'écrou antivol : tout se fait là où votre véhicule se trouve. Vous évitez les frais et les délais d'un remorquage, la récupération de votre voiture dans un garage inconnu, et vous repartez au volant de votre propre véhicule dans la foulée.</p>
   </div>
 </section>
 
@@ -296,6 +388,26 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
     <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
       <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Vous intervenez sur le parking du centre commercial de Sarcelles ?</summary>
       <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, on intervient dans tous les parkings — centres commerciaux, résidences, parkings souterrains accessibles. On se gare à côté de votre véhicule et on travaille sur place.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Combien coûte un dépannage pneu à Sarcelles ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Entre 80 € et 150 € selon l'intervention : réparation de crevaison, remplacement de pneu ou extraction d'écrou antivol. Le prix exact est annoncé au téléphone avant notre départ, et le diagnostic sur place est gratuit.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Vous intervenez la nuit et le samedi à Sarcelles ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, nous sommes ouverts 24h/24 et 7j/7, samedi, dimanche et jours fériés compris. Que ce soit aux Lochères, à Chantepie ou près de la gare Garges-Sarcelles, un technicien peut partir de notre base de Gonesse à toute heure.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Vous pouvez monter des pneus que j'ai déjà achetés ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, nous montons à Sarcelles les pneus que vous avez achetés, par exemple en ligne, avec équilibrage et serrage au couple. Appelez le 07 61 06 96 38 en précisant la dimension de vos pneus.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Mon écrou antivol est bloqué, vous pouvez l'enlever à Sarcelles ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, nous disposons de l'outillage d'extraction adapté. Si la clé d'origine est perdue ou l'écrou endommagé, le technicien le retire sur place, sans abîmer la jante, puis répare ou remplace votre pneu dans la foulée.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">J'ai crevé sur la RD316 ou la Francilienne près de Sarcelles, vous venez ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, nous intervenons sur les portions et aires accessibles de la RD316 et de la Francilienne (N104) autour de Sarcelles. Mettez-vous en sécurité à l'écart de la circulation, puis appelez le 07 61 06 96 38 en précisant votre sens de circulation.</p>
     </details>
   </div>
 </section>
