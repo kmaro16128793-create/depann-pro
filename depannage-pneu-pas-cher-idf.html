@@ -55,6 +55,7 @@ h1 .hl{color:var(--cyan)}
 .back-home::before{background:linear-gradient(135deg,rgba(46,233,255,.45),rgba(46,233,255,.08));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
 .back-home:hover{background:rgba(46,233,255,.1);color:#fff}
 .stats{display:flex;gap:2rem;margin-top:2.5rem;flex-wrap:wrap}
+@media(max-width:480px){.stats{gap:.85rem;flex-wrap:nowrap}}
 .stat-n{font-family:var(--f1);font-weight:900;font-size:1.8rem;color:#fff}.stat-n span{color:var(--cyan)}
 .stat-l{font-size:.78rem;color:var(--txt3);margin-top:.1rem}
 .sec{padding:5rem clamp(1.5rem,5vw,5rem)}.c{max-width:1100px;margin:0 auto}
@@ -175,10 +176,10 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
       },
       {
         "@type": "Question",
-        "name": "Pourquoi DEPAN2PNEUS est moins cher que les autres dépanneurs ?",
+        "name": "Pourquoi appeler DEPAN2PNEUS ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Nous fonctionnons sans intermédiaire et sans local commercial coûteux. Notre modèle d'atelier mobile réduit nos charges fixes. Le prix dépend du nombre de pneus, de leur marque, de l'heure et de la distance : devis gratuit au téléphone."
+          "text": "Nous intervenons directement sur place, sans dépanneuse. Le devis est gratuit au téléphone, avant tout déplacement."
         }
       },
       {
@@ -236,7 +237,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
       Devis gratuit · Paris &amp; IDF
     </div>
     <h1>Dépannage pneu<br><span class="hl">pas cher en IDF</span></h1>
-    <p class="hero-sub">Un dépannage pneu de qualité ne doit pas coûter une fortune. DEPAN2PNEUS IDF 24H propose un devis gratuit au téléphone, sans engagement. Le prix dépend du nombre de pneus, de leur marque, de l'heure et de la distance : devis gratuit au téléphone.</p>
+    <p class="hero-sub">Un dépannage pneu de qualité ne doit pas coûter une fortune. DEPAN2PNEUS IDF 24H propose un devis gratuit au téléphone, sans engagement.</p>
     <div class="btns">
       <a href="tel:+33761069638" class="btn-call">
         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -248,9 +249,9 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
       </a>
     </div>
     <div class="stats">
-      <div><div class="stat-n">Devis</div><div class="stat-l">Gratuit au téléphone</div></div>
-      <div><div class="stat-n">Devis</div><div class="stat-l">Gratuit au téléphone</div></div>
-      <div><div class="stat-n">Devis</div><div class="stat-l">Gratuit au téléphone</div></div>
+      <div><div class="stat-n">Gratuit</div><div class="stat-l">Devis au téléphone</div></div>
+      <div><div class="stat-n">0</div><div class="stat-l">Frais cachés</div></div>
+      <div><div class="stat-n">24h/24</div><div class="stat-l">7j/7</div></div>
     </div>
   </div>
 </section>
@@ -259,7 +260,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
 <section class="essentiel" style="max-width:800px;margin:0 auto;padding:24px 20px 0">
   <div style="background:#12151d;border:1px solid rgba(255,107,53,.35);border-radius:14px;padding:22px 26px">
     <div style="font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#ff6b35;margin-bottom:10px">L'essentiel</div>
-    <p style="font-size:16.5px;line-height:1.65;color:#e8eaf0;margin:0"><strong>DEPAN2PNEUS IDF 24H</strong> affiche des devis transparents, sans frais cachés, partout en Île-de-France : Le prix dépend du nombre de pneus, de leur marque, de l'heure et de la distance : devis gratuit au téléphone. Service ouvert <strong>24h/24 et 7j/7</strong>, délai moyen d'intervention de <strong>30 à 45 minutes</strong>, devis ferme annoncé par téléphone avant l'intervention. Contact direct : <strong>07 61 06 96 38</strong>.</p>
+    <p style="font-size:16.5px;line-height:1.65;color:#e8eaf0;margin:0"><strong>DEPAN2PNEUS IDF 24H</strong> affiche des devis transparents, sans frais cachés, partout en Île-de-France. Le prix dépend du nombre de pneus, de leur marque, de l'heure et de la distance : devis gratuit au téléphone. Service ouvert <strong>24h/24 et 7j/7</strong>, délai moyen d'intervention de <strong>30 à 45 minutes</strong>, devis ferme annoncé par téléphone avant l'intervention. Contact direct : <strong>07 61 06 96 38</strong>.</p>
   </div>
 </section>
 
@@ -267,7 +268,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
   <div class="c">
     <div class="avantage">
       <h3>Devis transparents, sans surprise</h3>
-      <p>Chez DEPAN2PNEUS, le prix annoncé au téléphone est le prix que vous payez. Pas de frais de déplacement cachés, pas de supplément non annoncé, pas de "ah mais en fait c'est plus cher que prévu". Notre modèle sans local commercial nous permet de réduire nos charges et de vous en faire profiter.</p>
+      <p>Chez DEPAN2PNEUS, le prix annoncé au téléphone est le prix que vous payez. Pas de frais de déplacement cachés, pas de supplément non annoncé.</p>
     </div>
     <div class="sec-tag">Nos devis</div>
     <h2 class="sec-h">Comment est calculé le prix</h2>
@@ -282,16 +283,16 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
 </section>
 
 <div class="content-block">
-  <h2>Pourquoi nos devis sont plus bas que la concurrence</h2>
-  <p>DEPAN2PNEUS IDF 24H fonctionne sur un modèle économique différent des garages traditionnels et des grands réseaux de franchises. Pas de local commercial avec un loyer parisien, pas de secrétariat, pas de salle d'attente climatisée. Notre atelier, c'est notre véhicule utilitaire, équipé de tout le matériel professionnel nécessaire. Ce modèle léger nous permet de répercuter les économies directement sur nos devis.</p>
-  <p>Chez nous, le prix annoncé au téléphone est le prix final : rien n'est ajouté après coup. Le prix dépend du nombre de pneus, de leur marque, de l'heure et de la distance : devis gratuit au téléphone.</p>
+  <h2>Pourquoi appeler DEPAN2PNEUS</h2>
+  <p>Nous intervenons directement sur place : réparation ou remplacement du pneu, sans dépanneuse. Le devis est gratuit au téléphone, avant tout déplacement.</p>
+  <p>Chez nous, le prix annoncé au téléphone est le prix final : rien n'est ajouté après coup.</p>
 
   <h2>Comparez avant de choisir</h2>
-  <p>Quand vous cherchez un dépannage pneu en IDF, méfiez-vous des annonces trop belles pour être vraies. Chez DEPAN2PNEUS, le devis communiqué par téléphone inclut tout : déplacement, diagnostic, main-d'oeuvre et fournitures si nécessaire. Le prix dépend du nombre de pneus, de leur marque, de l'heure et de la distance : devis gratuit au téléphone.</p>
-  <p>Le prix dépend du nombre de pneus, de leur marque, de l'heure et de la distance : devis gratuit au téléphone. L'heure d'intervention, y compris entre 22h et 6h, est prise en compte dans ce devis.</p>
+  <p>Quand vous cherchez un dépannage pneu en IDF, méfiez-vous des annonces trop belles pour être vraies. Chez DEPAN2PNEUS, le devis communiqué par téléphone inclut tout : déplacement, diagnostic, main-d'oeuvre et fournitures si nécessaire.</p>
+  <p>L'heure d'intervention, y compris entre 22h et 6h, est prise en compte dans le devis annoncé au téléphone.</p>
 
   <h2>Pas cher ne veut pas dire mauvaise qualité</h2>
-  <p>Un devis annoncé au téléphone n'est pas un compromis sur la qualité. Nous utilisons du matériel professionnel de dernière génération : cric hydraulique, clé dynamométrique calibrée, mèches et champignons certifiés. Les pneus que nous fournissons sont des marques reconnues (Michelin, Continental, Bridgestone, Hankook, Nexen). Chaque intervention est réalisée dans les règles de l'art, avec un serrage au couple constructeur et une vérification finale de la pression.</p>
+  <p>Un prix annoncé au téléphone, sans surprise, et le même travail soigné. Nous utilisons du matériel professionnel de dernière génération : cric hydraulique, clé dynamométrique calibrée, mèches et champignons certifiés. Les pneus que nous fournissons sont des marques reconnues (Michelin, Continental, Bridgestone, Hankook, Nexen). Chaque intervention est réalisée dans les règles de l'art, avec un serrage au couple constructeur et une vérification finale de la pression.</p>
   <p>Appelez le <strong>07 61 06 96 38</strong> pour un devis gratuit et immédiat. Aucun engagement, aucune obligation. Si le devis vous convient, on se met en route.</p>
 </div>
 
@@ -320,8 +321,8 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
       <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Le prix dépend du nombre de pneus, de leur marque, de l'heure et de la distance : devis gratuit au téléphone. Appelez le 07 61 06 96 38.</p>
     </details>
     <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
-      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Pourquoi DEPAN2PNEUS est moins cher que les autres dépanneurs ?</summary>
-      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Nous fonctionnons sans intermédiaire et sans local commercial coûteux. Notre modèle d'atelier mobile réduit nos charges fixes. Le prix dépend du nombre de pneus, de leur marque, de l'heure et de la distance : devis gratuit au téléphone.</p>
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Pourquoi appeler DEPAN2PNEUS ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Nous intervenons directement sur place, sans dépanneuse. Le devis est gratuit au téléphone, avant tout déplacement.</p>
     </details>
     <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
       <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Y a-t-il des frais de déplacement en plus du devis annoncé ?</summary>
