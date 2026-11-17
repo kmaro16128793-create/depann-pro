@@ -158,9 +158,15 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
 .back-home{background:rgba(46,233,255,.05);color:var(--cyan)}
 .back-home::before{background:linear-gradient(135deg,rgba(46,233,255,.45) 0%,rgba(46,233,255,.08) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
 .back-home:hover{background:rgba(46,233,255,.1);color:#fff;box-shadow:0 8px 28px rgba(46,233,255,.22),0 0 0 1px rgba(46,233,255,.2)}
+
+.sec h3{font-family:var(--f1);font-weight:700;font-size:1.08rem;color:#fff;margin:1.8rem 0 .5rem}
+.sec p.txt{color:var(--txt2);font-size:.95rem;line-height:1.75;margin-bottom:1rem;max-width:780px}
+.sec p.txt strong{color:var(--txt)}
+.cimg{width:100%;max-width:780px;border-radius:1rem;border:1px solid var(--border);margin:1.2rem 0;display:block}
+.step-n{display:inline-flex;align-items:center;justify-content:center;width:1.7rem;height:1.7rem;border-radius:50%;background:rgba(46,233,255,.12);border:1px solid rgba(46,233,255,.3);color:var(--cyan);font-family:var(--f1);font-weight:800;font-size:.85rem;margin-right:.5rem;vertical-align:middle}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Vous intervenez dans les zones logistiques de Goussainville ?","acceptedAnswer":{"@type":"Answer","text":"Oui, on couvre toutes les zones d'activité et logistiques de Goussainville. Nos camions y circulent régulièrement vu la proximité avec Roissy-CDG et Gonesse."}},{"@type":"Question","name":"Combien de temps pour venir à Goussainville depuis votre base ?","acceptedAnswer":{"@type":"Answer","text":"Goussainville est à 10-20 minutes de notre base de Gonesse. Mais nos techniciens sont souvent déjà en circulation dans le secteur nord, donc ça peut être plus rapide."}},{"@type":"Question","name":"Vous dépannez les utilitaires de livraison à Goussainville ?","acceptedAnswer":{"@type":"Answer","text":"On prend en charge tous les véhicules légers jusqu'à 3,5 tonnes — utilitaires de livraison compris. Montage, réparation, équilibrage directement sur le parking ou le quai de chargement."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Vous intervenez dans les zones logistiques de Goussainville ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, on couvre toutes les zones d'activité et logistiques de Goussainville. Nos camions y circulent régulièrement vu la proximité avec Roissy-CDG et Gonesse."}}, {"@type": "Question", "name": "Combien de temps pour venir à Goussainville depuis votre base ?", "acceptedAnswer": {"@type": "Answer", "text": "Goussainville est à 10-20 minutes de notre base de Gonesse. Mais nos techniciens sont souvent déjà en circulation dans le secteur nord, donc ça peut être plus rapide."}}, {"@type": "Question", "name": "Vous dépannez les utilitaires de livraison à Goussainville ?", "acceptedAnswer": {"@type": "Answer", "text": "On prend en charge tous les véhicules légers jusqu'à 3,5 tonnes — utilitaires de livraison compris. Montage, réparation, équilibrage directement sur le parking ou le quai de chargement."}}, {"@type": "Question", "name": "Combien coûte un dépannage pneu à Goussainville ?", "acceptedAnswer": {"@type": "Answer", "text": "Entre 80 € et 150 € selon l'intervention : réparation de crevaison, remplacement de pneu ou extraction d'écrou antivol. Le prix exact est annoncé au téléphone avant notre départ depuis Gonesse, et le diagnostic sur place est gratuit. Pas de surprise à l'arrivée."}}, {"@type": "Question", "name": "Vous intervenez la nuit et le samedi à Goussainville ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, 24h/24 et 7j/7, samedi, dimanche et jours fériés compris. Les horaires décalés des zones logistiques et les trajets vers CDG font que les appels nocturnes sont fréquents à Goussainville : appelez le 07 61 06 96 38, un technicien part de Gonesse en 10 à 20 minutes."}}, {"@type": "Question", "name": "Vous pouvez monter des pneus que j'ai déjà achetés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous montons à domicile, sur votre lieu de travail ou sur le lieu de la panne les pneus que vous avez achetés, avec équilibrage et contrôle de pression. Précisez la dimension de vos pneus lors de l'appel au 07 61 06 96 38 pour convenir de l'intervention."}}, {"@type": "Question", "name": "Mon écrou antivol est bloqué, vous pouvez l'enlever à Goussainville ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, l'extraction d'écrou antivol fait partie de nos services. Clé perdue ou écrou endommagé, notre technicien dispose de l'outillage d'extraction adapté et intervient sur place à Goussainville, sans remorquage, avant de procéder au changement de pneu si besoin."}}, {"@type": "Question", "name": "Vous intervenez en parking souterrain à Goussainville ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous intervenons en parking souterrain et en parking couvert, notamment dans les résidences du quartier des Noues, directement à l'emplacement du véhicule. Précisez la hauteur limitée et le niveau lors de votre appel au 07 61 06 96 38."}}]}
 </script>
 </head>
 <body>
@@ -224,6 +230,93 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
       <div class="card"><div class="card-ico">💨</div><div class="card-t">Valve & pression</div><div class="card-d">Valve neuve posée en quelques minutes et pression réglée selon les préconisations constructeur</div></div>
       <div class="card"><div class="card-ico">🛡️</div><div class="card-t">Diagnostic gratuit</div><div class="card-d">Examen du pneu endommagé avant intervention — on répare uniquement si c'est fiable</div></div>
     </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Bons réflexes</div>
+    <h2 class="sec-h">Pneu crevé à Goussainville : les bons réflexes avant notre arrivée</h2>
+    <p class="txt">Entre un départ tôt vers la gare RER D, un retour d'entrepôt en horaire décalé et un trajet vers la zone aéroportuaire, une crevaison à Goussainville tombe rarement au bon moment. Bonne nouvelle : nous sommes tout près, comptez <strong>10 à 20 minutes</strong>. En attendant, ces gestes simples vous protègent et gardent souvent le pneu réparable, donc l'intervention moins chère.</p>
+    <h3>Mettez-vous en sécurité avant tout</h3>
+    <p class="txt">Dès les premiers signes — vibration, bruit sourd, voyant de pression, direction qui tire — ralentissez et rejoignez une zone plane à l'écart du trafic : un parking, une rue calme du Vieux Pays ou une place libre près des Noues. Sur la RD47, où la circulation est rapide, ne vous arrêtez pas sur la voie : rejoignez un accotement large, un parking d'entreprise ou une rue latérale, puis allumez vos feux de détresse.</p>
+    <h3>Signalez votre présence</h3>
+    <p class="txt">Enfilez le gilet de sécurité avant de descendre et faites sortir les passagers du côté opposé à la circulation. Sur route, placez le triangle à une trentaine de mètres en amont. Si vous êtes sur une voie rapide aux abords de Goussainville ou en direction de l'A1, ne restez pas près du véhicule : mettez-vous à l'abri, loin de la chaussée, et attendez-nous à l'écart.</p>
+    <h3>Ne roulez pas sur un pneu à plat</h3>
+    <p class="txt">C'est l'erreur la plus coûteuse, y compris sur une courte distance pour « rentrer quand même ». Rouler à plat écrase le flanc, le déchire de l'intérieur et peut abîmer la jante : une crevaison qui se réparait par une simple mèche devient un pneu à remplacer. Pneu à plat, on s'arrête et on appelle le <a href="tel:+33761069638">07 61 06 96 38</a> : notre atelier est mobile, c'est lui qui se déplace, pas vous.</p>
+    <h3>Préparez les informations utiles</h3>
+    <p class="txt">Pour partir avec le bon matériel du premier coup, préparez votre localisation précise — rue, parking de la gare RER D, nom de l'entrepôt ou repère sur la RD47 —, la dimension inscrite sur le flanc du pneu, par exemple 205/55 R16, et dites-nous si vous avez une roue de secours et la clé de l'écrou antivol. Ces quelques détails, donnés à l'appel, font gagner de précieuses minutes sur place.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Déroulé de l'intervention</div>
+    <h2 class="sec-h">Comment se déroule un dépannage pneu à Goussainville</h2>
+    <p class="txt">Pas de remorquage, pas de journée perdue, pas de prix découvert à la fin. Depuis notre base de Gonesse, toute proche au sud de Goussainville, chaque intervention suit le même déroulé clair, de votre appel à votre départ :</p>
+    <h3><span class="step-n">1</span>Votre appel et la localisation précise</h3>
+    <p class="txt">Vous nous appelez au <a href="tel:+33761069638">07 61 06 96 38</a> ou vous nous écrivez sur WhatsApp. Nous situons ensemble votre véhicule : adresse dans le Vieux Pays ou aux Noues, parking de la gare, quai d'un entrepôt de la zone logistique ou position sur la RD47. Cette précision dès l'appel nous permet d'arriver directement au bon endroit, sans tourner dans le secteur.</p>
+    <h3><span class="step-n">2</span>Diagnostic à distance et devis gratuit</h3>
+    <p class="txt">À partir de ce que vous décrivez — perforation, pneu déchiré, simple perte de pression — nous établissons un premier diagnostic et nous vous annonçons le tarif. À Goussainville comme partout, nos dépannages se situent <strong>entre 80 € et 150 €</strong> selon la prestation. Devis gratuit et sans engagement : vous connaissez le prix avant que le technicien ne quitte la base.</p>
+    <h3><span class="step-n">3</span>Départ immédiat depuis notre base de Gonesse</h3>
+    <p class="txt">Notre atelier mobile est stationné au 5bis rue des Frères Montgolfier, à Gonesse, la commune voisine juste au sud de Goussainville. Le technicien part donc de très près, avec le matériel de réparation, des pneus et l'outillage d'équilibrage à bord. C'est cette proximité directe qui nous permet d'annoncer un délai de <strong>10 à 20 minutes à Goussainville</strong>.</p>
+    <img class="cimg" src="images/van_interior.jpg" alt="Intérieur du camion-atelier mobile DEPAN2PNEUS, équipé pour le dépannage pneu à Goussainville 95190" loading="lazy">
+    <h3><span class="step-n">4</span>Sécurisation de la zone d'intervention</h3>
+    <p class="txt">À son arrivée, le technicien sécurise d'abord la zone : signalisation, calage du véhicule et mise sur cric dans les règles. Devant un pavillon, sur le parking d'une résidence des Noues ou au bord d'un quai de chargement, le travail ne commence que lorsque tout est sûr, pour vous, pour lui et pour les véhicules qui passent.</p>
+    <h3><span class="step-n">5</span>Réparation ou remplacement sur place</h3>
+    <p class="txt">Le technicien examine le pneu et vous dit franchement ce qui est possible : réparation par mèche ou champignon si la perforation est sur la bande de roulement et le flanc intact, remplacement si le pneu est déchiré, trop usé ou a roulé à plat. Le <strong>diagnostic est gratuit</strong> : nous ne remplaçons jamais un pneu réparable. Montage et équilibrage sont faits sur place, dans le camion-atelier.</p>
+    <h3><span class="step-n">6</span>Contrôle de sécurité et remise en circulation</h3>
+    <p class="txt">Avant de vous laisser repartir, le technicien contrôle la pression, le serrage des écrous et l'état visible des autres roues. Vous réglez le tarif annoncé à l'appel, ni plus ni moins, et vous reprenez la route avec votre propre véhicule — direction la gare, l'entrepôt ou la maison, sans être passé par une dépanneuse.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Services en détail</div>
+    <h2 class="sec-h">Nos services de dépannage pneu à Goussainville en détail</h2>
+    <p class="txt">Goussainville mélange habitat ancien, grands ensembles, gare RER D et vastes zones logistiques tournées vers la plateforme de Roissy-CDG. Notre atelier mobile couvre toutes ces situations, là où votre véhicule est immobilisé.</p>
+    <h3>Réparation de crevaison sur place</h3>
+    <p class="txt">Un clou ramassé près d'un quai de chargement, une vis sur un parking, un débris sur la RD47 : la plupart des crevaisons se réparent sans changer le pneu. Si la perforation est sur la bande de roulement et le flanc sain, nous réalisons une <a href="reparation-crevaison-idf.html">réparation de crevaison</a> par mèche ou champignon, avec contrôle de pression et d'étanchéité. C'est la solution la plus rapide et la plus économique ; si le pneu n'est pas réparable, nous vous le disons clairement.</p>
+    <h3>Changement de pneu et montage sur place</h3>
+    <p class="txt">Pneu irréparable, pneu usé ou train complet à monter : nous assurons le <a href="changement-pneu-domicile-idf.html">changement de pneu à domicile</a>, sur votre lieu de travail ou sur le lieu de la panne, équilibrage compris. Nous montons aussi les pneus que vous avez déjà achetés, par exemple en ligne : vous gardez le prix d'achat qui vous convient, nous nous chargeons de la pose, du serrage au couple et du contrôle de pression.</p>
+    <img class="cimg" src="images/workshop_tire.jpg" alt="Montage et équilibrage d'un pneu par DEPAN2PNEUS lors d'une intervention à Goussainville, Val-d'Oise" loading="lazy">
+    <h3>Extraction d'écrou antivol</h3>
+    <p class="txt">Clé d'écrou antivol perdue ou écrou grippé : la roue ne se démonte plus, et aucun changement de pneu n'est possible, même avec une roue de secours dans le coffre. Notre service d'<a href="extraction-ecrou-antivol-idf.html">extraction d'écrou antivol</a> retire l'écrou récalcitrant sur place, avec l'outillage adapté et sans abîmer la jante, puis enchaîne directement sur le changement de pneu si nécessaire.</p>
+    <h3>Dépannage pneu sur autoroute et voies rapides</h3>
+    <p class="txt">Goussainville est bordée par des axes rapides : la RD47 au quotidien, et l'A1 comme la Francilienne (A104) à portée immédiate pour rejoindre la zone aéroportuaire. Nous assurons le <a href="pneu-creve-autoroute-idf.html">dépannage pneu sur autoroute</a> sur les portions et aires accessibles du secteur, avec une signalisation renforcée et une intervention menée côté abri. En cas de crevaison, mettez-vous en sécurité derrière la glissière avant de nous appeler.</p>
+    <h3>Intervention en parking souterrain</h3>
+    <p class="txt">Les résidences du quartier des Noues et certains ensembles de Goussainville disposent de parkings souterrains ou couverts où une dépanneuse classique ne passe pas. Notre intervention en <a href="pneu-creve-parking-souterrain.html">parking souterrain</a> se fait directement à votre emplacement, sans déplacer le véhicule. Indiquez-nous simplement la hauteur limitée et le niveau lors de votre appel, pour que le technicien prépare l'accès.</p>
+    <h3>Dépannage de nuit, le dimanche et les jours fériés</h3>
+    <p class="txt">La logistique ne s'arrête pas à 18 heures, et les trajets vers CDG non plus. Nous assurons le <a href="depannage-pneu-urgence-nuit.html">dépannage pneu de nuit</a> à Goussainville, ainsi que les interventions le <a href="reparation-pneu-dimanche-ferie.html">dimanche et les jours fériés</a>, dans les mêmes conditions que le jour : même proximité depuis Gonesse, même délai court et même tarif annoncé avant le départ.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Couverture locale</div>
+    <h2 class="sec-h">Quartiers et zones de Goussainville couverts</h2>
+    <p class="txt">Ville ancienne au nord, quartiers d'habitat et zones d'activité tournées vers l'aéroport : Goussainville a plusieurs visages, et nous intervenons dans chacun d'eux, à domicile comme sur les lieux de travail.</p>
+    <h3>Le Vieux Pays et le centre ancien</h3>
+    <p class="txt">Le Vieux Pays, c'est le village ancien de Goussainville, avec ses rues plus étroites et son habitat de maisons individuelles. Les crevaisons y surviennent le plus souvent au départ du domicile, le matin, quand on découvre le pneu à plat devant chez soi. Nous venons jusqu'au véhicule stationné, nous réparons ou remplaçons sur place, et la journée peut reprendre presque comme prévu.</p>
+    <h3>La gare RER D et le quartier des Noues</h3>
+    <p class="txt">La gare de Goussainville, sur le RER D, voit passer chaque jour les actifs qui rejoignent Paris, et le quartier des Noues concentre une grande partie de l'habitat collectif de la commune. Parkings de gare, parkings de résidences, rues des ensembles : c'est un de nos secteurs d'intervention les plus réguliers, pour des véhicules découverts à plat au retour du train comme pour des départs impossibles le matin.</p>
+    <h3>Les zones logistiques, les entrepôts et la RD47</h3>
+    <p class="txt">Au nord de Gonesse et à proximité de la zone aéroportuaire de CDG, Goussainville accueille zones logistiques et entrepôts, avec leurs salariés en horaires décalés et leurs utilitaires. Nous intervenons sur les parkings d'entreprises, près des quais et le long de la RD47 qui structure ces déplacements. Pour un professionnel, un véhicule immobilisé est un outil de travail arrêté : la réparation sur place évite le remorquage et limite l'interruption.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2rem">
+  <div class="c">
+    <div class="sec-tag">Nos engagements</div>
+    <h2 class="sec-h">Pourquoi choisir DEPAN2PNEUS à Goussainville</h2>
+    <h3>Basés à Gonesse, la commune voisine</h3>
+    <p class="txt">Notre base est au 5bis rue des Frères Montgolfier, à Gonesse, immédiatement au sud de Goussainville. Nous ne traversons pas la région pour venir chez vous : nous partons de la ville d'à côté. C'est ce qui rend notre délai de <strong>10 à 20 minutes</strong> crédible, et ce qui fait que nos techniciens connaissent déjà vos rues, votre gare et vos zones d'activité.</p>
+    <h3>Ouverts 24h/24 et 7j/7, samedi compris</h3>
+    <p class="txt">Pas d'horaires de bureau chez DEPAN2PNEUS : nous intervenons <strong>24h/24 et 7j/7, le samedi, le dimanche et les jours fériés compris</strong>. Un pneu à plat un samedi soir à Goussainville ou une crevaison un dimanche avant un départ ne vous laissera pas sans solution jusqu'au lundi. Un seul numéro, à toute heure : <a href="tel:+33761069638">07 61 06 96 38</a>.</p>
+    <h3>Un tarif clair, annoncé avant l'intervention</h3>
+    <p class="txt">Nos tarifs sont publics : <strong>entre 80 € et 150 €</strong> selon l'intervention. Au téléphone, nous vous annonçons le prix correspondant à votre situation avant de partir, et le diagnostic sur place est gratuit. Vous ne découvrirez pas la facture une fois le pneu démonté : le tarif annoncé à l'appel est celui que vous réglez à la fin.</p>
+    <h3>Tout se fait sur place, sans remorquage</h3>
+    <p class="txt">Réparation, remplacement, équilibrage, extraction d'écrou antivol : l'atelier vient à vous, pas l'inverse. Dans l'immense majorité des cas, vous repartez au volant de votre véhicule, sans frais de remorquage, sans journée perdue et sans voiture à récupérer dans un garage inconnu. C'est tout l'intérêt d'un dépannage pneu mobile basé dans la commune voisine.</p>
   </div>
 </section>
 
@@ -297,6 +390,26 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
       <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Vous dépannez les utilitaires de livraison à Goussainville ?</summary>
       <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">On prend en charge tous les véhicules légers jusqu'à 3,5 tonnes — utilitaires de livraison compris. Montage, réparation, équilibrage directement sur le parking ou le quai de chargement.</p>
     </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Combien coûte un dépannage pneu à Goussainville ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Entre 80 € et 150 € selon l'intervention : réparation de crevaison, remplacement de pneu ou extraction d'écrou antivol. Le prix exact est annoncé au téléphone avant notre départ depuis Gonesse, et le diagnostic sur place est gratuit. Pas de surprise à l'arrivée.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Vous intervenez la nuit et le samedi à Goussainville ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, 24h/24 et 7j/7, samedi, dimanche et jours fériés compris. Les horaires décalés des zones logistiques et les trajets vers CDG font que les appels nocturnes sont fréquents à Goussainville : appelez le 07 61 06 96 38, un technicien part de Gonesse en 10 à 20 minutes.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Vous pouvez monter des pneus que j'ai déjà achetés ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, nous montons à domicile, sur votre lieu de travail ou sur le lieu de la panne les pneus que vous avez achetés, avec équilibrage et contrôle de pression. Précisez la dimension de vos pneus lors de l'appel au 07 61 06 96 38 pour convenir de l'intervention.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Mon écrou antivol est bloqué, vous pouvez l'enlever à Goussainville ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, l'extraction d'écrou antivol fait partie de nos services. Clé perdue ou écrou endommagé, notre technicien dispose de l'outillage d'extraction adapté et intervient sur place à Goussainville, sans remorquage, avant de procéder au changement de pneu si besoin.</p>
+    </details>
+    <details style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:20px;">
+      <summary style="font-family:var(--f1);font-weight:600;color:var(--txt);cursor:pointer;font-size:1rem;">Vous intervenez en parking souterrain à Goussainville ?</summary>
+      <p style="margin-top:12px;color:var(--txt2);line-height:1.7;font-size:0.95rem;">Oui, nous intervenons en parking souterrain et en parking couvert, notamment dans les résidences du quartier des Noues, directement à l'emplacement du véhicule. Précisez la hauteur limitée et le niveau lors de votre appel au 07 61 06 96 38.</p>
+    </details>
   </div>
 </section>
 
@@ -310,6 +423,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem clam
       <a href="depannage-pneu-villepinte.html" style="display:inline-block;padding:8px 16px;background:rgba(46,233,255,0.06);border:1px solid rgba(46,233,255,0.15);border-radius:8px;color:var(--cyan);text-decoration:none;font-size:0.85rem;transition:all 0.3s;" onmouseenter="this.style.background='rgba(46,233,255,0.15)'" onmouseleave="this.style.background='rgba(46,233,255,0.06)'">Dépannage pneu à Villepinte</a>
       <a href="depannage-pneu-arnouville.html" style="display:inline-block;padding:8px 16px;background:rgba(46,233,255,0.06);border:1px solid rgba(46,233,255,0.15);border-radius:8px;color:var(--cyan);text-decoration:none;font-size:0.85rem;transition:all 0.3s;" onmouseenter="this.style.background='rgba(46,233,255,0.15)'" onmouseleave="this.style.background='rgba(46,233,255,0.06)'">Dépannage pneu à Arnouville</a>
       <a href="depannage-pneu-sarcelles.html" style="display:inline-block;padding:8px 16px;background:rgba(46,233,255,0.06);border:1px solid rgba(46,233,255,0.15);border-radius:8px;color:var(--cyan);text-decoration:none;font-size:0.85rem;transition:all 0.3s;" onmouseenter="this.style.background='rgba(46,233,255,0.15)'" onmouseleave="this.style.background='rgba(46,233,255,0.06)'">Dépannage pneu à Sarcelles</a>
+      <a href="depannage-pneu-villiers-le-bel.html" style="display:inline-block;padding:8px 16px;background:rgba(46,233,255,0.06);border:1px solid rgba(46,233,255,0.15);border-radius:8px;color:var(--cyan);text-decoration:none;font-size:0.85rem;transition:all 0.3s;" onmouseenter="this.style.background='rgba(46,233,255,0.15)'" onmouseleave="this.style.background='rgba(46,233,255,0.06)'">Dépannage pneu à Villiers-le-Bel</a>
   </div>
 </section>
 
